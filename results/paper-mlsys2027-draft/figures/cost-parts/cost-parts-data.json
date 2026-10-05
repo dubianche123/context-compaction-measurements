@@ -1,0 +1,97 @@
+{
+ "schema": "cost-parts-figure/v1",
+ "bars": [
+  {
+   "model": "glm",
+   "policy": "S",
+   "runs": 45,
+   "steps": 18268,
+   "cny_per_100_steps": {
+    "cached": 0.7560330755419313,
+    "uncached": 0.10834738340267133,
+    "output": 0.3801848368732209
+   },
+   "total": 1.2445652958178235,
+   "cached_share_of_input": 0.9604286744311237
+  },
+  {
+   "model": "glm",
+   "policy": "A",
+   "runs": 45,
+   "steps": 20350,
+   "cny_per_100_steps": {
+    "cached": 0.8241678812776414,
+    "uncached": 0.1313650162162162,
+    "output": 0.3996610339066339
+   },
+   "total": 1.3551939314004915,
+   "cached_share_of_input": 0.9561829743658258
+  },
+  {
+   "model": "glm",
+   "policy": "K",
+   "runs": 18,
+   "steps": 5307,
+   "cny_per_100_steps": {
+    "cached": 0.6989553600904466,
+    "uncached": 0.16458695308083662,
+    "output": 0.4537990653853401
+   },
+   "total": 1.3173413785566233,
+   "cached_share_of_input": 0.9365933395870705
+  },
+  {
+   "model": "glm",
+   "policy": "L",
+   "runs": 15,
+   "steps": 3376,
+   "cny_per_100_steps": {
+    "cached": 6.215063924170616,
+    "uncached": 0.06052559241706161,
+    "output": 0.3535749763033175
+   },
+   "total": 6.629164492890995,
+   "cached_share_of_input": 0.9972079894984428
+  },
+  {
+   "model": "deepseek",
+   "policy": "S",
+   "runs": 5,
+   "steps": 3696,
+   "cny_per_100_steps": {
+    "cached": 0.12905724567099566,
+    "uncached": 0.7578542207792207,
+    "output": 3.345865367965368
+   },
+   "total": 4.232776834415584,
+   "cached_share_of_input": 0.8948989021653759
+  },
+  {
+   "model": "deepseek",
+   "policy": "A",
+   "runs": 5,
+   "steps": 3878,
+   "cny_per_100_steps": {
+    "cached": 0.14602350799381125,
+    "uncached": 0.8288913357400722,
+    "output": 3.08934440433213
+   },
+   "total": 4.064259248066014,
+   "cached_share_of_input": 0.8980461830494227
+  },
+  {
+   "model": "deepseek",
+   "policy": "L",
+   "runs": 4,
+   "steps": 705,
+   "cny_per_100_steps": {
+    "cached": 1.3566794439716312,
+    "uncached": 0.18948,
+    "output": 1.8827744680851064
+   },
+   "total": 3.4289339120567375,
+   "cached_share_of_input": 0.9972144900931101
+  }
+ ],
+ "notes": "fixed price vectors; agent and summarization requests; tokens pooled over each policy's runs"
+}

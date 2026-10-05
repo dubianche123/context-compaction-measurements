@@ -1,0 +1,370 @@
+{
+ "schema": "glm-b002-formal-analysis-observation/v1",
+ "created_at": "2026-10-05T01:16:02.550300+08:00",
+ "paid_sources": 15,
+ "contributing_sources": 14,
+ "selected_points": 54,
+ "accepted_draws": 432,
+ "primary_variant": "three_endpoint_unanimous",
+ "unrounded_gates": {
+  "three_endpoint_unanimous": {
+   "accepted_draws": 432,
+   "unknown": 20,
+   "overall_coverage": 0.9537037037037037,
+   "arm_coverage": {
+    "S": 0.9814814814814815,
+    "K": 0.8981481481481481,
+    "S-nohint": 0.9722222222222222,
+    "S-continue": 0.9629629629629629
+   },
+   "arm_coverage_spread": 0.08333333333333337,
+   "minimum_overall_coverage": 0.8,
+   "maximum_arm_coverage_spread": 0.1,
+   "passed": true,
+   "interpretation": "exploratory secondary measurement only"
+  },
+  "three_endpoint_cautious": {
+   "accepted_draws": 432,
+   "unknown": 21,
+   "overall_coverage": 0.9513888888888888,
+   "arm_coverage": {
+    "S": 0.9722222222222222,
+    "K": 0.8981481481481481,
+    "S-nohint": 0.9722222222222222,
+    "S-continue": 0.9629629629629629
+   },
+   "arm_coverage_spread": 0.07407407407407407,
+   "minimum_overall_coverage": 0.8,
+   "maximum_arm_coverage_spread": 0.1,
+   "passed": true,
+   "interpretation": "exploratory secondary measurement only"
+  }
+ },
+ "effects": {
+  "three_endpoint_unanimous": {
+   "K-S": {
+    "inspection_probability": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.45535714285714285,
+     "upper": -0.3392857142857143,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    },
+    "shell_inspection": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.44940476190476186,
+     "upper": -0.3273809523809524,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    }
+   },
+   "nohint-S": {
+    "inspection_probability": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.02380952380952381,
+     "upper": 0.020833333333333332,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    },
+    "shell_inspection": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.02380952380952381,
+     "upper": 0.020833333333333332,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    }
+   },
+   "continue-nohint": {
+    "inspection_probability": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.0625,
+     "upper": 0.0,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    },
+    "shell_inspection": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.07142857142857142,
+     "upper": -0.008928571428571428,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    }
+   },
+   "continue-S": {
+    "inspection_probability": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.05952380952380953,
+     "upper": -0.005952380952380955,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    },
+    "shell_inspection": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.06845238095238096,
+     "upper": -0.014880952380952384,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    }
+   }
+  },
+  "three_endpoint_cautious": {
+   "K-S": {
+    "inspection_probability": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.45535714285714285,
+     "upper": -0.33035714285714285,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    },
+    "shell_inspection": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.44940476190476186,
+     "upper": -0.31845238095238093,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    }
+   },
+   "nohint-S": {
+    "inspection_probability": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.02380952380952381,
+     "upper": 0.02976190476190476,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    },
+    "shell_inspection": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.02380952380952381,
+     "upper": 0.02976190476190476,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    }
+   },
+   "continue-nohint": {
+    "inspection_probability": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.0625,
+     "upper": 0.0,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    },
+    "shell_inspection": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.07142857142857142,
+     "upper": -0.008928571428571428,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    }
+   },
+   "continue-S": {
+    "inspection_probability": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.05952380952380953,
+     "upper": 0.0029761904761904734,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    },
+    "shell_inspection": {
+     "weighting": "equal points within source, equal contributing sources",
+     "value": null,
+     "lower": -0.06845238095238096,
+     "upper": -0.005952380952380955,
+     "contributing_sources": 14,
+     "excluded_source_ranks": [
+      14
+     ]
+    }
+   }
+  }
+ },
+ "blind_consensus": {
+  "denominator": 179,
+  "agreement": 172,
+  "resolved": 159,
+  "endpoint_counts": {
+   "read_only": 103,
+   "non_read_only": 56,
+   "unresolved": 20
+  },
+  "pairwise_endpoint_agreement": {
+   "annotator_1_vs_2": {
+    "count": 179,
+    "agreement_count": 175,
+    "raw_agreement": 0.9776536312849162,
+    "percent_agreement": 97.76536312849161,
+    "confusion_matrix": {
+     "read_only": {
+      "read_only": 103,
+      "non_read_only": 0,
+      "unresolved": 2
+     },
+     "non_read_only": {
+      "read_only": 0,
+      "non_read_only": 59,
+      "unresolved": 0
+     },
+     "unresolved": {
+      "read_only": 2,
+      "non_read_only": 0,
+      "unresolved": 13
+     }
+    },
+    "cohen_kappa": 0.9586366262276141,
+    "kappa_defined": true,
+    "label_counts": {
+     "left": {
+      "read_only": 105,
+      "non_read_only": 59,
+      "unresolved": 15
+     },
+     "right": {
+      "read_only": 105,
+      "non_read_only": 59,
+      "unresolved": 15
+     }
+    }
+   },
+   "annotator_1_vs_3": {
+    "count": 179,
+    "agreement_count": 174,
+    "raw_agreement": 0.9720670391061452,
+    "percent_agreement": 97.20670391061452,
+    "confusion_matrix": {
+     "read_only": {
+      "read_only": 105,
+      "non_read_only": 0,
+      "unresolved": 0
+     },
+     "non_read_only": {
+      "read_only": 0,
+      "non_read_only": 56,
+      "unresolved": 3
+     },
+     "unresolved": {
+      "read_only": 2,
+      "non_read_only": 0,
+      "unresolved": 13
+     }
+    },
+    "cohen_kappa": 0.9481520101958059,
+    "kappa_defined": true,
+    "label_counts": {
+     "left": {
+      "read_only": 105,
+      "non_read_only": 59,
+      "unresolved": 15
+     },
+     "right": {
+      "read_only": 107,
+      "non_read_only": 56,
+      "unresolved": 16
+     }
+    }
+   },
+   "annotator_2_vs_3": {
+    "count": 179,
+    "agreement_count": 174,
+    "raw_agreement": 0.9720670391061452,
+    "percent_agreement": 97.20670391061452,
+    "confusion_matrix": {
+     "read_only": {
+      "read_only": 105,
+      "non_read_only": 0,
+      "unresolved": 0
+     },
+     "non_read_only": {
+      "read_only": 0,
+      "non_read_only": 56,
+      "unresolved": 3
+     },
+     "unresolved": {
+      "read_only": 2,
+      "non_read_only": 0,
+      "unresolved": 13
+     }
+    },
+    "cohen_kappa": 0.9481520101958059,
+    "kappa_defined": true,
+    "label_counts": {
+     "left": {
+      "read_only": 105,
+      "non_read_only": 59,
+      "unresolved": 15
+     },
+     "right": {
+      "read_only": 107,
+      "non_read_only": 56,
+      "unresolved": 16
+     }
+    }
+   }
+  }
+ },
+ "rule_audit": {
+  "actions": 60,
+  "endpoint_agree": 60,
+  "diagnostic_only": true,
+  "rules_or_labels_changed": false
+ },
+ "preserved_artifacts": [
+  "monitoring/glm-b002-branch-replication-20261003/annotation/glm-analysis-v1.json",
+  "monitoring/glm-b002-branch-replication-20261003/annotation/glm-automatic-v2-baseline.json",
+  "monitoring/glm-b002-branch-replication-20261003/annotation/glm-three_endpoint_unanimous-analysis.json",
+  "monitoring/glm-b002-branch-replication-20261003/annotation/glm-three_endpoint_cautious-analysis.json",
+  "monitoring/glm-b002-branch-replication-20261003/annotation/three-endpoint-consensus.json",
+  "monitoring/glm-b002-branch-replication-20261003/annotation/replication-readonly-summary.json"
+ ],
+ "execution_calls_added": 0,
+ "labels_modified": false,
+ "coverage_thresholds_modified": false,
+ "bounds_are_classification_uncertainty_not_statistical_confidence_intervals": true,
+ "new_result_review_state": "completed",
+ "independent_result_review": "monitoring/glm-b002-branch-replication-20261003/independent-result-review-20261005.md",
+ "result_review_and_response": "monitoring/glm-b002-branch-replication-20261003/result-review-20261005.md",
+ "result_review_completed_at": "2026-10-05T01:23:19.061407+08:00"
+}

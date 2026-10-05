@@ -1,0 +1,159 @@
+"""Section 5 figure: cost of each run against its length, and L against compaction across cache prices.
+
+Run from the repository root (no provider calls):
+  python3 results/paper-mlsys2027-draft/figures/cost/build_figure.py [--paste]
+Inputs: prelim-numbers-20261003/runs.json (GLM runs and DeepSeek S/A, 2026-10-03 23:08 snapshot) and
+deepseek-limitonly-numbers-20261004/deepseek-l-runs.json. Costs, pooled tokens and crossovers use the
+shared implementation in prelim-numbers-20261003/metrics.py.
+--paste replaces the generated block in main.tex so the manuscript stays self-contained.
+"""
+import argparse
+import json
+import math
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+PAPER = HERE.parents[1]
+ROOT = HERE.parents[3]
+DIAG = ROOT / "results/harness-diagnosis-20260927"
+sys.path.insert(0, str(DIAG / "prelim-numbers-20261003"))
+from metrics import PRICE, cost, pooled, step_cost, rstar  # noqa: E402
+
+COLOR = dict(S="polS", A="polA", K="polK", L="polL")
+FILLED = dict(S="*", A="square*", K="triangle*", L="diamond*")
+OPEN = dict(S="o", A="square", K="triangle", L="diamond")
+SIZE = dict(S="1.35pt", A="1.25pt", K="1.45pt", L="1.75pt")
+NAME = dict(glm="GLM", deepseek="DeepSeek")
+ISO = (1, 3, 10)  # CNY per 100 steps
+BEGIN, END = "% BEGIN generated cost figure", "% END generated cost figure"
+
+
+def collect():
+    snap = json.loads((DIAG / "prelim-numbers-20261003/runs.json").read_text())
+    dsl = json.loads((DIAG / "deepseek-limitonly-numbers-20261004/deepseek-l-runs.json").read_text())
+    runs = [m for m in snap if m["model"] == "glm" or m["policy"] in ("S", "A")] + dsl
+    points = [dict(model=m["model"], policy=m["policy"], task=m["task"], thr=m["thr"], rep=m["rep"],
+                   steps=m["steps"], cny=cost(m)[0], passed=m["reward"] == 1) for m in runs if m["steps"]]
+    sweep, crossings = [], {}
+    grid = [10 ** (-2.3 + 2.3 * i / 60) for i in range(61)]
+    for model, policies in (("glm", "SAK"), ("deepseek", "SA")):
+        tasks = {m["task"] for m in runs if m["model"] == model and m["policy"] in policies}
+        lp = pooled([m for m in runs if m["model"] == model and m["policy"] == "L" and m["task"] in tasks])
+        for policy in policies:
+            cp = pooled([m for m in runs if m["model"] == model and m["policy"] == policy])
+            actual = PRICE[model][1] / PRICE[model][0]
+            sweep.append(dict(model=model, policy=policy, actual_r=actual,
+                              actual_ratio=step_cost(model, lp, actual) / step_cost(model, cp, actual),
+                              curve=[(r, step_cost(model, lp, r) / step_cost(model, cp, r)) for r in grid]))
+            crossings[f"{model}/{policy}"] = rstar(model, cp, lp)
+    return dict(schema="cost-figure/v1", points=points, sweep=sweep, crossings=crossings,
+                notes=dict(cost="fixed price vectors, all agent and summary requests",
+                           sweep="pooled tokens per step of each policy against pooled L on the same tasks; "
+                                 "only the cached-input price changes"))
+
+
+def fmt(pts):
+    return " ".join(f"({x:.5g},{y:.5g})" for x, y in pts)
+
+
+def scatter_panel(data, model, first):
+    L = [r"\nextgroupplot[" + (r"ylabel={Run cost (CNY)}," if first else r"yticklabels={},") +
+         r"title={(" + ("a" if first else "b") + ") " + NAME[model] + r" runs}]"]
+    for c in ISO:
+        xmax = min(2500, 100 * 100 / c)
+        L.append(r"\addplot[black!35,dashed,line width=0.4pt,forget plot] coordinates {" + fmt([(10, c * 10 / 100), (xmax, c * xmax / 100)]) + "};")
+        anchor = "west" if xmax >= 2500 else "south"
+        L.append(r"\node[font=\scriptsize,text=black!55,anchor=" + anchor + r",inner sep=1pt] at (axis cs:" + f"{xmax:.5g},{c * xmax / 100:.5g}" + r") {" + str(c) + "};")
+    for policy in "SAKL":
+        pts = [p for p in data["points"] if p["model"] == model and p["policy"] == policy]
+        if not pts:
+            continue
+        for passed in (False, True):
+            sel = [(p["steps"], p["cny"]) for p in pts if p["passed"] == passed]
+            if not sel:
+                continue
+            mark = FILLED[policy] if passed else OPEN[policy]
+            fill = "" if passed else ",mark options={fill=white}"
+            L.append(r"\addplot[" + COLOR[policy] + r",only marks,mark=" + mark + ",mark size=" + SIZE[policy] +
+                     r",line width=0.55pt" + fill + r",forget plot] coordinates {" + fmt(sel) + "};")
+    if not first:
+        for policy in "SAKL":
+            L.append(r"\addlegendimage{" + COLOR[policy] + r",only marks,mark=" + FILLED[policy] + ",mark size=" + SIZE[policy] + "}")
+            L.append(r"\addlegendentry{" + policy + "}")
+        L.append(r"\addlegendimage{black,only marks,mark=o,mark size=1.35pt,line width=0.55pt}")
+        L.append(r"\addlegendentry{failed}")
+    return L
+
+
+def write_tex(data):
+    L = [BEGIN, "% Generated by figures/cost/build_figure.py; data in the same directory.",
+         r"\begin{figure*}[t]", r"\centering", r"\begin{tikzpicture}[baseline]",
+         r"\begin{groupplot}[group style={group size=2 by 1,horizontal sep=0.45cm},",
+         r"scale only axis,width=0.23\textwidth,height=3.1cm,xmode=log,ymode=log,xmin=10,xmax=2500,ymin=0.05,ymax=100,",
+         r"xtick={10,100,1000},xticklabels={10,100,1000},ytick={0.1,1,10,100},yticklabels={0.1,1,10,100},",
+         r"xlabel={Agent steps},tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},",
+         r"axis line style={black!45},tick style={black!45},grid=major,grid style={black!8},clip=false,",
+         r"legend style={at={(0.03,0.97)},anchor=north west,font=\scriptsize,draw=black!30,inner sep=1pt,row sep=-1pt},",
+         r"legend cell align=left]"]
+    L += scatter_panel(data, "glm", True)
+    L += scatter_panel(data, "deepseek", False)
+    L += [r"\end{groupplot}", r"\end{tikzpicture}\hspace{0.55cm}%", r"\begin{tikzpicture}[baseline]",
+          r"\begin{axis}[scale only axis,width=0.23\textwidth,height=3.1cm,xmode=log,ymode=log,xmin=0.005,xmax=1,ymin=0.3,ymax=12,",
+          r"xtick={0.01,0.03,0.1,0.3,1},xticklabels={1\%,3\%,10\%,30\%,100\%},ytick={0.5,1,2,5,10},yticklabels={0.5,1,2,5,10},",
+          r"xlabel={Cached-input price (share of uncached)},ylabel={Cost per step, L / compaction},",
+          r"tick label style={font=\scriptsize},label style={font=\small},title style={font=\small},title={(c) Repriced per-step cost},",
+          r"axis line style={black!45},tick style={black!45},grid=major,grid style={black!8},clip=false,",
+          r"legend style={at={(0.03,0.97)},anchor=north west,font=\scriptsize,draw=black!30,inner sep=1pt,row sep=-1pt},",
+          r"legend cell align=left]",
+          r"\addplot[black!55,line width=0.5pt,forget plot] coordinates {(0.005,1)(1,1)};"]
+    for model, label in (("glm", "GLM price"), ("deepseek", "DeepSeek price")):
+        r = PRICE[model][1] / PRICE[model][0]
+        L.append(r"\addplot[black!40,dotted,line width=0.6pt,forget plot] coordinates {" + fmt([(r, 0.3), (r, 12)]) + "};")
+        L.append(r"\node[font=\scriptsize,text=black!65,anchor=south west,inner sep=1.5pt] at (axis cs:" + f"{r:.5g},0.3" + r") {" + label + "};")
+    for s in data["sweep"]:
+        style = "solid" if s["model"] == "glm" else "dashed"
+        L.append(r"\addplot[" + COLOR[s["policy"]] + "," + style + r",line width=0.8pt,forget plot] coordinates {" + fmt(s["curve"]) + "};")
+        L.append(r"\addplot[" + COLOR[s["policy"]] + r",only marks,mark=" + FILLED[s["policy"]] + ",mark size=" + SIZE[s["policy"]] +
+                 r",forget plot] coordinates {" + fmt([(s["actual_r"], s["actual_ratio"])]) + "};")
+    L += [r"\addlegendimage{black,line width=0.8pt}", r"\addlegendentry{GLM}",
+          r"\addlegendimage{black,dashed,line width=0.8pt}", r"\addlegendentry{DeepSeek}",
+          r"\end{axis}", r"\end{tikzpicture}",
+          r"\caption{Cost at fixed list prices. (a,b)~Total cost of each run against its agent steps, counting every",
+          r"agent and summarization request; open marks are failed runs, and dashed lines mark constant cost per 100",
+          r"steps in CNY. (c)~Cost per step of L divided by that of S, A, or K after repricing the same requests with",
+          r"only the cached-input price changed, pooling each policy's runs and the L runs on the same tasks; above 1,",
+          r"compaction is cheaper per step. Marks show each provider's actual price.}",
+          r"\label{fig:cost}", r"\end{figure*}", END]
+    tex = "\n".join(L) + "\n"
+    (HERE / "cost-pgfplots.tex").write_text(tex)
+    return tex
+
+
+def paste(tex):
+    main = PAPER / "main.tex"
+    s = main.read_text()
+    if BEGIN not in s or END not in s:
+        raise SystemExit("markers not found in main.tex")
+    a, b = s.index(BEGIN), s.index(END) + len(END) + 1
+    main.write_text(s[:a] + tex + s[b:])
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--paste", action="store_true")
+    args = parser.parse_args()
+    data = collect()
+    (HERE / "cost-data.json").write_text(json.dumps(data, indent=1) + "\n")
+    tex = write_tex(data)
+    if args.paste:
+        paste(tex)
+    for s in data["sweep"]:
+        print(f"{s['model']:8s} {s['policy']} ratio at actual price {s['actual_ratio']:.2f}; crossing r* {data['crossings'][s['model'] + '/' + s['policy']]:.3f}")
+    ys = [p["cny"] for p in data["points"]]
+    xs = [p["steps"] for p in data["points"]]
+    print("ranges: steps", min(xs), max(xs), "cny", round(min(ys), 3), round(max(ys), 2))
+
+
+if __name__ == "__main__":
+    main()

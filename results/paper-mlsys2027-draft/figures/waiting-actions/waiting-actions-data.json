@@ -1,0 +1,621 @@
+{
+ "schema": "waiting-actions/v2",
+ "wait": [
+  {
+   "model": "deepseek",
+   "task": "retro-console-soc",
+   "thr": 32,
+   "rep": "b001",
+   "share": 0.43076407887063417,
+   "hard_ms": 0
+  },
+  {
+   "model": "deepseek",
+   "task": "interleaved-vigenere",
+   "thr": 64,
+   "rep": "b001",
+   "share": 0.07796772528175208,
+   "hard_ms": 0
+  },
+  {
+   "model": "deepseek",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 64,
+   "rep": "b001",
+   "share": 0.09430924360000363,
+   "hard_ms": 0
+  },
+  {
+   "model": "deepseek",
+   "task": "rs-archive-clone",
+   "thr": 64,
+   "rep": "b001",
+   "share": 0.07825917629881829,
+   "hard_ms": 0
+  },
+  {
+   "model": "deepseek",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 128,
+   "rep": "b001",
+   "share": 0.008819472778037385,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 32,
+   "rep": "b001",
+   "share": 0.032686719574325535,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 32,
+   "rep": "b002",
+   "share": 0.05667749911348809,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 32,
+   "rep": "b003",
+   "share": 0.03843140775802401,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 32,
+   "rep": "b001",
+   "share": 0.07832484443618544,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 32,
+   "rep": "b002",
+   "share": 0.03273047380089804,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 32,
+   "rep": "b003",
+   "share": 0.034273953356530454,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 32,
+   "rep": "b001",
+   "share": 0.021942893258964025,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 32,
+   "rep": "b002",
+   "share": 0.07188938844363228,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 32,
+   "rep": "b003",
+   "share": 0.04800054028043932,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 32,
+   "rep": "b001",
+   "share": 0.10782777597928132,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 32,
+   "rep": "b002",
+   "share": 0.13048888868423233,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 32,
+   "rep": "b003",
+   "share": 0.12349925740555623,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 32,
+   "rep": "b001",
+   "share": 0.11646315684374907,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 32,
+   "rep": "b002",
+   "share": 0.132661963987377,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 32,
+   "rep": "b003",
+   "share": 0.14003122452029332,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 64,
+   "rep": "b001",
+   "share": 0.04287727917964702,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 64,
+   "rep": "b002",
+   "share": 0.04427192112844058,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 64,
+   "rep": "b003",
+   "share": 0.038378817521636764,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 64,
+   "rep": "b001",
+   "share": 0.02507224481841432,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 64,
+   "rep": "b002",
+   "share": 0.026764948686895777,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 64,
+   "rep": "b003",
+   "share": 0.023387776384594754,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 64,
+   "rep": "b001",
+   "share": 0.020796094678541006,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 64,
+   "rep": "b002",
+   "share": 0.009032561555148165,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 64,
+   "rep": "b003",
+   "share": 0.018418201842916728,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 64,
+   "rep": "b001",
+   "share": 0.058150259897305163,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 64,
+   "rep": "b002",
+   "share": 0.081745360444444,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 64,
+   "rep": "b003",
+   "share": 0.04597716576337184,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 64,
+   "rep": "b001",
+   "share": 0.04899252971473542,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 64,
+   "rep": "b002",
+   "share": 0.03261088171899564,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 64,
+   "rep": "b003",
+   "share": 0.039886024377380036,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 128,
+   "rep": "b001",
+   "share": 0.029112155664127323,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 128,
+   "rep": "b002",
+   "share": 0.02739516280120762,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "coq-block-bound",
+   "thr": 128,
+   "rep": "b003",
+   "share": 0.01964152038268984,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 128,
+   "rep": "b001",
+   "share": 0.0052098894493483785,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 128,
+   "rep": "b002",
+   "share": 0.0,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "interleaved-vigenere",
+   "thr": 128,
+   "rep": "b003",
+   "share": 0.0,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 128,
+   "rep": "b001",
+   "share": 0.0024085562125963226,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 128,
+   "rep": "b002",
+   "share": 0.0018165203049079481,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 128,
+   "rep": "b003",
+   "share": 0.0029825996090369514,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 128,
+   "rep": "b001",
+   "share": 0.023760566128213326,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 128,
+   "rep": "b002",
+   "share": 0.023564658724608917,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "retro-console-soc",
+   "thr": 128,
+   "rep": "b003",
+   "share": 0.023184293434812042,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 128,
+   "rep": "b001",
+   "share": 0.0302049400357646,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 128,
+   "rep": "b002",
+   "share": 0.029656116005253225,
+   "hard_ms": 0
+  },
+  {
+   "model": "glm",
+   "task": "rs-archive-clone",
+   "thr": 128,
+   "rep": "b003",
+   "share": 0.026115527206039636,
+   "hard_ms": 0
+  }
+ ],
+ "behavior": [
+  {
+   "model": "glm",
+   "policy": "S",
+   "y": 5.0,
+   "label": "GLM S",
+   "runs": 43,
+   "events": 760,
+   "after": 0.679,
+   "usual": 0.164,
+   "per_run": [
+    0.0,
+    0.25,
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333,
+    0.39285714285714285,
+    0.4444444444444444,
+    0.5,
+    0.5,
+    0.5714285714285714,
+    0.6,
+    0.6296296296296297,
+    0.6349206349206349,
+    0.6363636363636364,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.6666666666666666,
+    0.6923076923076923,
+    0.696969696969697,
+    0.7,
+    0.7111111111111111,
+    0.7142857142857143,
+    0.72,
+    0.723404255319149,
+    0.7272727272727273,
+    0.7428571428571429,
+    0.7619047619047619,
+    0.7777777777777778,
+    0.8,
+    0.8125,
+    0.8333333333333334,
+    0.8421052631578947,
+    0.8461538461538461,
+    0.8461538461538461,
+    0.8518518518518519,
+    0.9,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  {
+   "model": "glm",
+   "policy": "A",
+   "y": 4.0,
+   "label": "GLM A",
+   "runs": 45,
+   "events": 1004,
+   "after": 0.262,
+   "usual": 0.155,
+   "per_run": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.06521739130434782,
+    0.08888888888888889,
+    0.1,
+    0.10256410256410256,
+    0.1111111111111111,
+    0.1111111111111111,
+    0.125,
+    0.13333333333333333,
+    0.14285714285714285,
+    0.15,
+    0.16666666666666666,
+    0.20833333333333334,
+    0.2682926829268293,
+    0.27906976744186046,
+    0.3076923076923077,
+    0.3225806451612903,
+    0.3333333333333333,
+    0.35714285714285715,
+    0.36363636363636365,
+    0.3684210526315789,
+    0.37142857142857144,
+    0.38461538461538464,
+    0.4,
+    0.40476190476190477,
+    0.42857142857142855,
+    0.44166666666666665,
+    0.45454545454545453,
+    0.45454545454545453,
+    0.4791666666666667,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.6,
+    0.75
+   ]
+  },
+  {
+   "model": "glm",
+   "policy": "K",
+   "y": 3.0,
+   "label": "GLM K",
+   "runs": 18,
+   "events": 313,
+   "after": 0.184,
+   "usual": 0.152,
+   "per_run": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.06666666666666667,
+    0.08333333333333333,
+    0.08695652173913043,
+    0.16666666666666666,
+    0.18333333333333332,
+    0.2,
+    0.2,
+    0.21052631578947367,
+    0.2638888888888889,
+    0.3333333333333333,
+    0.3333333333333333,
+    0.36363636363636365,
+    0.4,
+    0.42857142857142855
+   ]
+  },
+  {
+   "model": "deepseek",
+   "policy": "S",
+   "y": 1.6,
+   "label": "DeepSeek S",
+   "runs": 5,
+   "events": 455,
+   "after": 0.849,
+   "usual": 0.172,
+   "per_run": [
+    0.47761194029850745,
+    0.8536585365853658,
+    0.9423076923076923,
+    0.9708333333333333,
+    1.0
+   ]
+  },
+  {
+   "model": "deepseek",
+   "policy": "A",
+   "y": 0.6,
+   "label": "DeepSeek A",
+   "runs": 5,
+   "events": 450,
+   "after": 0.378,
+   "usual": 0.279,
+   "per_run": [
+    0.06666666666666667,
+    0.3106796116504854,
+    0.41830065359477125,
+    0.4444444444444444,
+    0.65
+   ]
+  }
+ ],
+ "branch": {
+  "deepseek": {
+   "sources": 6,
+   "K": [
+    -60.76,
+    -52.08
+   ],
+   "cont": [
+    -9.38,
+    -8.33
+   ],
+   "bare": [
+    -4.17,
+    -2.08
+   ]
+  },
+  "glm": {
+   "sources": 14,
+   "points": 54,
+   "K": [
+    -45.535714285714285,
+    -33.92857142857143
+   ],
+   "cont": [
+    -5.9523809523809526,
+    -0.5952380952380955
+   ],
+   "bare": [
+    -2.3809523809523814,
+    2.083333333333333
+   ]
+  }
+ },
+ "notes": {
+  "wait": "ordinary summary waits / native foreground time, S runs in the 2026-10-03 23:08 snapshot",
+  "behavior": "explicit-read (inspect_only) share; first accepted step of each summary generation vs steps at position 4 or later; runs weighted equally",
+  "branch": "same-state branches (DeepSeek; GLM replication on second-repetition S runs); bounds over unclassified first actions, not sampling intervals"
+ }
+}

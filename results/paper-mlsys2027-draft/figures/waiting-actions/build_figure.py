@@ -1,0 +1,171 @@
+"""Section 4 figure: waiting share, first action after a switch, and branch effects; no provider calls.
+
+Run from the repository root:
+  python3 results/paper-mlsys2027-draft/figures/waiting-actions/build_figure.py [--paste]
+Inputs are the saved analysis outputs that the section's numbers come from:
+  (a) prelim-numbers-20261003/wait-metrics.json from wait_metrics.py (ordinary waits / foreground time, S runs;
+      identical to the 2026-10-03 review file review-wait-metrics-20261003.json for the snapshot),
+  (b) post-switch-behavior-20261004/post-switch-behavior.json (explicit-read share of first actions),
+  (c) claude-cross-annotation-20261003/score-output.txt (DeepSeek branch contrasts, three-annotator rule) and
+      monitoring/glm-b002-branch-replication-20261003/formal-analysis-observation-20261005.json (GLM replication,
+      primary three-annotator variant).
+--paste replaces the generated block in main.tex so the manuscript stays self-contained.
+"""
+import argparse
+import json
+import re
+import statistics as st
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+PAPER = HERE.parents[1]
+ROOT = HERE.parents[3]
+DIAG = ROOT / "results/harness-diagnosis-20260927"
+WAIT = DIAG / "prelim-numbers-20261003/wait-metrics.json"
+BEHAVIOR = DIAG / "post-switch-behavior-20261004/post-switch-behavior.json"
+BRANCH = DIAG / "claude-cross-annotation-20261003/score-output.txt"
+GLM_BRANCH = ROOT / "monitoring/glm-b002-branch-replication-20261003/formal-analysis-observation-20261005.json"
+COLOR = dict(S="polS", A="polA", K="polK", L="polL")
+MARK = dict(S="*", A="square*", K="triangle*")
+OPEN = dict(S="o", A="square", K="triangle")
+ROWS = [("glm", "S", 5.0, "GLM S"), ("glm", "A", 4.0, "GLM A"), ("glm", "K", 3.0, "GLM K"),
+        ("deepseek", "S", 1.6, "DeepSeek S"), ("deepseek", "A", 0.6, "DeepSeek A")]
+BRANCH_ROWS = [("glm", "K", 5.5, "GLM K", "polK"), ("glm", "cont", 4.7, "GLM S-cont", "polS"),
+               ("glm", "bare", 3.9, "GLM S-bare", "polS"), ("deepseek", "K", 2.7, "DeepSeek K", "polK"),
+               ("deepseek", "cont", 1.9, "DeepSeek S-cont", "polS"), ("deepseek", "bare", 1.1, "DeepSeek S-bare", "polS")]
+BEGIN, END = "% BEGIN generated waiting-actions figure", "% END generated waiting-actions figure"
+
+
+def jitter(i, n, width):
+    return 0.0 if n == 1 else -width + 2 * width * i / (n - 1)
+
+
+def collect():
+    wait = json.loads(WAIT.read_text())
+    runs = []
+    for r in wait["rows"]:
+        runs.append(dict(model=r["model"], task=r["task"], thr=r["thr"], rep=r["rep"],
+                         share=r["waits"]["ordinary"]["duration_ms_known_sum"] / r["foreground"]["duration_ms_known_sum"],
+                         hard_ms=r["waits"]["hard"]["duration_ms_known_sum"]))
+    behavior = json.loads(BEHAVIOR.read_text())
+    rows = []
+    for model, policy, y, label in ROWS:
+        t = behavior["table"][f"{model}/{policy}/all"]
+        per_run = sorted(r["measures"]["step1_inspect_only"] for r in behavior["runs"]
+                         if r["model"] == model and r["policy"] == policy and r["measures"].get("step1_inspect_only") is not None)
+        rows.append(dict(model=model, policy=policy, y=y, label=label, runs=t["runs"], events=t["events"],
+                         after=t["step1_inspect_only"], usual=t["base_inspect_only"], per_run=per_run))
+    line = next(l for l in BRANCH.read_text().splitlines() if l.startswith("3-annotator agreement only") and " deepseek " in l)
+    bound = lambda key: [float(x) for x in re.search(key + r" \[([-+\d.]+), ([-+\d.]+)\]", line).groups()]
+    branch = dict(deepseek=dict(sources=int(re.search(r"sources (\d+)", line).group(1)),
+                                K=bound("K-S"), cont=bound("cont-S"), bare=bound("bare-S")))
+    obs = json.loads(GLM_BRANCH.read_text())
+    eff = obs["effects"][obs["primary_variant"]]
+    glm = lambda key: [100 * eff[key]["inspection_probability"][end] for end in ("lower", "upper")]
+    branch["glm"] = dict(sources=eff["K-S"]["inspection_probability"]["contributing_sources"], points=obs["selected_points"],
+                         K=glm("K-S"), cont=glm("continue-S"), bare=glm("nohint-S"))
+    return dict(schema="waiting-actions/v2", wait=runs, behavior=rows, branch=branch,
+                notes=dict(wait="ordinary summary waits / native foreground time, S runs in the 2026-10-03 23:08 snapshot",
+                           behavior="explicit-read (inspect_only) share; first accepted step of each summary generation vs "
+                                    "steps at position 4 or later; runs weighted equally",
+                           branch="same-state branches (DeepSeek; GLM replication on second-repetition S runs); bounds "
+                                  "over unclassified first actions, not sampling intervals"))
+
+
+def fmt(points):
+    return " ".join(f"({x:.4g},{y:.4g})" for x, y in points)
+
+
+def write_tex(data):
+    L = [BEGIN, "% Generated by figures/waiting-actions/build_figure.py; data in the same directory.",
+         r"\begin{figure*}[t]", r"\centering", r"\begin{tikzpicture}",
+         r"\begin{groupplot}[group style={group size=3 by 1,horizontal sep=2.25cm},",
+         r"scale only axis,height=2.9cm,tick label style={font=\scriptsize},label style={font=\small},",
+         r"axis line style={black!45},tick style={black!45},title style={font=\small},clip=false]"]
+    # (a) waiting share of S runs, by threshold
+    L += [r"\nextgroupplot[width=0.19\textwidth,xmin=0.5,xmax=3.5,xtick={1,2,3},xticklabels={32K,64K,128K},",
+          r"xlabel={Threshold},ymode=log,ymin=0.15,ymax=60,ytick={0.3,1,3,10,30},yticklabels={0.3\%,1\%,3\%,10\%,30\%},",
+          r"ylabel={Run time spent waiting},ymajorgrids,grid style={black!8},title={(a) Waiting for summaries}]",
+          r"\addplot[black!45,dashed,line width=0.5pt,forget plot] coordinates {(0.5,10)(3.5,10)};"]
+    for model, mark, opts in (("glm", "*", "mark size=1.25pt"), ("deepseek", "diamond", "mark size=2.1pt,line width=0.6pt,mark options={fill=white}")):
+        pts = []
+        for i, thr in enumerate((32, 64, 128), start=1):
+            xs = sorted(r["share"] * 100 for r in data["wait"] if r["model"] == model and r["thr"] == thr)
+            pts += [(i + (jitter(j, len(xs), 0.22) if model == "glm" else 0.0), v) for j, v in enumerate(xs)]
+        pts = [(x, y) for x, y in pts if y > 0]  # a run with no summary has no wait and no place on a log axis
+        L.append(r"\addplot[polS,only marks,mark=" + mark + "," + opts + ",forget plot] coordinates {" + fmt(pts) + "};")
+    for i, thr in enumerate((32, 64, 128), start=1):
+        m = st.median(r["share"] * 100 for r in data["wait"] if r["model"] == "glm" and r["thr"] == thr)
+        L.append(r"\addplot[black,line width=0.9pt,forget plot] coordinates {" + fmt([(i - 0.3, m), (i + 0.3, m)]) + "};")
+    outlier = max(data["wait"], key=lambda r: r["share"])
+    L.append(r"\node[font=\scriptsize,anchor=west] at (axis cs:1.12," + f"{outlier['share'] * 100:.4g}" + r") {Retro32};")
+    # (b) explicit reads among first actions: other steps vs right after a switch
+    L += [r"\nextgroupplot[width=0.25\textwidth,xmin=0,xmax=100,xtick={0,25,50,75,100},",
+          r"xlabel={First actions that are explicit reads (\%)},ymin=0.1,ymax=5.6,",
+          r"ytick={" + ",".join(f"{r['y']}" for r in data["behavior"]) + "},yticklabels={" +
+          ",".join(r["label"] for r in data["behavior"]) + "},",
+          r"xmajorgrids,grid style={black!8},title={(b) First action after a switch}]",
+          r"\addplot[black!30,line width=0.4pt,forget plot] coordinates {(0,2.3)(100,2.3)};"]
+    for r in data["behavior"]:
+        c, y = COLOR[r["policy"]], r["y"]
+        dots = [(100 * v, y + 0.32 + jitter(j, len(r["per_run"]), 0.07)) for j, v in enumerate(r["per_run"])]
+        L.append(r"\addplot[" + c + r",only marks,mark=*,mark size=0.55pt,opacity=0.45,forget plot] coordinates {" + fmt(dots) + "};")
+        L.append(r"\addplot[" + c + r",line width=0.8pt,forget plot] coordinates {" + fmt([(100 * r["usual"], y), (100 * r["after"], y)]) + "};")
+        L.append(r"\addplot[" + c + r",only marks,mark=" + OPEN[r["policy"]] + r",mark size=1.9pt,line width=0.7pt,mark options={fill=white},forget plot] coordinates {" + fmt([(100 * r["usual"], y)]) + "};")
+        L.append(r"\addplot[" + c + r",only marks,mark=" + MARK[r["policy"]] + r",mark size=1.9pt,forget plot] coordinates {" + fmt([(100 * r["after"], y)]) + "};")
+        if r["policy"] == "S":
+            L.append(r"\node[font=\scriptsize,anchor=north] at (axis cs:" + f"{100 * r['after']:.4g},{y - 0.08}" + r") {" + f"{100 * r['after']:.0f}" + r"\%};")
+    # (c) same-state branches: change in the read-only share against S, GLM replication above DeepSeek
+    L += [r"\nextgroupplot[width=0.19\textwidth,xmin=-70,xmax=10,xtick={-60,-40,-20,0},",
+          r"xlabel={Change from S (points)},ymin=0.6,ymax=6.0,ytick={" + ",".join(f"{r[2]}" for r in BRANCH_ROWS) +
+          "},yticklabels={" + ",".join(r[3] for r in BRANCH_ROWS) + "},",
+          r"xmajorgrids,grid style={black!8},title={(c) Same-state branches}]",
+          r"\addplot[black!45,line width=0.5pt,forget plot] coordinates {(0,0.6)(0,6.0)};",
+          r"\addplot[black!30,line width=0.4pt,forget plot] coordinates {(-70,3.3)(10,3.3)};"]
+    for model, key, y, _, c in BRANCH_ROWS:
+        lo, hi = data["branch"][model][key]
+        L.append(r"\addplot[" + c + r",line width=3.2pt,forget plot] coordinates {" + fmt([(lo, y), (hi, y)]) + "};")
+        where = f"{hi + 2:.4g},{y}" + r") {" if key == "K" else f"{lo - 2:.4g},{y}" + r") {"
+        L.append(r"\node[font=\scriptsize,anchor=" + ("west" if key == "K" else "east") + r"] at (axis cs:" + where +
+                 f"${round(lo):d}$ to ${round(hi):d}$" + "};")
+    L += [r"\end{groupplot}", r"\end{tikzpicture}",
+          r"\caption{Waiting and the first action after a switch. (a)~Share of each S run's foreground time spent",
+          r"waiting for ordinary summaries: dots are GLM runs, diamonds DeepSeek runs, bars GLM medians, and the dashed",
+          r"line marks 10\%; one GLM S128 run ended before its first summary. (b)~Share of first actions that were",
+          r"explicit read commands right after a switch (filled marks; small dots are single runs) and at a run's other",
+          r"steps (open marks, from the fourth step after each switch). (c)~Same-state branches: change in the share",
+          r"of read-only first proposed actions relative to S when the agent keeps the last two steps (K), or when",
+          r"the two notices are removed (S-bare) or replaced with a continue instruction (S-cont); GLM branches come",
+          r"from the replication (Section~\ref{sec:behavior}). Bars span the assignments of unclassified actions,",
+          r"not sampling intervals.}",
+          r"\label{fig:waiting-actions}", r"\end{figure*}", END]
+    tex = "\n".join(L) + "\n"
+    (HERE / "waiting-actions-pgfplots.tex").write_text(tex)
+    return tex
+
+
+def paste(tex):
+    main = PAPER / "main.tex"
+    s = main.read_text()
+    if BEGIN not in s or END not in s:
+        raise SystemExit("markers not found in main.tex")
+    a, b = s.index(BEGIN), s.index(END) + len(END) + 1
+    main.write_text(s[:a] + tex + s[b:])
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--paste", action="store_true")
+    args = parser.parse_args()
+    data = collect()
+    (HERE / "waiting-actions-data.json").write_text(json.dumps(data, indent=1) + "\n")
+    tex = write_tex(data)
+    if args.paste:
+        paste(tex)
+    for r in data["behavior"]:
+        print(f"{r['label']:11s} runs={r['runs']} switches={r['events']} usual={100 * r['usual']:.0f}% after={100 * r['after']:.0f}%")
+    print("branch", data["branch"])
+
+
+if __name__ == "__main__":
+    main()

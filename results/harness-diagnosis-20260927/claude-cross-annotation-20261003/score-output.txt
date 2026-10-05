@@ -1,0 +1,50 @@
+codex semantic               glm      K-S [-49.70, -29.46] | bare-S [-1.19, +2.68] | cont-bare [-5.95, -1.49] | cont-S [-5.36, -0.60] (sources 14)
+codex semantic               deepseek K-S [-60.76, -52.08] | bare-S [-4.17, -2.08] | cont-bare [-6.25, -5.21] | cont-S [-9.38, -8.33] (sources 6)
+codex cautious               glm      K-S [-52.38, -27.68] | bare-S [-8.33, +6.55] | cont-bare [-10.71, +6.55] | cont-S [-9.82, +3.87] (sources 14)
+codex cautious               deepseek K-S [-62.85, -51.04] | bare-S [-4.17, -1.04] | cont-bare [-6.25, -5.21] | cont-S [-9.38, -7.29] (sources 6)
+
+EXECUTION n=141 agreement 0.936 kappa 0.881
+confusion (codex -> claude):
+   read_only    {'read_only': 92, 'side_effect': 0, 'build_test': 0, 'unresolved': 0}
+   side_effect  {'read_only': 0, 'side_effect': 19, 'build_test': 0, 'unresolved': 0}
+   build_test   {'read_only': 0, 'side_effect': 0, 'build_test': 7, 'unresolved': 0}
+   unresolved   {'read_only': 0, 'side_effect': 0, 'build_test': 9, 'unresolved': 14}
+claude counts Counter({'read_only': 92, 'side_effect': 19, 'build_test': 16, 'unresolved': 14})
+disagreements (cid, eid, codex, claude, claude_conf, codex_disputed):
+   ('c011', 'e0121', 'unresolved', 'build_test', 'medium', True)
+   ('c036', 'e0041', 'unresolved', 'build_test', 'medium', True)
+   ('c063', 'e0039', 'unresolved', 'build_test', 'low', True)
+   ('c157', 'e0137', 'unresolved', 'build_test', 'medium', True)
+   ('c167', 'e0107', 'unresolved', 'build_test', 'medium', True)
+   ('c195', 'e0058', 'unresolved', 'build_test', 'medium', True)
+   ('c197', 'e0008', 'unresolved', 'build_test', 'medium', True)
+   ('c201', 'e0109', 'unresolved', 'build_test', 'medium', True)
+   ('c210', 'e0031', 'unresolved', 'build_test', 'medium', True)
+
+RESIDUAL (codex category -> claude subtype):
+   c002 a0283 work -> side_effect high
+   c015 a0668 work -> side_effect high
+   c023 a0646 inspect_only -> read_only high
+   c033 a0148 unknown -> side_effect high
+   c049 a0637 work -> side_effect high
+   c052 a0243 work -> side_effect high
+   c053 a0731 work -> side_effect high
+   c075 a0312 work -> side_effect medium
+   c085 a0624 work -> build_test medium
+   c089 a0340 work -> side_effect medium
+   c094 a0378 work -> side_effect medium
+   c098 a0096 work -> side_effect high
+   c115 a0512 work -> unresolved medium
+   c123 a0589 work -> side_effect high
+   c142 a0635 work -> side_effect high
+   c143 a0438 work -> side_effect medium
+   c179 a0575 work -> side_effect medium
+
+parser_inspect_only: claude agrees 40/40; others: []
+
+parser_work: claude agrees 18/20; others: [('c060', 'unresolved', 'medium'), ('c137', 'unresolved', 'medium')]
+
+claude labels                glm      K-S [-49.70, -44.05] | bare-S [-1.19, +3.57] | cont-bare [-6.85, -2.38] | cont-S [-5.36, -1.49] (sources 14)
+claude labels                deepseek K-S [-60.76, -57.64] | bare-S [-4.17, -2.08] | cont-bare [-6.25, -5.21] | cont-S [-9.38, -8.33] (sources 6)
+3-annotator agreement only   glm      K-S [-49.70, -28.57] | bare-S [-1.19, +3.57] | cont-bare [-6.85, -1.49] | cont-S [-5.36, -0.60] (sources 14)
+3-annotator agreement only   deepseek K-S [-60.76, -52.08] | bare-S [-4.17, -2.08] | cont-bare [-6.25, -5.21] | cont-S [-9.38, -8.33] (sources 6)

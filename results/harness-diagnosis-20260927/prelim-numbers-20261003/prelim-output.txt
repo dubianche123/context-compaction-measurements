@@ -1,0 +1,64 @@
+generated 2026-10-06T03:39 runs 138 Counter({('glm', 'A'): 45, ('glm', 'S'): 45, ('glm', 'K'): 18, ('glm', 'L'): 15, ('deepseek', 'S'): 5, ('deepseek', 'A'): 5, ('deepseek', 'L'): 5})
+
+## 1. Share of elapsed time spent generating summaries (S runs)
+glm S32: n=15 median 7.2% min 2.2% max 13.8%  | Coq1:3.3%, Coq2:5.6%, Coq3:3.8%, Vig1:7.8%, Vig2:3.2%, Vig3:3.4%, MP1:2.2%, MP2:7.2%, MP3:4.8%, Retro1:10.7%, Retro2:13.0%, Retro3:12.3%, RS1:11.6%, RS2:13.1%, RS3:13.8%
+glm S64: n=15 median 3.8% min 0.9% max 8.1%  | Coq1:4.2%, Coq2:4.4%, Coq3:3.8%, Vig1:2.5%, Vig2:2.7%, Vig3:2.3%, MP1:2.1%, MP2:0.9%, MP3:1.8%, Retro1:5.7%, Retro2:8.1%, Retro3:4.5%, RS1:4.9%, RS2:3.2%, RS3:3.9%
+glm S128: n=15 median 2.3% min 0.0% max 3.0%  | Coq1:2.9%, Coq2:2.7%, Coq3:1.9%, Vig1:0.5%, Vig2:0.0%, Vig3:0.0%, MP1:0.2%, MP2:0.2%, MP3:0.3%, Retro1:2.4%, Retro2:2.3%, Retro3:2.3%, RS1:3.0%, RS2:2.9%, RS3:2.6%
+deepseek S32: n=1 median 42.7% min 42.7% max 42.7%  | Retro1:42.7%
+deepseek S64: n=3 median 7.7% min 7.7% max 9.4%  | Vig1:7.7%, MP1:9.4%, RS1:7.7%
+deepseek S128: n=1 median 0.9% min 0.9% max 0.9%  | MP1:0.9%
+summary call duration: see per-model medians below
+
+## 2. Elapsed time across repetitions of the same setting (GLM S/A/K)
+settings with >=2 runs: 36 median max/min ratio 3.2 largest: [(('S', 'interleaved-vigenere', 128), [0.14, 0.47, 1.33]), (('A', 'interleaved-vigenere', 128), [0.91, 6.69, 0.42]), (('A', 'interleaved-vigenere', 64), [8.02, 0.28, 0.19])]
+
+## 3. Official task success (reward=1) by model/policy/threshold
+glm S32: 9/15  by task {'Coq': '2/3', 'Vig': '3/3', 'MP': '3/3', 'Retro': '0/3', 'RS': '1/3'}
+glm S64: 6/15  by task {'Coq': '3/3', 'Vig': '1/3', 'MP': '2/3', 'Retro': '0/3', 'RS': '0/3'}
+glm S128: 7/15  by task {'Coq': '3/3', 'Vig': '2/3', 'MP': '2/3', 'Retro': '0/3', 'RS': '0/3'}
+glm A32: 4/15  by task {'Coq': '2/3', 'Vig': '1/3', 'MP': '1/3', 'Retro': '0/3', 'RS': '0/3'}
+glm A64: 6/15  by task {'Coq': '2/3', 'Vig': '2/3', 'MP': '2/3', 'Retro': '0/3', 'RS': '0/3'}
+glm A128: 8/15  by task {'Coq': '3/3', 'Vig': '2/3', 'MP': '2/3', 'Retro': '1/3', 'RS': '0/3'}
+glm K32: 2/3  by task {'Coq': '2/3'}
+glm K64: 5/15  by task {'Coq': '3/3', 'Vig': '1/3', 'MP': '1/3', 'Retro': '0/3', 'RS': '0/3'}
+glm L: 4/15  by task {'Coq': '3/3', 'Vig': '1/3', 'MP': '0/3', 'Retro': '0/3', 'RS': '0/3'}
+deepseek S32: 0/1  by task {'Retro': '0/1'}
+deepseek S64: 1/3  by task {'Vig': '0/1', 'MP': '1/1', 'RS': '0/1'}
+deepseek S128: 1/1  by task {'MP': '1/1'}
+deepseek A32: 0/1  by task {'Retro': '0/1'}
+deepseek A64: 1/3  by task {'Vig': '0/1', 'MP': '0/1', 'RS': '1/1'}
+deepseek A128: 1/1  by task {'MP': '1/1'}
+deepseek L: 2/5  by task {'Coq': '1/1', 'Vig': '0/1', 'MP': '1/1', 'Retro': '0/1', 'RS': '0/1'}
+GLM complete S/A pairs: 45 both pass 11 S only 11 A only 7 neither 16
+
+## 4. Cost per 100 agent steps (fixed list prices) and summarization share
+glm S32: n=15 CNY/100 steps 0.94  summarization share 17.6%  | repriced at r=0.02: 0.57  | compactions/100 steps 7.23, re-trigger<=1 step 6/444
+glm S64: n=15 CNY/100 steps 1.16  summarization share 8.2%  | repriced at r=0.02: 0.51  | compactions/100 steps 3.34, re-trigger<=1 step 4/245
+glm S128: n=15 CNY/100 steps 1.76  summarization share 3.9%  | repriced at r=0.02: 0.54  | compactions/100 steps 1.48, re-trigger<=1 step 1/71
+glm A32: n=15 CNY/100 steps 1.21  summarization share 21.9%  | repriced at r=0.02: 0.75  | compactions/100 steps 9.15, re-trigger<=1 step 22/696
+glm A64: n=15 CNY/100 steps 1.23  summarization share 6.8%  | repriced at r=0.02: 0.52  | compactions/100 steps 3.37, re-trigger<=1 step 2/239
+glm A128: n=15 CNY/100 steps 1.70  summarization share 2.7%  | repriced at r=0.02: 0.46  | compactions/100 steps 1.26, re-trigger<=1 step 0/71
+glm K32: n=3 CNY/100 steps 1.56  summarization share 16.2%  | repriced at r=0.02: 1.15  | compactions/100 steps 13.74, re-trigger<=1 step 76/151
+glm K64: n=15 CNY/100 steps 1.25  summarization share 6.7%  | repriced at r=0.02: 0.54  | compactions/100 steps 3.85, re-trigger<=1 step 14/162
+glm L: n=15 CNY/100 steps 6.63  summarization share 0.0%  | repriced at r=0.02: 0.85  | compactions/100 steps 0.00, re-trigger<=1 step 0/0
+deepseek S32: n=1 CNY/100 steps 6.08  summarization share 55.3%
+deepseek S64: n=3 CNY/100 steps 3.49  summarization share 13.0%
+deepseek S128: n=1 CNY/100 steps 1.93  summarization share 4.4%
+deepseek A32: n=1 CNY/100 steps 3.79  summarization share 44.9%
+deepseek A64: n=3 CNY/100 steps 4.26  summarization share 13.9%
+deepseek A128: n=1 CNY/100 steps 3.02  summarization share 5.3%
+deepseek L: n=5 CNY/100 steps 3.31  summarization share 0.0%
+
+GLM per task, CNY per 100 steps at r=0.29 / r=0.02:
+  Coq L 5.90/0.72 | S128 1.91/0.72 | A128 1.77/0.56 | S64 1.42/0.78 | A64 1.28/0.57 | S32 1.57/1.21 | A32 1.22/0.79
+  Vig L 4.42/0.76 | S128 1.55/0.47 | A128 1.57/0.43 | S64 1.06/0.45 | A64 1.29/0.59 | S32 0.80/0.47 | A32 0.95/0.55
+  MP L 7.16/0.89 | S128 1.68/0.41 | A128 1.72/0.39 | S64 1.14/0.45 | A64 1.16/0.45 | S32 0.94/0.57 | A32 0.91/0.51
+  Retro L 7.16/0.85 | S128 1.73/0.50 | A128 1.71/0.41 | S64 1.03/0.38 | A64 1.14/0.42 | S32 0.83/0.47 | A32 1.42/0.91
+  RS L 7.55/0.98 | S128 1.71/0.51 | A128 1.72/0.50 | S64 1.19/0.54 | A64 1.30/0.57 | S32 0.85/0.48 | A32 1.07/0.64
+
+## 5. Kept steps (K): median kept tokens per switch
+K32: median of per-run medians 16662 tokens, range 2704-18519
+K64: median of per-run medians 5912 tokens, range 3158-14870
+
+## 6. Final answer with a background command still running
+runs 11 passed 9 by model/policy {'glm A': 3, 'glm S': 4, 'glm K': 2, 'deepseek S': 1, 'deepseek A': 1} by task {'MP': 9, 'Coq': 1, 'Retro': 1}

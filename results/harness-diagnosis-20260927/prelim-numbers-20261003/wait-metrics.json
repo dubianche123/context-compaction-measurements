@@ -1,0 +1,3042 @@
+{
+ "schema": "wait-metrics/v1",
+ "source_snapshot": "results/harness-diagnosis-20260927/prelim-numbers-20261003/runs.json",
+ "scope": "S runs of the snapshot; 20 rows reused from results/harness-diagnosis-20260927/prelim-numbers-20261003/wait-metrics.json because their L0 is archived",
+ "definitions": {
+  "foreground": "native turn/state terminal durations; excludes host assessment and cleanup",
+  "wait": "native agent/compaction-await durations, ordinary and hard separately; contained in foreground",
+  "summary_request_wall": "physical compaction request wall durations of these S runs"
+ },
+ "groups": [
+  {
+   "model": "deepseek",
+   "threshold": 32,
+   "n": 1,
+   "known": 1,
+   "ordinary_wait_fraction_median": 0.43076407887063417,
+   "ordinary_wait_fraction_max": 0.43076407887063417,
+   "all_wait_fraction_median": 0.43076407887063417,
+   "all_wait_fraction_max": 0.43076407887063417,
+   "hard_wait_seconds": 0.0,
+   "unknown_wait_events": 0
+  },
+  {
+   "model": "deepseek",
+   "threshold": 64,
+   "n": 3,
+   "known": 3,
+   "ordinary_wait_fraction_median": 0.07825917629881829,
+   "ordinary_wait_fraction_max": 0.09430924360000363,
+   "all_wait_fraction_median": 0.07825917629881829,
+   "all_wait_fraction_max": 0.09430924360000363,
+   "hard_wait_seconds": 0.0,
+   "unknown_wait_events": 0
+  },
+  {
+   "model": "deepseek",
+   "threshold": 128,
+   "n": 1,
+   "known": 1,
+   "ordinary_wait_fraction_median": 0.008819472778037385,
+   "ordinary_wait_fraction_max": 0.008819472778037385,
+   "all_wait_fraction_median": 0.008819472778037385,
+   "all_wait_fraction_max": 0.008819472778037385,
+   "hard_wait_seconds": 0.0,
+   "unknown_wait_events": 0
+  },
+  {
+   "model": "glm",
+   "threshold": 32,
+   "n": 15,
+   "known": 15,
+   "ordinary_wait_fraction_median": 0.07188938844363228,
+   "ordinary_wait_fraction_max": 0.14003122452029332,
+   "all_wait_fraction_median": 0.07188938844363228,
+   "all_wait_fraction_max": 0.14003122452029332,
+   "hard_wait_seconds": 0.0,
+   "unknown_wait_events": 0
+  },
+  {
+   "model": "glm",
+   "threshold": 64,
+   "n": 15,
+   "known": 15,
+   "ordinary_wait_fraction_median": 0.038378817521636764,
+   "ordinary_wait_fraction_max": 0.081745360444444,
+   "all_wait_fraction_median": 0.038378817521636764,
+   "all_wait_fraction_max": 0.081745360444444,
+   "hard_wait_seconds": 0.0,
+   "unknown_wait_events": 0
+  },
+  {
+   "model": "glm",
+   "threshold": 128,
+   "n": 15,
+   "known": 15,
+   "ordinary_wait_fraction_median": 0.023184293434812042,
+   "ordinary_wait_fraction_max": 0.0302049400357646,
+   "all_wait_fraction_median": 0.023184293434812042,
+   "all_wait_fraction_max": 0.0302049400357646,
+   "hard_wait_seconds": 0.0,
+   "unknown_wait_events": 0
+  }
+ ],
+ "summary_request_wall_by_model": {
+  "deepseek": {
+   "n": 559,
+   "median": 32.430333957774565
+  },
+  "glm": {
+   "n": 761,
+   "median": 20.649279000004753
+  }
+ },
+ "rows": [
+  {
+   "model": "deepseek",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 32,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-retro-console-soc-b001-s32/retro-console-soc__24PMJRB/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-retro-console-soc-b001-s32/retro-console-soc__24PMJRB/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 28440598,
+    "duration_ms_known_sum": 28440598,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 310,
+     "observed_count": 310,
+     "duration_ms_known_sum": 12251188,
+     "duration_ms": 12251188,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 310
+     },
+     "adopted_count": 240
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.43076407887063417,
+   "all_wait_fraction": 0.43076407887063417,
+   "native_elapsed_seconds": 28610.159169166116,
+   "summary_physical_request_count": 342,
+   "summary_physical_request_wall_seconds": 12212.132675001398,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 36.27962691592984
+  },
+  {
+   "model": "deepseek",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 64,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": "NonZeroAgentExitCodeError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s64/interleaved-vigenere__Qh2iHRX/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s64/interleaved-vigenere__Qh2iHRX/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 16886654,
+    "duration_ms_known_sum": 16886654,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 67,
+     "observed_count": 67,
+     "duration_ms_known_sum": 1316614,
+     "duration_ms": 1316614,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 67
+     },
+     "adopted_count": 67
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.07796772528175208,
+   "all_wait_fraction": 0.07796772528175208,
+   "native_elapsed_seconds": 16930.692210249836,
+   "summary_physical_request_count": 69,
+   "summary_physical_request_wall_seconds": 1310.079057201976,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 17.679423000197858
+  },
+  {
+   "model": "deepseek",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 64,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": "NonZeroAgentExitCodeError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s64/mp-checkpoint-consolidation__fP6XQyg/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s64/mp-checkpoint-consolidation__fP6XQyg/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 9241724,
+    "duration_ms_known_sum": 9241724,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 41,
+     "observed_count": 41,
+     "duration_ms_known_sum": 871580,
+     "duration_ms": 871580,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 41
+     },
+     "adopted_count": 41
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.09430924360000363,
+   "all_wait_fraction": 0.09430924360000363,
+   "native_elapsed_seconds": 9272.279805833008,
+   "summary_physical_request_count": 41,
+   "summary_physical_request_wall_seconds": 868.0876421686262,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 20.389680791879073
+  },
+  {
+   "model": "deepseek",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 64,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-rs-archive-clone-b001-s64/rs-archive-clone__uM37Lcn/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-rs-archive-clone-b001-s64/rs-archive-clone__uM37Lcn/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 26401249,
+    "duration_ms_known_sum": 26401249,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 104,
+     "observed_count": 104,
+     "duration_ms_known_sum": 2066140,
+     "duration_ms": 2066140,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 104
+     },
+     "adopted_count": 104
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.07825917629881829,
+   "all_wait_fraction": 0.07825917629881829,
+   "native_elapsed_seconds": 26579.728763167048,
+   "summary_physical_request_count": 104,
+   "summary_physical_request_wall_seconds": 2051.589955042349,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 19.68106335401535
+  },
+  {
+   "model": "deepseek",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 128,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s128/mp-checkpoint-consolidation__gwi45k7/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s128/mp-checkpoint-consolidation__gwi45k7/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 5127404,
+    "duration_ms_known_sum": 5127404,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 3,
+     "observed_count": 3,
+     "duration_ms_known_sum": 45221,
+     "duration_ms": 45221,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 3
+     },
+     "adopted_count": 3
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.008819472778037385,
+   "all_wait_fraction": 0.008819472778037385,
+   "native_elapsed_seconds": 5139.695920708124,
+   "summary_physical_request_count": 3,
+   "summary_physical_request_wall_seconds": 44.65393000096083,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 15.499283749843016
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 32,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": "NonZeroAgentExitCodeError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s32/coq-block-bound__FLDJf2f/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s32/coq-block-bound__FLDJf2f/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 4707447,
+    "duration_ms_known_sum": 4707447,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 6,
+     "observed_count": 6,
+     "duration_ms_known_sum": 153871,
+     "duration_ms": 153871,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 6
+     },
+     "adopted_count": 6
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.032686719574325535,
+   "all_wait_fraction": 0.032686719574325535,
+   "native_elapsed_seconds": 4708.661635834025,
+   "summary_physical_request_count": 6,
+   "summary_physical_request_wall_seconds": 153.31288912589662,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 25.986643166979775
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 32,
+   "rep": "b002",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s32/coq-block-bound__9vQA9PK/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s32/coq-block-bound__9vQA9PK/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 4117260,
+    "duration_ms_known_sum": 4117260,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 13,
+     "observed_count": 13,
+     "duration_ms_known_sum": 233356,
+     "duration_ms": 233356,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 13
+     },
+     "adopted_count": 13
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.05667749911348809,
+   "all_wait_fraction": 0.05667749911348809,
+   "native_elapsed_seconds": 4142.137168042129,
+   "summary_physical_request_count": 13,
+   "summary_physical_request_wall_seconds": 232.64192104223184,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 19.432984000071883
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 32,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s32/coq-block-bound__vzCXvbG/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s32/coq-block-bound__vzCXvbG/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 9534103,
+    "duration_ms_known_sum": 9534103,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 21,
+     "observed_count": 21,
+     "duration_ms_known_sum": 366409,
+     "duration_ms": 366409,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 21
+     },
+     "adopted_count": 21
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.03843140775802401,
+   "all_wait_fraction": 0.03843140775802401,
+   "native_elapsed_seconds": 9596.403860957827,
+   "summary_physical_request_count": 21,
+   "summary_physical_request_wall_seconds": 364.12933524977416,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 18.781295499997213
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 32,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s32/interleaved-vigenere__uoHf3h2/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s32/interleaved-vigenere__uoHf3h2/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 1684357,
+    "duration_ms_known_sum": 1684357,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 9,
+     "observed_count": 9,
+     "duration_ms_known_sum": 131927,
+     "duration_ms": 131927,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 9
+     },
+     "adopted_count": 9
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.07832484443618544,
+   "all_wait_fraction": 0.07832484443618544,
+   "native_elapsed_seconds": 1689.2268296249676,
+   "summary_physical_request_count": 9,
+   "summary_physical_request_wall_seconds": 131.57958583394065,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 14.080029500182718
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 32,
+   "rep": "b002",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s32/interleaved-vigenere__wrFCJFh/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s32/interleaved-vigenere__wrFCJFh/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 1623319,
+    "duration_ms_known_sum": 1623319,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 4,
+     "observed_count": 4,
+     "duration_ms_known_sum": 53132,
+     "duration_ms": 53132,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 4
+     },
+     "adopted_count": 4
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.03273047380089804,
+   "all_wait_fraction": 0.03273047380089804,
+   "native_elapsed_seconds": 1628.4999562080484,
+   "summary_physical_request_count": 4,
+   "summary_physical_request_wall_seconds": 52.86666120868176,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 12.898457687464543
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 32,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s32/interleaved-vigenere__UeR9gER/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s32/interleaved-vigenere__UeR9gER/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 730263,
+    "duration_ms_known_sum": 730263,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 2,
+     "observed_count": 2,
+     "duration_ms_known_sum": 25029,
+     "duration_ms": 25029,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 2
+     },
+     "adopted_count": 2
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.034273953356530454,
+   "all_wait_fraction": 0.034273953356530454,
+   "native_elapsed_seconds": 735.2875956671778,
+   "summary_physical_request_count": 2,
+   "summary_physical_request_wall_seconds": 24.751638625049964,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 12.375819312524982
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 32,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": "NonZeroAgentExitCodeError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s32/mp-checkpoint-consolidation__yUgr4HS/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s32/mp-checkpoint-consolidation__yUgr4HS/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 23745638,
+    "duration_ms_known_sum": 23745638,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 27,
+     "observed_count": 27,
+     "duration_ms_known_sum": 521048,
+     "duration_ms": 521048,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 27
+     },
+     "adopted_count": 27
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.021942893258964025,
+   "all_wait_fraction": 0.021942893258964025,
+   "native_elapsed_seconds": 23758.043552207993,
+   "summary_physical_request_count": 27,
+   "summary_physical_request_wall_seconds": 519.413007667521,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 18.265074166003615
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 32,
+   "rep": "b002",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s32/mp-checkpoint-consolidation__3SDyz8J/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s32/mp-checkpoint-consolidation__3SDyz8J/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 11227109,
+    "duration_ms_known_sum": 11227109,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 38,
+     "observed_count": 38,
+     "duration_ms_known_sum": 807110,
+     "duration_ms": 807110,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 38
+     },
+     "adopted_count": 38
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.07188938844363228,
+   "all_wait_fraction": 0.07188938844363228,
+   "native_elapsed_seconds": 11244.219314167043,
+   "summary_physical_request_count": 38,
+   "summary_physical_request_wall_seconds": 805.382420288166,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 21.110521749942563
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 32,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s32/mp-checkpoint-consolidation__n2Ci9EJ/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s32/mp-checkpoint-consolidation__n2Ci9EJ/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 26178997,
+    "duration_ms_known_sum": 26178997,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 55,
+     "observed_count": 55,
+     "duration_ms_known_sum": 1256606,
+     "duration_ms": 1256606,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 55
+     },
+     "adopted_count": 55
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.04800054028043932,
+   "all_wait_fraction": 0.04800054028043932,
+   "native_elapsed_seconds": 26204.09265658306,
+   "summary_physical_request_count": 55,
+   "summary_physical_request_wall_seconds": 1253.4516587941907,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 22.418369333958253
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 32,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s32/retro-console-soc__SWGG3xT/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s32/retro-console-soc__SWGG3xT/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 16371700,
+    "duration_ms_known_sum": 16371700,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 81,
+     "observed_count": 81,
+     "duration_ms_known_sum": 1765324,
+     "duration_ms": 1765324,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 81
+     },
+     "adopted_count": 81
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.10782777597928132,
+   "all_wait_fraction": 0.10782777597928132,
+   "native_elapsed_seconds": 16461.9260306668,
+   "summary_physical_request_count": 81,
+   "summary_physical_request_wall_seconds": 1760.0956412493251,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 20.860622375039384
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 32,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s32/retro-console-soc__rvSCrZd/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s32/retro-console-soc__rvSCrZd/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 7817976,
+    "duration_ms_known_sum": 7817976,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 47,
+     "observed_count": 47,
+     "duration_ms_known_sum": 1020159,
+     "duration_ms": 1020159,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 47
+     },
+     "adopted_count": 47
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.13048888868423233,
+   "all_wait_fraction": 0.13048888868423233,
+   "native_elapsed_seconds": 7854.080678208964,
+   "summary_physical_request_count": 47,
+   "summary_physical_request_wall_seconds": 1018.0229936265387,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 21.668259375030175
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 32,
+   "rep": "b003",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s32/retro-console-soc__GAy8zjZ/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s32/retro-console-soc__GAy8zjZ/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 6903499,
+    "duration_ms_known_sum": 6903499,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 45,
+     "observed_count": 45,
+     "duration_ms_known_sum": 852577,
+     "duration_ms": 852577,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 45
+     },
+     "adopted_count": 45
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.12349925740555623,
+   "all_wait_fraction": 0.12349925740555623,
+   "native_elapsed_seconds": 6930.5032164158765,
+   "summary_physical_request_count": 45,
+   "summary_physical_request_wall_seconds": 849.4356150806416,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 19.05700149992481
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 32,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s32/rs-archive-clone__ZkyziWT/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s32/rs-archive-clone__ZkyziWT/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 7051011,
+    "duration_ms_known_sum": 7051011,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 33,
+     "observed_count": 33,
+     "duration_ms_known_sum": 821183,
+     "duration_ms": 821183,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 33
+     },
+     "adopted_count": 33
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.11646315684374907,
+   "all_wait_fraction": 0.11646315684374907,
+   "native_elapsed_seconds": 7069.86657070904,
+   "summary_physical_request_count": 33,
+   "summary_physical_request_wall_seconds": 819.7956904566381,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 25.058095958083868
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 32,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s32/rs-archive-clone__nXamhEY/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s32/rs-archive-clone__nXamhEY/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 5494740,
+    "duration_ms_known_sum": 5494740,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 35,
+     "observed_count": 35,
+     "duration_ms_known_sum": 728943,
+     "duration_ms": 728943,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 35
+     },
+     "adopted_count": 35
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.132661963987377,
+   "all_wait_fraction": 0.132661963987377,
+   "native_elapsed_seconds": 5556.406749125104,
+   "summary_physical_request_count": 36,
+   "summary_physical_request_wall_seconds": 725.5113540480379,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 18.52743091713637
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 32,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s32/rs-archive-clone__FkUnBNw/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s32/rs-archive-clone__FkUnBNw/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 4577172,
+    "duration_ms_known_sum": 4577172,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 28,
+     "observed_count": 28,
+     "duration_ms_known_sum": 640947,
+     "duration_ms": 640947,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 28
+     },
+     "adopted_count": 28
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.14003122452029332,
+   "all_wait_fraction": 0.14003122452029332,
+   "native_elapsed_seconds": 4636.760404416826,
+   "summary_physical_request_count": 28,
+   "summary_physical_request_wall_seconds": 638.5300074159168,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 22.192169082933106
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 64,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s64/coq-block-bound__rBUMTgT/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s64/coq-block-bound__rBUMTgT/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 5010136,
+    "duration_ms_known_sum": 5010136,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 11,
+     "observed_count": 11,
+     "duration_ms_known_sum": 214821,
+     "duration_ms": 214821,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 11
+     },
+     "adopted_count": 11
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.04287727917964702,
+   "all_wait_fraction": 0.04287727917964702,
+   "native_elapsed_seconds": 5042.031431833049,
+   "summary_physical_request_count": 11,
+   "summary_physical_request_wall_seconds": 213.97566812485456,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 21.31544995889999
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 64,
+   "rep": "b002",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s64/coq-block-bound__VcojrmD/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s64/coq-block-bound__VcojrmD/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 7907337,
+    "duration_ms_known_sum": 7907337,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 16,
+     "observed_count": 16,
+     "duration_ms_known_sum": 350073,
+     "duration_ms": 350073,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 16
+     },
+     "adopted_count": 16
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.04427192112844058,
+   "all_wait_fraction": 0.04427192112844058,
+   "native_elapsed_seconds": 7977.462625624845,
+   "summary_physical_request_count": 16,
+   "summary_physical_request_wall_seconds": 348.24698528973386,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 21.153537562582642
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 64,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s64/coq-block-bound__ZSQsvhN/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s64/coq-block-bound__ZSQsvhN/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 6031400,
+    "duration_ms_known_sum": 6031400,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 10,
+     "observed_count": 10,
+     "duration_ms_known_sum": 231478,
+     "duration_ms": 231478,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 10
+     },
+     "adopted_count": 10
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.038378817521636764,
+   "all_wait_fraction": 0.038378817521636764,
+   "native_elapsed_seconds": 6083.801398582989,
+   "summary_physical_request_count": 10,
+   "summary_physical_request_wall_seconds": 230.3261071681045,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 20.67417510400992
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 64,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s64/interleaved-vigenere__uxk4cwi/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s64/interleaved-vigenere__uxk4cwi/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 3165971,
+    "duration_ms_known_sum": 3165971,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 5,
+     "observed_count": 5,
+     "duration_ms_known_sum": 79378,
+     "duration_ms": 79378,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 5
+     },
+     "adopted_count": 5
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.02507224481841432,
+   "all_wait_fraction": 0.02507224481841432,
+   "native_elapsed_seconds": 3178.090971458936,
+   "summary_physical_request_count": 5,
+   "summary_physical_request_wall_seconds": 79.02677796012722,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 13.659865041961893
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 64,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s64/interleaved-vigenere__GVNWXGR/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s64/interleaved-vigenere__GVNWXGR/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 1670431,
+    "duration_ms_known_sum": 1670431,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 3,
+     "observed_count": 3,
+     "duration_ms_known_sum": 44709,
+     "duration_ms": 44709,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 3
+     },
+     "adopted_count": 3
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.026764948686895777,
+   "all_wait_fraction": 0.026764948686895777,
+   "native_elapsed_seconds": 1674.2175062079914,
+   "summary_physical_request_count": 3,
+   "summary_physical_request_wall_seconds": 44.46117487503216,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 12.996612625196576
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 64,
+   "rep": "b003",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s64/interleaved-vigenere__Jkurdet/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s64/interleaved-vigenere__Jkurdet/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 2203587,
+    "duration_ms_known_sum": 2203587,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 4,
+     "observed_count": 4,
+     "duration_ms_known_sum": 51537,
+     "duration_ms": 51537,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 4
+     },
+     "adopted_count": 4
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.023387776384594754,
+   "all_wait_fraction": 0.023387776384594754,
+   "native_elapsed_seconds": 2217.8264325000346,
+   "summary_physical_request_count": 4,
+   "summary_physical_request_wall_seconds": 51.05558741791174,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 11.73014116694685
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 64,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": "NonZeroAgentExitCodeError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s64/mp-checkpoint-consolidation__HkE4Jtj/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s64/mp-checkpoint-consolidation__HkE4Jtj/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 5583356,
+    "duration_ms_known_sum": 5583356,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 6,
+     "observed_count": 6,
+     "duration_ms_known_sum": 116112,
+     "duration_ms": 116112,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 6
+     },
+     "adopted_count": 6
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.020796094678541006,
+   "all_wait_fraction": 0.020796094678541006,
+   "native_elapsed_seconds": 5592.885152166011,
+   "summary_physical_request_count": 6,
+   "summary_physical_request_wall_seconds": 115.62304858211428,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 19.547624708036892
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 64,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": "AgentTimeoutError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s64/mp-checkpoint-consolidation__zdv4A58/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s64/mp-checkpoint-consolidation__zdv4A58/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 28808882,
+    "duration_ms_known_sum": 28808882,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 13,
+     "observed_count": 13,
+     "duration_ms_known_sum": 260218,
+     "duration_ms": 260218,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 13
+     },
+     "adopted_count": 13
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.009032561555148165,
+   "all_wait_fraction": 0.009032561555148165,
+   "native_elapsed_seconds": 28887.650157582946,
+   "summary_physical_request_count": 13,
+   "summary_physical_request_wall_seconds": 258.97090479172766,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 19.187448916956782
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 64,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": "NonZeroAgentExitCodeError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s64/mp-checkpoint-consolidation__pfFMP5N/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s64/mp-checkpoint-consolidation__pfFMP5N/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 23254876,
+    "duration_ms_known_sum": 23254876,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 20,
+     "observed_count": 20,
+     "duration_ms_known_sum": 428313,
+     "duration_ms": 428313,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 20
+     },
+     "adopted_count": 20
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.018418201842916728,
+   "all_wait_fraction": 0.018418201842916728,
+   "native_elapsed_seconds": 23318.590904042125,
+   "summary_physical_request_count": 20,
+   "summary_physical_request_wall_seconds": 426.43570041819476,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 22.01516052056104
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 64,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s64/retro-console-soc__wewiZAT/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s64/retro-console-soc__wewiZAT/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 3227621,
+    "duration_ms_known_sum": 3227621,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 9,
+     "observed_count": 9,
+     "duration_ms_known_sum": 187687,
+     "duration_ms": 187687,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 9
+     },
+     "adopted_count": 9
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.058150259897305163,
+   "all_wait_fraction": 0.058150259897305163,
+   "native_elapsed_seconds": 3251.494642375037,
+   "summary_physical_request_count": 9,
+   "summary_physical_request_wall_seconds": 186.77746516559273,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 17.7503231249284
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 64,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s64/retro-console-soc__cweEu5h/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s64/retro-console-soc__cweEu5h/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 7023787,
+    "duration_ms_known_sum": 7023787,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 25,
+     "observed_count": 25,
+     "duration_ms_known_sum": 574162,
+     "duration_ms": 574162,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 25
+     },
+     "adopted_count": 25
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.081745360444444,
+   "all_wait_fraction": 0.081745360444444,
+   "native_elapsed_seconds": 7073.373484707903,
+   "summary_physical_request_count": 25,
+   "summary_physical_request_wall_seconds": 572.0813501677476,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 22.021657333010808
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 64,
+   "rep": "b003",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s64/retro-console-soc__YuguGj7/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s64/retro-console-soc__YuguGj7/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 10878139,
+    "duration_ms_known_sum": 10878139,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 27,
+     "observed_count": 27,
+     "duration_ms_known_sum": 500146,
+     "duration_ms": 500146,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 27
+     },
+     "adopted_count": 27
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.04597716576337184,
+   "all_wait_fraction": 0.04597716576337184,
+   "native_elapsed_seconds": 10942.796384625137,
+   "summary_physical_request_count": 27,
+   "summary_physical_request_wall_seconds": 497.0271918314975,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 18.210294041084126
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 64,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": "AgentTimeoutError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s64/rs-archive-clone__AhEjN8R/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s64/rs-archive-clone__AhEjN8R/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 28800105,
+    "duration_ms_known_sum": 28800105,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 63,
+     "observed_count": 63,
+     "duration_ms_known_sum": 1410990,
+     "duration_ms": 1410990,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 63
+     },
+     "adopted_count": 63
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.04899252971473542,
+   "all_wait_fraction": 0.04899252971473542,
+   "native_elapsed_seconds": 28911.7381048752,
+   "summary_physical_request_count": 63,
+   "summary_physical_request_wall_seconds": 1405.012344869785,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 21.883203208213672
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 64,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s64/rs-archive-clone__Q3KeHJJ/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s64/rs-archive-clone__Q3KeHJJ/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 6926277,
+    "duration_ms_known_sum": 6926277,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 12,
+     "observed_count": 12,
+     "duration_ms_known_sum": 225872,
+     "duration_ms": 225872,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 12
+     },
+     "adopted_count": 12
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.03261088171899564,
+   "all_wait_fraction": 0.03261088171899564,
+   "native_elapsed_seconds": 6939.068038749974,
+   "summary_physical_request_count": 12,
+   "summary_physical_request_wall_seconds": 225.0163299574051,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 19.520403229165822
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 64,
+   "rep": "b003",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s64/rs-archive-clone__mKT7KeP/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s64/rs-archive-clone__mKT7KeP/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 13226688,
+    "duration_ms_known_sum": 13226688,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 21,
+     "observed_count": 21,
+     "duration_ms_known_sum": 527560,
+     "duration_ms": 527560,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 21
+     },
+     "adopted_count": 21
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.039886024377380036,
+   "all_wait_fraction": 0.039886024377380036,
+   "native_elapsed_seconds": 13290.352876459016,
+   "summary_physical_request_count": 21,
+   "summary_physical_request_wall_seconds": 524.5836165838409,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 25.883559165988117
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 128,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s128/coq-block-bound__hRKe9Rp/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s128/coq-block-bound__hRKe9Rp/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 5182440,
+    "duration_ms_known_sum": 5182440,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 6,
+     "observed_count": 6,
+     "duration_ms_known_sum": 150872,
+     "duration_ms": 150872,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 6
+     },
+     "adopted_count": 6
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.029112155664127323,
+   "all_wait_fraction": 0.029112155664127323,
+   "native_elapsed_seconds": 5231.26820833399,
+   "summary_physical_request_count": 6,
+   "summary_physical_request_wall_seconds": 149.8618056238629,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 24.275174520444125
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 128,
+   "rep": "b002",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s128/coq-block-bound__mspqVVE/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s128/coq-block-bound__mspqVVE/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 11187632,
+    "duration_ms_known_sum": 11187632,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 13,
+     "observed_count": 13,
+     "duration_ms_known_sum": 306487,
+     "duration_ms": 306487,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 13
+     },
+     "adopted_count": 13
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.02739516280120762,
+   "all_wait_fraction": 0.02739516280120762,
+   "native_elapsed_seconds": 11234.795572499977,
+   "summary_physical_request_count": 13,
+   "summary_physical_request_wall_seconds": 304.173482041806,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 21.331134249921888
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "coq-block-bound",
+   "thr": 128,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s128/coq-block-bound__o8jN4L3/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s128/coq-block-bound__o8jN4L3/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 3303563,
+    "duration_ms_known_sum": 3303563,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 3,
+     "observed_count": 3,
+     "duration_ms_known_sum": 64887,
+     "duration_ms": 64887,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 3
+     },
+     "adopted_count": 3
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.01964152038268984,
+   "all_wait_fraction": 0.01964152038268984,
+   "native_elapsed_seconds": 3374.8038136661053,
+   "summary_physical_request_count": 3,
+   "summary_physical_request_wall_seconds": 63.95084604108706,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 20.517925458028913
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 128,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s128/interleaved-vigenere__gPwmqMS/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s128/interleaved-vigenere__gPwmqMS/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 4796263,
+    "duration_ms_known_sum": 4796263,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 1,
+     "observed_count": 1,
+     "duration_ms_known_sum": 24988,
+     "duration_ms": 24988,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 1
+     },
+     "adopted_count": 1
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.0052098894493483785,
+   "all_wait_fraction": 0.0052098894493483785,
+   "native_elapsed_seconds": 4802.006749290973,
+   "summary_physical_request_count": 1,
+   "summary_physical_request_wall_seconds": 24.826633709017187,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 24.826633709017187
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 128,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": "NonZeroAgentExitCodeError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s128/interleaved-vigenere__tATNAGi/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s128/interleaved-vigenere__tATNAGi/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 488738,
+    "duration_ms_known_sum": 488738,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.0,
+   "all_wait_fraction": 0.0,
+   "native_elapsed_seconds": 489.7660432080738,
+   "summary_physical_request_count": 0,
+   "summary_physical_request_wall_seconds": 0,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": null
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "interleaved-vigenere",
+   "thr": 128,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s128/interleaved-vigenere__XkQiFKS/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s128/interleaved-vigenere__XkQiFKS/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 1692100,
+    "duration_ms_known_sum": 1692100,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.0,
+   "all_wait_fraction": 0.0,
+   "native_elapsed_seconds": 1697.8190189579036,
+   "summary_physical_request_count": 0,
+   "summary_physical_request_wall_seconds": 0,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": null
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 128,
+   "rep": "b001",
+   "reward": 1.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s128/mp-checkpoint-consolidation__cKs8aNW/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s128/mp-checkpoint-consolidation__cKs8aNW/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 7553903,
+    "duration_ms_known_sum": 7553903,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 1,
+     "observed_count": 1,
+     "duration_ms_known_sum": 18194,
+     "duration_ms": 18194,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 1
+     },
+     "adopted_count": 1
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.0024085562125963226,
+   "all_wait_fraction": 0.0024085562125963226,
+   "native_elapsed_seconds": 7561.617273249896,
+   "summary_physical_request_count": 1,
+   "summary_physical_request_wall_seconds": 18.00131579209119,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 18.00131579209119
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 128,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": "AgentTimeoutError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s128/mp-checkpoint-consolidation__cp9CTZo/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s128/mp-checkpoint-consolidation__cp9CTZo/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 28803972,
+    "duration_ms_known_sum": 28803972,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 3,
+     "observed_count": 3,
+     "duration_ms_known_sum": 52323,
+     "duration_ms": 52323,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 3
+     },
+     "adopted_count": 3
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.0018165203049079481,
+   "all_wait_fraction": 0.0018165203049079481,
+   "native_elapsed_seconds": 28824.17587395897,
+   "summary_physical_request_count": 3,
+   "summary_physical_request_wall_seconds": 51.48925154074095,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 16.512247540988028
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "mp-checkpoint-consolidation",
+   "thr": 128,
+   "rep": "b003",
+   "reward": 1.0,
+   "exception": "NonZeroAgentExitCodeError",
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s128/mp-checkpoint-consolidation__txohdkm/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s128/mp-checkpoint-consolidation__txohdkm/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 18222694,
+    "duration_ms_known_sum": 18222694,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 3,
+     "observed_count": 3,
+     "duration_ms_known_sum": 54351,
+     "duration_ms": 54351,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 3
+     },
+     "adopted_count": 3
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.0029825996090369514,
+   "all_wait_fraction": 0.0029825996090369514,
+   "native_elapsed_seconds": 18242.316740792012,
+   "summary_physical_request_count": 3,
+   "summary_physical_request_wall_seconds": 53.57656037528068,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 17.411358083132654
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 128,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s128/retro-console-soc__B9qaoMt/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s128/retro-console-soc__B9qaoMt/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 3403328,
+    "duration_ms_known_sum": 3403328,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 4,
+     "observed_count": 4,
+     "duration_ms_known_sum": 80865,
+     "duration_ms": 80865,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 4
+     },
+     "adopted_count": 4
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.023760566128213326,
+   "all_wait_fraction": 0.023760566128213326,
+   "native_elapsed_seconds": 3415.7141101669986,
+   "summary_physical_request_count": 4,
+   "summary_physical_request_wall_seconds": 80.31147429184057,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 19.823320208466612
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 128,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s128/retro-console-soc__eQ2EKA3/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s128/retro-console-soc__eQ2EKA3/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 18905260,
+    "duration_ms_known_sum": 18905260,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 15,
+     "observed_count": 15,
+     "duration_ms_known_sum": 445496,
+     "duration_ms": 445496,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 15
+     },
+     "adopted_count": 15
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.023564658724608917,
+   "all_wait_fraction": 0.023564658724608917,
+   "native_elapsed_seconds": 19029.356141209137,
+   "summary_physical_request_count": 15,
+   "summary_physical_request_wall_seconds": 441.04241179465316,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 28.631650124909356
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "retro-console-soc",
+   "thr": 128,
+   "rep": "b003",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s128/retro-console-soc__s8ULf3P/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s128/retro-console-soc__s8ULf3P/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 5389899,
+    "duration_ms_known_sum": 5389899,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 6,
+     "observed_count": 6,
+     "duration_ms_known_sum": 124961,
+     "duration_ms": 124961,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 6
+     },
+     "adopted_count": 6
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.023184293434812042,
+   "all_wait_fraction": 0.023184293434812042,
+   "native_elapsed_seconds": 5435.498453291133,
+   "summary_physical_request_count": 6,
+   "summary_physical_request_wall_seconds": 123.18156837392598,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 19.589035479002632
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 128,
+   "rep": "b001",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s128/rs-archive-clone__aKgqtTj/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s128/rs-archive-clone__aKgqtTj/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 2477310,
+    "duration_ms_known_sum": 2477310,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 3,
+     "observed_count": 3,
+     "duration_ms_known_sum": 74827,
+     "duration_ms": 74827,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 3
+     },
+     "adopted_count": 3
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.0302049400357646,
+   "all_wait_fraction": 0.0302049400357646,
+   "native_elapsed_seconds": 2489.3749210829847,
+   "summary_physical_request_count": 3,
+   "summary_physical_request_wall_seconds": 74.22012933436781,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 26.451857708161697
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 128,
+   "rep": "b002",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s128/rs-archive-clone__L4iqRDp/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s128/rs-archive-clone__L4iqRDp/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 6484396,
+    "duration_ms_known_sum": 6484396,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 7,
+     "observed_count": 7,
+     "duration_ms_known_sum": 192302,
+     "duration_ms": 192302,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 7
+     },
+     "adopted_count": 7
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.029656116005253225,
+   "all_wait_fraction": 0.029656116005253225,
+   "native_elapsed_seconds": 6508.643339457922,
+   "summary_physical_request_count": 7,
+   "summary_physical_request_wall_seconds": 191.37367108324543,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 27.83220541710034
+  },
+  {
+   "model": "glm",
+   "policy": "S",
+   "task": "rs-archive-clone",
+   "thr": 128,
+   "rep": "b003",
+   "reward": 0.0,
+   "exception": null,
+   "native_result": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s128/rs-archive-clone__KiHMsmF/axiom-private/result.json",
+   "l0_path": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s128/rs-archive-clone__KiHMsmF/axiom-private/l0/session.jsonl",
+   "l0_truncated": false,
+   "foreground": {
+    "duration_ms": 4932085,
+    "duration_ms_known_sum": 4932085,
+    "unknown_turns": 0,
+    "overlapping_turn_brackets": false,
+    "observed_turn_brackets": 1,
+    "scope": "new native turn/state terminal durations; excludes host assessment and cleanup"
+   },
+   "waits": {
+    "ordinary": {
+     "count": 6,
+     "observed_count": 6,
+     "duration_ms_known_sum": 128804,
+     "duration_ms": 128804,
+     "unknown_duration_count": 0,
+     "status_counts": {
+      "completed": 6
+     },
+     "adopted_count": 6
+    },
+    "hard": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "unknown": {
+     "count": 0,
+     "observed_count": 0,
+     "duration_ms_known_sum": 0,
+     "duration_ms": 0,
+     "unknown_duration_count": 0,
+     "status_counts": {},
+     "adopted_count": 0
+    },
+    "scope": "recorded wait intervals are contained in foreground turns; do not add to foreground duration"
+   },
+   "ordinary_wait_fraction": 0.026115527206039636,
+   "all_wait_fraction": 0.026115527206039636,
+   "native_elapsed_seconds": 4975.002303750021,
+   "summary_physical_request_count": 6,
+   "summary_physical_request_wall_seconds": 127.04859899962321,
+   "summary_physical_request_wall_missing": 0,
+   "summary_physical_request_wall_median": 20.283360853907652
+  }
+ ]
+}

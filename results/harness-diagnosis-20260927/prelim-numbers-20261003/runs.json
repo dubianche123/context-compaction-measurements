@@ -1,0 +1,4424 @@
+[
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 8428.087782708928,
+  "W": 456.466228205245,
+  "steps": 563,
+  "comps": 18,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 517839,
+    "H": 18232192,
+    "O": 579643,
+    "n": 563
+   },
+   "compaction": {
+    "U": 29116,
+    "H": 962752,
+    "O": 67578,
+    "n": 18
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-a64/rs-archive-clone__SDRU6gC/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-a64/rs-archive-clone__SDRU6gC/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28886.58958483301,
+  "W": 226.63094508112408,
+  "steps": 630,
+  "comps": 9,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 533708,
+    "H": 35400320,
+    "O": 714794,
+    "n": 630
+   },
+   "compaction": {
+    "U": 7891,
+    "H": 990784,
+    "O": 32929,
+    "n": 9
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-a128/rs-archive-clone__89EU2Bx/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-a128/rs-archive-clone__89EU2Bx/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 26204.09265658306,
+  "W": 1253.4516587941907,
+  "steps": 573,
+  "comps": 55,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 942560,
+    "H": 8737024,
+    "O": 646938,
+    "n": 573
+   },
+   "compaction": {
+    "U": 112573,
+    "H": 1535808,
+    "O": 283782,
+    "n": 55
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s32/mp-checkpoint-consolidation__n2Ci9EJ/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s32/mp-checkpoint-consolidation__n2Ci9EJ/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 11244.219314167043,
+  "W": 805.382420288166,
+  "steps": 409,
+  "comps": 38,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 702312,
+    "H": 6068864,
+    "O": 430982,
+    "n": 409
+   },
+   "compaction": {
+    "U": 78133,
+    "H": 1055552,
+    "O": 162615,
+    "n": 38
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s32/mp-checkpoint-consolidation__3SDyz8J/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s32/mp-checkpoint-consolidation__3SDyz8J/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 5042.031431833049,
+  "W": 213.97566812485456,
+  "steps": 370,
+  "comps": 11,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 224990,
+    "H": 10361088,
+    "O": 578908,
+    "n": 370
+   },
+   "compaction": {
+    "U": 349614,
+    "H": 397440,
+    "O": 43241,
+    "n": 11
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s64/coq-block-bound__rBUMTgT/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s64/coq-block-bound__rBUMTgT/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 3043.5488719581626,
+  "W": 47.15390729228966,
+  "steps": 225,
+  "comps": 3,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 203977,
+    "H": 12280064,
+    "O": 255738,
+    "n": 225
+   },
+   "compaction": {
+    "U": 2296,
+    "H": 353472,
+    "O": 6876,
+    "n": 3
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-a128/retro-console-soc__udysZkK/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-a128/retro-console-soc__udysZkK/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 3178.090971458936,
+  "W": 79.02677796012722,
+  "steps": 203,
+  "comps": 5,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 162832,
+    "H": 6039872,
+    "O": 182760,
+    "n": 203
+   },
+   "compaction": {
+    "U": 18415,
+    "H": 273536,
+    "O": 13581,
+    "n": 5
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s64/interleaved-vigenere__uxk4cwi/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s64/interleaved-vigenere__uxk4cwi/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 16461.9260306668,
+  "W": 1760.0956412493251,
+  "steps": 1135,
+  "comps": 81,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 1512302,
+    "H": 17461504,
+    "O": 872377,
+    "n": 1135
+   },
+   "compaction": {
+    "U": 370157,
+    "H": 2099648,
+    "O": 345270,
+    "n": 81
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s32/retro-console-soc__SWGG3xT/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s32/retro-console-soc__SWGG3xT/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 3272.4779416669626,
+  "W": 17.039153415942565,
+  "steps": 115,
+  "comps": 1,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 84546,
+    "H": 4708032,
+    "O": 97255,
+    "n": 115
+   },
+   "compaction": {
+    "U": 697,
+    "H": 111552,
+    "O": 2411,
+    "n": 1
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-a128/interleaved-vigenere__yqZKpMU/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-a128/interleaved-vigenere__yqZKpMU/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4339.805502750212,
+  "W": 347.2576804147102,
+  "steps": 293,
+  "comps": 12,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 335971,
+    "H": 9121664,
+    "O": 430654,
+    "n": 293
+   },
+   "compaction": {
+    "U": 26967,
+    "H": 617920,
+    "O": 51804,
+    "n": 12
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-a64/rs-archive-clone__8rqmxFF/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-a64/rs-archive-clone__8rqmxFF/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 22385.26188062504,
+  "W": 35.224166583037004,
+  "steps": 241,
+  "comps": 2,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 152441,
+    "H": 14163008,
+    "O": 159963,
+    "n": 241
+   },
+   "compaction": {
+    "U": 1716,
+    "H": 222656,
+    "O": 6225,
+    "n": 2
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": true,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-a128/mp-checkpoint-consolidation__Dyh2iTo/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-a128/mp-checkpoint-consolidation__Dyh2iTo/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 17193.405465374934,
+  "W": 1102.5339797134511,
+  "steps": 1146,
+  "comps": 46,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 1295677,
+    "H": 37505408,
+    "O": 1681872,
+    "n": 1146
+   },
+   "compaction": {
+    "U": 69779,
+    "H": 2495424,
+    "O": 204027,
+    "n": 46
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-a64/rs-archive-clone__aqHaHoR/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-a64/rs-archive-clone__aqHaHoR/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 6930.5032164158765,
+  "W": 849.4356150806416,
+  "steps": 606,
+  "comps": 45,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 814906,
+    "H": 9172928,
+    "O": 595065,
+    "n": 606
+   },
+   "compaction": {
+    "U": 302413,
+    "H": 1167872,
+    "O": 186279,
+    "n": 45
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s32/retro-console-soc__GAy8zjZ/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s32/retro-console-soc__GAy8zjZ/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 2217.8264325000346,
+  "W": 51.05558741791174,
+  "steps": 143,
+  "comps": 4,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 97778,
+    "H": 3526592,
+    "O": 170654,
+    "n": 143
+   },
+   "compaction": {
+    "U": 7052,
+    "H": 226880,
+    "O": 9046,
+    "n": 4
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s64/interleaved-vigenere__Jkurdet/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s64/interleaved-vigenere__Jkurdet/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 6083.801398582989,
+  "W": 230.3261071681045,
+  "steps": 289,
+  "comps": 10,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 261218,
+    "H": 7937216,
+    "O": 703930,
+    "n": 290
+   },
+   "compaction": {
+    "U": 184570,
+    "H": 558336,
+    "O": 45595,
+    "n": 10
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s64/coq-block-bound__ZSQsvhN/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s64/coq-block-bound__ZSQsvhN/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 23758.043552207993,
+  "W": 519.413007667521,
+  "steps": 367,
+  "comps": 27,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 480661,
+    "H": 5611328,
+    "O": 290361,
+    "n": 367
+   },
+   "compaction": {
+    "U": 59049,
+    "H": 755264,
+    "O": 96716,
+    "n": 27
+   }
+  },
+  "unknown_cache": 3,
+  "left_running": true,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s32/mp-checkpoint-consolidation__yUgr4HS/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s32/mp-checkpoint-consolidation__yUgr4HS/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 7977.462625624845,
+  "W": 348.24698528973386,
+  "steps": 420,
+  "comps": 16,
+  "retrig": 2,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 367322,
+    "H": 12216896,
+    "O": 883513,
+    "n": 421
+   },
+   "compaction": {
+    "U": 331924,
+    "H": 713280,
+    "O": 77890,
+    "n": 16
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s64/coq-block-bound__VcojrmD/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s64/coq-block-bound__VcojrmD/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 1674.2175062079914,
+  "W": 44.46117487503216,
+  "steps": 99,
+  "comps": 3,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 66719,
+    "H": 2373056,
+    "O": 165071,
+    "n": 99
+   },
+   "compaction": {
+    "U": 3121,
+    "H": 196864,
+    "O": 7351,
+    "n": 3
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s64/interleaved-vigenere__GVNWXGR/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s64/interleaved-vigenere__GVNWXGR/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 7854.080678208964,
+  "W": 1018.0229936265387,
+  "steps": 761,
+  "comps": 47,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 884096,
+    "H": 11587648,
+    "O": 569868,
+    "n": 761
+   },
+   "compaction": {
+    "U": 200748,
+    "H": 1299712,
+    "O": 179147,
+    "n": 47
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s32/retro-console-soc__rvSCrZd/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s32/retro-console-soc__rvSCrZd/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 2900.3850419169758,
+  "W": 166.66803766833618,
+  "steps": 297,
+  "comps": 7,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 216523,
+    "H": 9434176,
+    "O": 319209,
+    "n": 297
+   },
+   "compaction": {
+    "U": 14977,
+    "H": 415744,
+    "O": 29915,
+    "n": 7
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-a64/coq-block-bound__vPkkV8D/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-a64/coq-block-bound__vPkkV8D/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28890.881729542045,
+  "W": 948.9188942492474,
+  "steps": 524,
+  "comps": 42,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 827546,
+    "H": 9053056,
+    "O": 452681,
+    "n": 524
+   },
+   "compaction": {
+    "U": 112420,
+    "H": 1011072,
+    "O": 166279,
+    "n": 43
+   }
+  },
+  "unknown_cache": 3,
+  "left_running": false,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-a32/mp-checkpoint-consolidation__cDsR944/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-a32/mp-checkpoint-consolidation__cDsR944/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 8564.146851333091,
+  "W": 1699.1350863319822,
+  "steps": 930,
+  "comps": 70,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 1551374,
+    "H": 16866560,
+    "O": 654297,
+    "n": 930
+   },
+   "compaction": {
+    "U": 244024,
+    "H": 1633472,
+    "O": 316271,
+    "n": 70
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-a32/retro-console-soc__cgMeTea/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-a32/retro-console-soc__cgMeTea/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28887.514545874903,
+  "W": 629.4960342911072,
+  "steps": 791,
+  "comps": 31,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 896551,
+    "H": 24784128,
+    "O": 1189200,
+    "n": 791
+   },
+   "compaction": {
+    "U": 153633,
+    "H": 1601408,
+    "O": 111603,
+    "n": 31
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-a64/interleaved-vigenere__hz5oSxK/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-a64/interleaved-vigenere__hz5oSxK/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 13290.352876459016,
+  "W": 524.5836165838409,
+  "steps": 609,
+  "comps": 21,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 578641,
+    "H": 16288000,
+    "O": 726222,
+    "n": 609
+   },
+   "compaction": {
+    "U": 39050,
+    "H": 1191232,
+    "O": 82110,
+    "n": 21
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s64/rs-archive-clone__mKT7KeP/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s64/rs-archive-clone__mKT7KeP/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 6939.068038749974,
+  "W": 225.0163299574051,
+  "steps": 326,
+  "comps": 12,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 308764,
+    "H": 9121344,
+    "O": 417635,
+    "n": 326
+   },
+   "compaction": {
+    "U": 20369,
+    "H": 685568,
+    "O": 36470,
+    "n": 12
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s64/rs-archive-clone__Q3KeHJJ/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s64/rs-archive-clone__Q3KeHJJ/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 5199.176399375079,
+  "W": 115.91343845776282,
+  "steps": 440,
+  "comps": 5,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 462897,
+    "H": 25047552,
+    "O": 505009,
+    "n": 440
+   },
+   "compaction": {
+    "U": 3999,
+    "H": 594752,
+    "O": 18115,
+    "n": 5
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-a128/coq-block-bound__zsN37aM/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-a128/coq-block-bound__zsN37aM/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28856.273575457977,
+  "W": 947.2077723736875,
+  "steps": 523,
+  "comps": 48,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 903877,
+    "H": 8479040,
+    "O": 501541,
+    "n": 523
+   },
+   "compaction": {
+    "U": 73744,
+    "H": 1179840,
+    "O": 165899,
+    "n": 48
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-a32/mp-checkpoint-consolidation__jtxbvrc/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-a32/mp-checkpoint-consolidation__jtxbvrc/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28870.202834624797,
+  "W": 81.97640458284877,
+  "steps": 333,
+  "comps": 4,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 260345,
+    "H": 22126528,
+    "O": 260301,
+    "n": 333
+   },
+   "compaction": {
+    "U": 3291,
+    "H": 444992,
+    "O": 11296,
+    "n": 4
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-a128/mp-checkpoint-consolidation__xaPxBdN/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-a128/mp-checkpoint-consolidation__xaPxBdN/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 5222.1769064590335,
+  "W": 244.47919045947492,
+  "steps": 334,
+  "comps": 11,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 506433,
+    "H": 10470848,
+    "O": 604780,
+    "n": 334
+   },
+   "compaction": {
+    "U": 60470,
+    "H": 711744,
+    "O": 42199,
+    "n": 11
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-a64/coq-block-bound__TerKMaS/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-a64/coq-block-bound__TerKMaS/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 8902.111706333002,
+  "W": 213.28227329044603,
+  "steps": 173,
+  "comps": 12,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 241562,
+    "H": 2860864,
+    "O": 144889,
+    "n": 173
+   },
+   "compaction": {
+    "U": 21854,
+    "H": 322560,
+    "O": 38111,
+    "n": 12
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": true,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a32/mp-checkpoint-consolidation__UAj2GWY/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a32/mp-checkpoint-consolidation__UAj2GWY/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 28744.82349620806,
+  "W": 12884.778186829994,
+  "steps": 1922,
+  "comps": 240,
+  "retrig": 12,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 6194940,
+    "H": 46767616,
+    "O": 2835421,
+    "n": 1923
+   },
+   "compaction": {
+    "U": 3031463,
+    "H": 5466112,
+    "O": 2744631,
+    "n": 276
+   }
+  },
+  "unknown_cache": 3,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-a32/retro-console-soc__YCyN7Uo/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-a32/retro-console-soc__YCyN7Uo/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 24083.14400658384,
+  "W": 185.57455983408727,
+  "steps": 541,
+  "comps": 7,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 383501,
+    "H": 30343232,
+    "O": 548835,
+    "n": 541
+   },
+   "compaction": {
+    "U": 5457,
+    "H": 787136,
+    "O": 20826,
+    "n": 7
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-a128/interleaved-vigenere__jj35CR3/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-a128/interleaved-vigenere__jj35CR3/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1011.6689616250806,
+  "W": 25.05815412499942,
+  "steps": 83,
+  "comps": 2,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 78452,
+    "H": 2342912,
+    "O": 88284,
+    "n": 83
+   },
+   "compaction": {
+    "U": 3684,
+    "H": 110464,
+    "O": 3217,
+    "n": 2
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-a64/interleaved-vigenere__dFC7RYX/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-a64/interleaved-vigenere__dFC7RYX/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 5235.503326124977,
+  "W": 119.16864012391306,
+  "steps": 491,
+  "comps": 6,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 534046,
+    "H": 30016064,
+    "O": 372034,
+    "n": 491
+   },
+   "compaction": {
+    "U": 5990,
+    "H": 667776,
+    "O": 19250,
+    "n": 6
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-a128/retro-console-soc__DSKskVk/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-a128/retro-console-soc__DSKskVk/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28911.7381048752,
+  "W": 1405.012344869785,
+  "steps": 1653,
+  "comps": 63,
+  "retrig": 2,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 1741670,
+    "H": 47761600,
+    "O": 2186801,
+    "n": 1653
+   },
+   "compaction": {
+    "U": 246225,
+    "H": 3420672,
+    "O": 292985,
+    "n": 63
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s64/rs-archive-clone__AhEjN8R/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s64/rs-archive-clone__AhEjN8R/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 692.8059310421813,
+  "W": 11.652808583108708,
+  "steps": 55,
+  "comps": 1,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 43238,
+    "H": 1414016,
+    "O": 65420,
+    "n": 55
+   },
+   "compaction": {
+    "U": 991,
+    "H": 58368,
+    "O": 1504,
+    "n": 1
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-a64/interleaved-vigenere__j6mEmxA/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-a64/interleaved-vigenere__j6mEmxA/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 5047.671001374954,
+  "W": 843.5161189564969,
+  "steps": 555,
+  "comps": 41,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 919303,
+    "H": 9742656,
+    "O": 422063,
+    "n": 555
+   },
+   "compaction": {
+    "U": 107876,
+    "H": 1011648,
+    "O": 151470,
+    "n": 41
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-a32/retro-console-soc__fejVKjR/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-a32/retro-console-soc__fejVKjR/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 5209.136550333817,
+  "W": 306.6000388325192,
+  "steps": 431,
+  "comps": 13,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 499896,
+    "H": 13484288,
+    "O": 527782,
+    "n": 431
+   },
+   "compaction": {
+    "U": 30350,
+    "H": 757632,
+    "O": 57838,
+    "n": 13
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-a64/coq-block-bound__PqWU8kN/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-a64/coq-block-bound__PqWU8kN/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 5435.498453291133,
+  "W": 123.18156837392598,
+  "steps": 398,
+  "comps": 6,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 476021,
+    "H": 22524224,
+    "O": 331275,
+    "n": 398
+   },
+   "compaction": {
+    "U": 8919,
+    "H": 667392,
+    "O": 20405,
+    "n": 6
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s128/retro-console-soc__s8ULf3P/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s128/retro-console-soc__s8ULf3P/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 489.7660432080738,
+  "W": 0.0,
+  "steps": 24,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 25733,
+    "H": 817088,
+    "O": 54899,
+    "n": 24
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s128/interleaved-vigenere__tATNAGi/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s128/interleaved-vigenere__tATNAGi/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28824.17587395897,
+  "W": 51.48925154074095,
+  "steps": 328,
+  "comps": 3,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 228815,
+    "H": 19775936,
+    "O": 223833,
+    "n": 328
+   },
+   "compaction": {
+    "U": 7154,
+    "H": 332608,
+    "O": 9825,
+    "n": 3
+   }
+  },
+  "unknown_cache": 2,
+  "left_running": false,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s128/mp-checkpoint-consolidation__cp9CTZo/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s128/mp-checkpoint-consolidation__cp9CTZo/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 2489.3749210829847,
+  "W": 74.22012933436781,
+  "steps": 183,
+  "comps": 3,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 138276,
+    "H": 10152896,
+    "O": 228852,
+    "n": 183
+   },
+   "compaction": {
+    "U": 3357,
+    "H": 333312,
+    "O": 8994,
+    "n": 3
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s128/rs-archive-clone__aKgqtTj/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s128/rs-archive-clone__aKgqtTj/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 5231.26820833399,
+  "W": 149.8618056238629,
+  "steps": 481,
+  "comps": 6,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 239090,
+    "H": 27395520,
+    "O": 520588,
+    "n": 481
+   },
+   "compaction": {
+    "U": 78284,
+    "H": 639360,
+    "O": 28574,
+    "n": 6
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s128/coq-block-bound__hRKe9Rp/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s128/coq-block-bound__hRKe9Rp/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 18242.316740792012,
+  "W": 53.57656037528068,
+  "steps": 216,
+  "comps": 3,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 193374,
+    "H": 12677568,
+    "O": 210734,
+    "n": 216
+   },
+   "compaction": {
+    "U": 2827,
+    "H": 339200,
+    "O": 8814,
+    "n": 3
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": true,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s128/mp-checkpoint-consolidation__txohdkm/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s128/mp-checkpoint-consolidation__txohdkm/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1697.8190189579036,
+  "W": 0.0,
+  "steps": 65,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 30547,
+    "H": 3123392,
+    "O": 65139,
+    "n": 65
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s128/interleaved-vigenere__XkQiFKS/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s128/interleaved-vigenere__XkQiFKS/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 19029.356141209137,
+  "W": 441.04241179465316,
+  "steps": 960,
+  "comps": 15,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 1113958,
+    "H": 52798848,
+    "O": 1073533,
+    "n": 960
+   },
+   "compaction": {
+    "U": 218086,
+    "H": 1598912,
+    "O": 81133,
+    "n": 15
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s128/retro-console-soc__eQ2EKA3/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s128/retro-console-soc__eQ2EKA3/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4975.002303750021,
+  "W": 127.04859899962321,
+  "steps": 353,
+  "comps": 6,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 304657,
+    "H": 17740800,
+    "O": 482039,
+    "n": 353
+   },
+   "compaction": {
+    "U": 22980,
+    "H": 656256,
+    "O": 20017,
+    "n": 6
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s128/rs-archive-clone__KiHMsmF/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s128/rs-archive-clone__KiHMsmF/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 5809.264212500071,
+  "W": 1231.0955521236174,
+  "steps": 482,
+  "comps": 39,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 710926,
+    "H": 8977216,
+    "O": 458777,
+    "n": 482
+   },
+   "compaction": {
+    "U": 95130,
+    "H": 923840,
+    "O": 190970,
+    "n": 39
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-a32/rs-archive-clone__ngN5NMA/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-a32/rs-archive-clone__ngN5NMA/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 9596.403860957827,
+  "W": 364.12933524977416,
+  "steps": 372,
+  "comps": 21,
+  "retrig": 2,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 302481,
+    "H": 5688064,
+    "O": 912142,
+    "n": 372
+   },
+   "compaction": {
+    "U": 709894,
+    "H": 497344,
+    "O": 72571,
+    "n": 21
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s32/coq-block-bound__vzCXvbG/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s32/coq-block-bound__vzCXvbG/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 735.2875956671778,
+  "W": 24.751638625049964,
+  "steps": 44,
+  "comps": 2,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 28230,
+    "H": 555648,
+    "O": 42206,
+    "n": 44
+   },
+   "compaction": {
+    "U": 2461,
+    "H": 54784,
+    "O": 3373,
+    "n": 2
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s32/interleaved-vigenere__UeR9gER/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-s32/interleaved-vigenere__UeR9gER/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 10942.796384625137,
+  "W": 497.0271918314975,
+  "steps": 913,
+  "comps": 27,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 985408,
+    "H": 25771008,
+    "O": 651054,
+    "n": 913
+   },
+   "compaction": {
+    "U": 69333,
+    "H": 1473536,
+    "O": 84078,
+    "n": 27
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s64/retro-console-soc__YuguGj7/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-s64/retro-console-soc__YuguGj7/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 7073.373484707903,
+  "W": 572.0813501677476,
+  "steps": 877,
+  "comps": 25,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 911261,
+    "H": 25885376,
+    "O": 573425,
+    "n": 877
+   },
+   "compaction": {
+    "U": 133589,
+    "H": 1299328,
+    "O": 116166,
+    "n": 25
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s64/retro-console-soc__cweEu5h/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-s64/retro-console-soc__cweEu5h/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1628.4999562080484,
+  "W": 52.86666120868176,
+  "steps": 67,
+  "comps": 4,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 58277,
+    "H": 873728,
+    "O": 63254,
+    "n": 67
+   },
+   "compaction": {
+    "U": 5001,
+    "H": 110336,
+    "O": 7333,
+    "n": 4
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s32/interleaved-vigenere__wrFCJFh/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-s32/interleaved-vigenere__wrFCJFh/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 4142.137168042129,
+  "W": 232.64192104223184,
+  "steps": 272,
+  "comps": 13,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 191524,
+    "H": 4180480,
+    "O": 505975,
+    "n": 273
+   },
+   "compaction": {
+    "U": 182093,
+    "H": 369664,
+    "O": 51124,
+    "n": 13
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s32/coq-block-bound__9vQA9PK/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s32/coq-block-bound__9vQA9PK/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 5592.885152166011,
+  "W": 115.62304858211428,
+  "steps": 220,
+  "comps": 6,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 208961,
+    "H": 7141568,
+    "O": 187283,
+    "n": 220
+   },
+   "compaction": {
+    "U": 9399,
+    "H": 339392,
+    "O": 19360,
+    "n": 6
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": true,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s64/mp-checkpoint-consolidation__HkE4Jtj/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s64/mp-checkpoint-consolidation__HkE4Jtj/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 3415.7141101669986,
+  "W": 80.31147429184057,
+  "steps": 286,
+  "comps": 4,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 353976,
+    "H": 17129408,
+    "O": 224688,
+    "n": 286
+   },
+   "compaction": {
+    "U": 7603,
+    "H": 443648,
+    "O": 11820,
+    "n": 4
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s128/retro-console-soc__B9qaoMt/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s128/retro-console-soc__B9qaoMt/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 6289.248458167072,
+  "W": 873.1993953355122,
+  "steps": 498,
+  "comps": 46,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 830058,
+    "H": 8784256,
+    "O": 845161,
+    "n": 500
+   },
+   "compaction": {
+    "U": 89062,
+    "H": 1139456,
+    "O": 186974,
+    "n": 46
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-a32/rs-archive-clone__UDz7Bnn/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-a32/rs-archive-clone__UDz7Bnn/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 11234.795572499977,
+  "W": 304.173482041806,
+  "steps": 450,
+  "comps": 13,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 627400,
+    "H": 22840320,
+    "O": 1383243,
+    "n": 450
+   },
+   "compaction": {
+    "U": 632693,
+    "H": 1001280,
+    "O": 47935,
+    "n": 13
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s128/coq-block-bound__mspqVVE/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-s128/coq-block-bound__mspqVVE/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 23318.590904042125,
+  "W": 426.43570041819476,
+  "steps": 541,
+  "comps": 20,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 641216,
+    "H": 15833920,
+    "O": 573438,
+    "n": 541
+   },
+   "compaction": {
+    "U": 30119,
+    "H": 1117952,
+    "O": 76616,
+    "n": 20
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": true,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s64/mp-checkpoint-consolidation__pfFMP5N/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-s64/mp-checkpoint-consolidation__pfFMP5N/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 3251.494642375037,
+  "W": 186.77746516559273,
+  "steps": 259,
+  "comps": 9,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 279333,
+    "H": 6950144,
+    "O": 290145,
+    "n": 259
+   },
+   "compaction": {
+    "U": 92734,
+    "H": 469440,
+    "O": 25607,
+    "n": 9
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s64/retro-console-soc__wewiZAT/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-s64/retro-console-soc__wewiZAT/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1689.2268296249676,
+  "W": 131.57958583394065,
+  "steps": 120,
+  "comps": 9,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 117122,
+    "H": 1648640,
+    "O": 167913,
+    "n": 120
+   },
+   "compaction": {
+    "U": 13135,
+    "H": 253952,
+    "O": 20740,
+    "n": 9
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s32/interleaved-vigenere__uoHf3h2/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s32/interleaved-vigenere__uoHf3h2/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 4708.661635834025,
+  "W": 153.31288912589662,
+  "steps": 12,
+  "comps": 6,
+  "retrig": 2,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 40816,
+    "H": 48512,
+    "O": 693903,
+    "n": 14
+   },
+   "compaction": {
+    "U": 392033,
+    "H": 82880,
+    "O": 23564,
+    "n": 6
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s32/coq-block-bound__FLDJf2f/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-s32/coq-block-bound__FLDJf2f/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28887.650157582946,
+  "W": 258.97090479172766,
+  "steps": 424,
+  "comps": 13,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 433859,
+    "H": 12990016,
+    "O": 407264,
+    "n": 424
+   },
+   "compaction": {
+    "U": 38594,
+    "H": 722880,
+    "O": 47220,
+    "n": 13
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s64/mp-checkpoint-consolidation__zdv4A58/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-s64/mp-checkpoint-consolidation__zdv4A58/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 9112.650715125026,
+  "W": 1172.0778230007272,
+  "steps": 533,
+  "comps": 48,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 822997,
+    "H": 9536000,
+    "O": 590561,
+    "n": 533
+   },
+   "compaction": {
+    "U": 85297,
+    "H": 1147968,
+    "O": 247235,
+    "n": 48
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-a32/rs-archive-clone__fHz6jTw/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-a32/rs-archive-clone__fHz6jTw/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 1735.509518292034,
+  "W": 54.84829950099811,
+  "steps": 79,
+  "comps": 4,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 73462,
+    "H": 1316288,
+    "O": 77062,
+    "n": 79
+   },
+   "compaction": {
+    "U": 5737,
+    "H": 106496,
+    "O": 6830,
+    "n": 4
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-a32/interleaved-vigenere__5dAgfKr/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b002-a32/interleaved-vigenere__5dAgfKr/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4074.9392528329045,
+  "W": 244.72135087288916,
+  "steps": 449,
+  "comps": 13,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 516608,
+    "H": 14927808,
+    "O": 347006,
+    "n": 449
+   },
+   "compaction": {
+    "U": 78294,
+    "H": 674432,
+    "O": 37842,
+    "n": 13
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-a64/retro-console-soc__zDcFgoz/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b002-a64/retro-console-soc__zDcFgoz/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28882.2878771252,
+  "W": 428.99210395663977,
+  "steps": 730,
+  "comps": 24,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 792771,
+    "H": 22714624,
+    "O": 738781,
+    "n": 730
+   },
+   "compaction": {
+    "U": 49071,
+    "H": 1298624,
+    "O": 67756,
+    "n": 24
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a64/mp-checkpoint-consolidation__roRC3ZQ/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a64/mp-checkpoint-consolidation__roRC3ZQ/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 10389.867246665992,
+  "W": 832.7004169200081,
+  "steps": 513,
+  "comps": 43,
+  "retrig": 5,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 804041,
+    "H": 9293312,
+    "O": 1081297,
+    "n": 514
+   },
+   "compaction": {
+    "U": 364783,
+    "H": 1076992,
+    "O": 161652,
+    "n": 43
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": true,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-a32/coq-block-bound__2zreP2U/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-a32/coq-block-bound__2zreP2U/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 7069.86657070904,
+  "W": 819.7956904566381,
+  "steps": 483,
+  "comps": 33,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 533506,
+    "H": 7056192,
+    "O": 470092,
+    "n": 483
+   },
+   "compaction": {
+    "U": 84122,
+    "H": 922432,
+    "O": 134376,
+    "n": 33
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s32/rs-archive-clone__ZkyziWT/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b001-s32/rs-archive-clone__ZkyziWT/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 3374.8038136661053,
+  "W": 63.95084604108706,
+  "steps": 346,
+  "comps": 3,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 264153,
+    "H": 19198336,
+    "O": 326994,
+    "n": 346
+   },
+   "compaction": {
+    "U": 54244,
+    "H": 307968,
+    "O": 11804,
+    "n": 3
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "coq-block-bound",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s128/coq-block-bound__o8jN4L3/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-s128/coq-block-bound__o8jN4L3/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 2622.879194749985,
+  "W": 165.50437966897152,
+  "steps": 200,
+  "comps": 10,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 279533,
+    "H": 3592576,
+    "O": 303783,
+    "n": 200
+   },
+   "compaction": {
+    "U": 79570,
+    "H": 345664,
+    "O": 32422,
+    "n": 10
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-a32/coq-block-bound__WVdTZho/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-a32/coq-block-bound__WVdTZho/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 14505.454828582937,
+  "W": 397.5063977492973,
+  "steps": 662,
+  "comps": 19,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 758856,
+    "H": 20456256,
+    "O": 482186,
+    "n": 662
+   },
+   "compaction": {
+    "U": 40030,
+    "H": 1023744,
+    "O": 57237,
+    "n": 19
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-a64/retro-console-soc__mnmfEGR/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b003-a64/retro-console-soc__mnmfEGR/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 1981.7606742919888,
+  "W": 166.08613745844923,
+  "steps": 153,
+  "comps": 11,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 201579,
+    "H": 2625152,
+    "O": 190076,
+    "n": 153
+   },
+   "compaction": {
+    "U": 25346,
+    "H": 290112,
+    "O": 25170,
+    "n": 11
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-a32/interleaved-vigenere__My3tXHU/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b003-a32/interleaved-vigenere__My3tXHU/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 4641.814528166084,
+  "W": 303.40188312204555,
+  "steps": 244,
+  "comps": 20,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 316150,
+    "H": 4161856,
+    "O": 343942,
+    "n": 244
+   },
+   "compaction": {
+    "U": 30880,
+    "H": 530496,
+    "O": 46741,
+    "n": 20
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-a32/interleaved-vigenere__hnLhJnq/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-a32/interleaved-vigenere__hnLhJnq/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4679.315453582909,
+  "W": 266.8619003361091,
+  "steps": 348,
+  "comps": 13,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 553967,
+    "H": 11067712,
+    "O": 385091,
+    "n": 348
+   },
+   "compaction": {
+    "U": 70896,
+    "H": 660608,
+    "O": 38997,
+    "n": 13
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-a64/retro-console-soc__nPYPCtz/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-a64/retro-console-soc__nPYPCtz/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 24477.947102375096,
+  "W": 274.12665874836966,
+  "steps": 444,
+  "comps": 15,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 486014,
+    "H": 13863232,
+    "O": 476186,
+    "n": 444
+   },
+   "compaction": {
+    "U": 20741,
+    "H": 822400,
+    "O": 42497,
+    "n": 15
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-a64/mp-checkpoint-consolidation__SqfdzA5/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b002-a64/mp-checkpoint-consolidation__SqfdzA5/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 4096.510675875004,
+  "W": 439.57252950035036,
+  "steps": 279,
+  "comps": 22,
+  "retrig": 3,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 417846,
+    "H": 4896640,
+    "O": 428193,
+    "n": 279
+   },
+   "compaction": {
+    "U": 187868,
+    "H": 472000,
+    "O": 75733,
+    "n": 22
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-a32/coq-block-bound__w7XXaw7/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b001-a32/coq-block-bound__w7XXaw7/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 4636.760404416826,
+  "W": 638.5300074159168,
+  "steps": 444,
+  "comps": 28,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 450634,
+    "H": 6909568,
+    "O": 371650,
+    "n": 444
+   },
+   "compaction": {
+    "U": 40925,
+    "H": 795648,
+    "O": 130804,
+    "n": 28
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s32/rs-archive-clone__FkUnBNw/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-s32/rs-archive-clone__FkUnBNw/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 4802.006749290973,
+  "W": 24.826633709017187,
+  "steps": 82,
+  "comps": 1,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 51154,
+    "H": 4627712,
+    "O": 82418,
+    "n": 82
+   },
+   "compaction": {
+    "U": 1017,
+    "H": 112640,
+    "O": 2421,
+    "n": 1
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s128/interleaved-vigenere__gPwmqMS/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s128/interleaved-vigenere__gPwmqMS/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 7561.617273249896,
+  "W": 18.00131579209119,
+  "steps": 114,
+  "comps": 1,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 103316,
+    "H": 5950080,
+    "O": 129560,
+    "n": 114
+   },
+   "compaction": {
+    "U": 1129,
+    "H": 111872,
+    "O": 2663,
+    "n": 1
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s128/mp-checkpoint-consolidation__cKs8aNW/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s128/mp-checkpoint-consolidation__cKs8aNW/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 5556.406749125104,
+  "W": 725.5113540480379,
+  "steps": 475,
+  "comps": 35,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 594520,
+    "H": 7228352,
+    "O": 483768,
+    "n": 475
+   },
+   "compaction": {
+    "U": 127646,
+    "H": 985280,
+    "O": 157682,
+    "n": 36
+   }
+  },
+  "unknown_cache": 2,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s32/rs-archive-clone__nXamhEY/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s32/rs-archive-clone__nXamhEY/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 6508.643339457922,
+  "W": 191.37367108324543,
+  "steps": 496,
+  "comps": 7,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 357430,
+    "H": 28317184,
+    "O": 532521,
+    "n": 496
+   },
+   "compaction": {
+    "U": 16522,
+    "H": 775040,
+    "O": 32335,
+    "n": 7
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s128/rs-archive-clone__L4iqRDp/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-s128/rs-archive-clone__L4iqRDp/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 17747.903618084034,
+  "W": 297.7164954151958,
+  "steps": 474,
+  "comps": 14,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 471573,
+    "H": 14937600,
+    "O": 454324,
+    "n": 474
+   },
+   "compaction": {
+    "U": 25153,
+    "H": 749824,
+    "O": 46303,
+    "n": 14
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-a64/mp-checkpoint-consolidation__SbMpca4/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b003-a64/mp-checkpoint-consolidation__SbMpca4/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 11172.879304416943,
+  "W": 244.33577200165018,
+  "steps": 927,
+  "comps": 11,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 839176,
+    "H": 55035840,
+    "O": 684880,
+    "n": 927
+   },
+   "compaction": {
+    "U": 25358,
+    "H": 1239104,
+    "O": 34636,
+    "n": 11
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-a128/retro-console-soc__6GqpKNe/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-retro-console-soc-b001-a128/retro-console-soc__6GqpKNe/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 5533.217758291867,
+  "W": 106.04800541512668,
+  "steps": 401,
+  "comps": 6,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 333089,
+    "H": 21528640,
+    "O": 471146,
+    "n": 401
+   },
+   "compaction": {
+    "U": 4787,
+    "H": 675584,
+    "O": 16638,
+    "n": 6
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-a128/rs-archive-clone__ekdS8BD/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b003-a128/rs-archive-clone__ekdS8BD/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 4331.8833777499385,
+  "W": 57.08183899894357,
+  "steps": 245,
+  "comps": 2,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 172955,
+    "H": 12406336,
+    "O": 282755,
+    "n": 245
+   },
+   "compaction": {
+    "U": 78250,
+    "H": 200640,
+    "O": 6109,
+    "n": 2
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-a128/coq-block-bound__7RiW5xL/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b002-a128/coq-block-bound__7RiW5xL/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 2801.5656641670503,
+  "W": 52.17045245808549,
+  "steps": 161,
+  "comps": 2,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 174845,
+    "H": 9507072,
+    "O": 322393,
+    "n": 162
+   },
+   "compaction": {
+    "U": 111766,
+    "H": 111360,
+    "O": 6978,
+    "n": 2
+   }
+  },
+  "unknown_cache": 2,
+  "left_running": false,
+  "policy": "A",
+  "task": "coq-block-bound",
+  "thr": 128,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-a128/coq-block-bound__yTMQ4pA/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-b003-a128/coq-block-bound__yTMQ4pA/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 11004.239753667032,
+  "W": 210.32455399888568,
+  "steps": 632,
+  "comps": 10,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 502263,
+    "H": 34993024,
+    "O": 774208,
+    "n": 632
+   },
+   "compaction": {
+    "U": 10050,
+    "H": 1109760,
+    "O": 32277,
+    "n": 10
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 128,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-a128/rs-archive-clone__YZcsNNw/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-rs-archive-clone-b002-a128/rs-archive-clone__YZcsNNw/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1503.800753041869,
+  "W": 12.562854582909495,
+  "steps": 103,
+  "comps": 1,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 78781,
+    "H": 4209280,
+    "O": 107654,
+    "n": 103
+   },
+   "compaction": {
+    "U": 607,
+    "H": 114048,
+    "O": 1359,
+    "n": 1
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-a128/interleaved-vigenere__LeZYm2M/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-interleaved-vigenere-b001-a128/interleaved-vigenere__LeZYm2M/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 9449.949477042072,
+  "W": 41.776926666963845,
+  "steps": 157,
+  "comps": 2,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 140039,
+    "H": 8269696,
+    "O": 152102,
+    "n": 157
+   },
+   "compaction": {
+    "U": 2443,
+    "H": 222336,
+    "O": 4934,
+    "n": 2
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a128/mp-checkpoint-consolidation__HBNvYxx/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a128/mp-checkpoint-consolidation__HBNvYxx/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 3785.2251103750896,
+  "W": 370.783266041195,
+  "steps": 246,
+  "comps": 19,
+  "retrig": 6,
+  "kept": 2704,
+  "tok": {
+   "conversation": {
+    "U": 607444,
+    "H": 4116800,
+    "O": 391339,
+    "n": 246
+   },
+   "compaction": {
+    "U": 56903,
+    "H": 541184,
+    "O": 74802,
+    "n": 20
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "K",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b002",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b002-k32/coq-block-bound__n4oQniH/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b002-k32/coq-block-bound__n4oQniH/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 20920.34221166605,
+  "W": 183.56532970932312,
+  "steps": 276,
+  "comps": 9,
+  "retrig": 0,
+  "kept": 5967,
+  "tok": {
+   "conversation": {
+    "U": 290514,
+    "H": 8898048,
+    "O": 263957,
+    "n": 276
+   },
+   "compaction": {
+    "U": 6036,
+    "H": 461568,
+    "O": 28257,
+    "n": 9
+   }
+  },
+  "unknown_cache": 3,
+  "left_running": true,
+  "policy": "K",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-mp-checkpoint-consolidation-b001-k64/mp-checkpoint-consolidation__mMY92Fz/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-mp-checkpoint-consolidation-b001-k64/mp-checkpoint-consolidation__mMY92Fz/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 3174.795831500087,
+  "W": 69.02475320803933,
+  "steps": 159,
+  "comps": 5,
+  "retrig": 0,
+  "kept": 4119,
+  "tok": {
+   "conversation": {
+    "U": 157338,
+    "H": 4862592,
+    "O": 204543,
+    "n": 159
+   },
+   "compaction": {
+    "U": 3117,
+    "H": 256640,
+    "O": 10151,
+    "n": 5
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "K",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-interleaved-vigenere-b001-k64/interleaved-vigenere__ZC5jdhZ/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-interleaved-vigenere-b001-k64/interleaved-vigenere__ZC5jdhZ/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1999.3076078749727,
+  "W": 39.4937627078034,
+  "steps": 114,
+  "comps": 3,
+  "retrig": 0,
+  "kept": 6372,
+  "tok": {
+   "conversation": {
+    "U": 100108,
+    "H": 3351936,
+    "O": 138256,
+    "n": 114
+   },
+   "compaction": {
+    "U": 1958,
+    "H": 155008,
+    "O": 5903,
+    "n": 3
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-interleaved-vigenere-b003-k64/interleaved-vigenere__WH2sUpT/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-interleaved-vigenere-b003-k64/interleaved-vigenere__WH2sUpT/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 5516.041073957924,
+  "W": 182.9825988339726,
+  "steps": 256,
+  "comps": 10,
+  "retrig": 4,
+  "kept": 14870.0,
+  "tok": {
+   "conversation": {
+    "U": 520100,
+    "H": 7601536,
+    "O": 330293,
+    "n": 256
+   },
+   "compaction": {
+    "U": 22567,
+    "H": 416000,
+    "O": 35276,
+    "n": 10
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "K",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b003-k64/coq-block-bound__a35USTa/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b003-k64/coq-block-bound__a35USTa/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 1966.1944352081046,
+  "W": 69.70636812597513,
+  "steps": 151,
+  "comps": 5,
+  "retrig": 0,
+  "kept": 3851,
+  "tok": {
+   "conversation": {
+    "U": 123160,
+    "H": 4183296,
+    "O": 197531,
+    "n": 151
+   },
+   "compaction": {
+    "U": 3341,
+    "H": 259200,
+    "O": 11362,
+    "n": 5
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-interleaved-vigenere-b002-k64/interleaved-vigenere__tfUubrg/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-interleaved-vigenere-b002-k64/interleaved-vigenere__tfUubrg/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1423.605452750111,
+  "W": 25.228967749746516,
+  "steps": 82,
+  "comps": 1,
+  "retrig": 0,
+  "kept": 3201,
+  "tok": {
+   "conversation": {
+    "U": 170546,
+    "H": 7115008,
+    "O": 167899,
+    "n": 82
+   },
+   "compaction": {
+    "U": 983,
+    "H": 168768,
+    "O": 3453,
+    "n": 2
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b002-k64/coq-block-bound__4U39KFp/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b002-k64/coq-block-bound__4U39KFp/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 3230.4115607920103,
+  "W": 116.21075425040908,
+  "steps": 213,
+  "comps": 7,
+  "retrig": 0,
+  "kept": 6983,
+  "tok": {
+   "conversation": {
+    "U": 224887,
+    "H": 6621184,
+    "O": 396627,
+    "n": 214
+   },
+   "compaction": {
+    "U": 4181,
+    "H": 353984,
+    "O": 20682,
+    "n": 7
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "coq-block-bound",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b001-k64/coq-block-bound__tkyhLgW/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b001-k64/coq-block-bound__tkyhLgW/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 11799.779187874869,
+  "W": 1052.7787570008077,
+  "steps": 432,
+  "comps": 60,
+  "retrig": 33,
+  "kept": 16662.5,
+  "tok": {
+   "conversation": {
+    "U": 1902895,
+    "H": 7004352,
+    "O": 1063650,
+    "n": 433
+   },
+   "compaction": {
+    "U": 193597,
+    "H": 1355264,
+    "O": 234721,
+    "n": 61
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b003",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b003-k32/coq-block-bound__iFVhfGE/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b003-k32/coq-block-bound__iFVhfGE/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 17961.023801916977,
+  "W": 1293.9345003319904,
+  "steps": 421,
+  "comps": 72,
+  "retrig": 37,
+  "kept": 18519.0,
+  "tok": {
+   "conversation": {
+    "U": 1899199,
+    "H": 6371840,
+    "O": 966722,
+    "n": 421
+   },
+   "compaction": {
+    "U": 201873,
+    "H": 1431616,
+    "O": 279933,
+    "n": 72
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "coq-block-bound",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b001-k32/coq-block-bound__Xr9kn8h/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-b001-k32/coq-block-bound__Xr9kn8h/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4537.396702582948,
+  "W": 271.73781924904324,
+  "steps": 293,
+  "comps": 15,
+  "retrig": 2,
+  "kept": 7898,
+  "tok": {
+   "conversation": {
+    "U": 475529,
+    "H": 8986048,
+    "O": 454110,
+    "n": 293
+   },
+   "compaction": {
+    "U": 21162,
+    "H": 678784,
+    "O": 59682,
+    "n": 15
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-rs-archive-clone-b001-k64/rs-archive-clone__eH9VMoT/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-rs-archive-clone-b001-k64/rs-archive-clone__eH9VMoT/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28868.60206212499,
+  "W": 505.66239196108654,
+  "steps": 572,
+  "comps": 23,
+  "retrig": 0,
+  "kept": 5677,
+  "tok": {
+   "conversation": {
+    "U": 730593,
+    "H": 17949248,
+    "O": 681891,
+    "n": 572
+   },
+   "compaction": {
+    "U": 17712,
+    "H": 1178816,
+    "O": 85957,
+    "n": 23
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-mp-checkpoint-consolidation-b002-k64/mp-checkpoint-consolidation__3mNwy6Y/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-mp-checkpoint-consolidation-b002-k64/mp-checkpoint-consolidation__3mNwy6Y/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4839.682295582956,
+  "W": 260.64992091595195,
+  "steps": 360,
+  "comps": 15,
+  "retrig": 2,
+  "kept": 5742,
+  "tok": {
+   "conversation": {
+    "U": 650052,
+    "H": 10648320,
+    "O": 376874,
+    "n": 360
+   },
+   "compaction": {
+    "U": 16776,
+    "H": 706048,
+    "O": 49768,
+    "n": 15
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "K",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-retro-console-soc-b001-k64/retro-console-soc__xhL8Uky/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-retro-console-soc-b001-k64/retro-console-soc__xhL8Uky/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28834.501937874826,
+  "W": 84.01961204060353,
+  "steps": 277,
+  "comps": 6,
+  "retrig": 0,
+  "kept": 3158.0,
+  "tok": {
+   "conversation": {
+    "U": 263795,
+    "H": 8289856,
+    "O": 89123,
+    "n": 277
+   },
+   "compaction": {
+    "U": 4122,
+    "H": 318016,
+    "O": 15806,
+    "n": 6
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-mp-checkpoint-consolidation-b003-k64/mp-checkpoint-consolidation__kDYcS6T/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-mp-checkpoint-consolidation-b003-k64/mp-checkpoint-consolidation__kDYcS6T/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 3667.1196120409295,
+  "W": 205.56727804150432,
+  "steps": 270,
+  "comps": 12,
+  "retrig": 4,
+  "kept": 7914.5,
+  "tok": {
+   "conversation": {
+    "U": 502156,
+    "H": 8064640,
+    "O": 269569,
+    "n": 270
+   },
+   "compaction": {
+    "U": 23840,
+    "H": 461376,
+    "O": 34396,
+    "n": 12
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-retro-console-soc-b002-k64/retro-console-soc__X2xK6MS/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-retro-console-soc-b002-k64/retro-console-soc__X2xK6MS/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4494.048992374912,
+  "W": 278.4233377119526,
+  "steps": 384,
+  "comps": 14,
+  "retrig": 0,
+  "kept": 5665.0,
+  "tok": {
+   "conversation": {
+    "U": 428590,
+    "H": 11787904,
+    "O": 459006,
+    "n": 384
+   },
+   "compaction": {
+    "U": 9436,
+    "H": 703936,
+    "O": 50528,
+    "n": 14
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "K",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-rs-archive-clone-b003-k64/rs-archive-clone__pACPDER/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-rs-archive-clone-b003-k64/rs-archive-clone__pACPDER/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 7340.438833791995,
+  "W": 341.81602937635034,
+  "steps": 359,
+  "comps": 15,
+  "retrig": 0,
+  "kept": 6166,
+  "tok": {
+   "conversation": {
+    "U": 449222,
+    "H": 10846144,
+    "O": 468547,
+    "n": 359
+   },
+   "compaction": {
+    "U": 11936,
+    "H": 738432,
+    "O": 60320,
+    "n": 15
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "K",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b002",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-rs-archive-clone-b002-k64/rs-archive-clone__TsJ96KJ/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-rs-archive-clone-b002-k64/rs-archive-clone__TsJ96KJ/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 6579.230757958954,
+  "W": 523.9115125834942,
+  "steps": 442,
+  "comps": 22,
+  "retrig": 2,
+  "kept": 5911.5,
+  "tok": {
+   "conversation": {
+    "U": 798149,
+    "H": 13389248,
+    "O": 529823,
+    "n": 442
+   },
+   "compaction": {
+    "U": 24470,
+    "H": 1003712,
+    "O": 90356,
+    "n": 22
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": true,
+  "policy": "K",
+  "task": "retro-console-soc",
+  "thr": 64,
+  "rep": "b003",
+  "native": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-retro-console-soc-b003-k64/retro-console-soc__N67a6aS/axiom-private/result.json",
+  "official": "results/skeep-20261001/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-retro-console-soc-b003-k64/retro-console-soc__N67a6aS/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 3389.730573375011,
+  "W": 0.0,
+  "steps": 63,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 58956,
+    "H": 5236928,
+    "O": 129291,
+    "n": 63
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "interleaved-vigenere",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-guard-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-interleaved-vigenere-b001-n1m/interleaved-vigenere__hPz5MjD/axiom-private/result.json",
+  "official": "results/glm-repetition-guard-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-interleaved-vigenere-b001-n1m/interleaved-vigenere__hPz5MjD/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 7949.276852416107,
+  "W": 0.0,
+  "steps": 265,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 252186,
+    "H": 69425600,
+    "O": 336042,
+    "n": 265
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "retro-console-soc",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-retro-console-soc-b001-n1m/retro-console-soc__BXmW6kY/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-retro-console-soc-b001-n1m/retro-console-soc__BXmW6kY/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 6556.440658458974,
+  "W": 0.0,
+  "steps": 215,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 140517,
+    "H": 42352512,
+    "O": 348151,
+    "n": 216
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "coq-block-bound",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-coq-block-bound-b001-n1m/coq-block-bound__iwQFUfx/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-coq-block-bound-b001-n1m/coq-block-bound__iwQFUfx/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 12102.191245666007,
+  "W": 0.0,
+  "steps": 330,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 265247,
+    "H": 125386752,
+    "O": 533980,
+    "n": 330
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "rs-archive-clone",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-rs-archive-clone-b001-n1m/rs-archive-clone__8QiuZuz/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-rs-archive-clone-b001-n1m/rs-archive-clone__8QiuZuz/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4332.789596332936,
+  "W": 0.0,
+  "steps": 71,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 59797,
+    "H": 4227008,
+    "O": 59096,
+    "n": 71
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-english-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-mp-checkpoint-consolidation-b001-n1m/mp-checkpoint-consolidation__ZSRfXWf/axiom-private/result.json",
+  "official": "results/glm-english-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-mp-checkpoint-consolidation-b001-n1m/mp-checkpoint-consolidation__ZSRfXWf/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 6616.890422584023,
+  "W": 0.0,
+  "steps": 248,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 167853,
+    "H": 67582784,
+    "O": 338549,
+    "n": 248
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "rs-archive-clone",
+  "thr": 1000,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-rs-archive-clone-b002-n1m/rs-archive-clone__MPHNKAr/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-rs-archive-clone-b002-n1m/rs-archive-clone__MPHNKAr/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 2487.840690375073,
+  "W": 0.0,
+  "steps": 42,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 74424,
+    "H": 2421888,
+    "O": 65877,
+    "n": 42
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "retro-console-soc",
+  "thr": 1000,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-retro-console-soc-b002-n1m/retro-console-soc__CkZen5a/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-retro-console-soc-b002-n1m/retro-console-soc__CkZen5a/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 7071.052343416959,
+  "W": 0.0,
+  "steps": 448,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 310061,
+    "H": 125843136,
+    "O": 296201,
+    "n": 448
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "coq-block-bound",
+  "thr": 1000,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-coq-block-bound-b002-n1m/coq-block-bound__EweDJco/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-coq-block-bound-b002-n1m/coq-block-bound__EweDJco/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 1984.7532891251612,
+  "W": 0.0,
+  "steps": 69,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 52344,
+    "H": 4569600,
+    "O": 89244,
+    "n": 69
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "interleaved-vigenere",
+  "thr": 1000,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-interleaved-vigenere-b002-n1m/interleaved-vigenere__HvqKe6d/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-interleaved-vigenere-b002-n1m/interleaved-vigenere__HvqKe6d/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 14817.357944666175,
+  "W": 0.0,
+  "steps": 394,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 278744,
+    "H": 154658304,
+    "O": 569973,
+    "n": 394
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 1000,
+  "rep": "b002",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-mp-checkpoint-consolidation-b002-n1m/mp-checkpoint-consolidation__nMGpSPg/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b002-summary12288/window-main-long-011-summary12288-mp-checkpoint-consolidation-b002-n1m/mp-checkpoint-consolidation__nMGpSPg/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4268.893245792016,
+  "W": 0.0,
+  "steps": 213,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 164491,
+    "H": 49788160,
+    "O": 348667,
+    "n": 213
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "rs-archive-clone",
+  "thr": 1000,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-rs-archive-clone-b003-n1m/rs-archive-clone__VRtkKJo/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-rs-archive-clone-b003-n1m/rs-archive-clone__VRtkKJo/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 6483.24382208311,
+  "W": 0.0,
+  "steps": 456,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 328773,
+    "H": 153275072,
+    "O": 441497,
+    "n": 456
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "retro-console-soc",
+  "thr": 1000,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-retro-console-soc-b003-n1m/retro-console-soc__LG6ZQ2E/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-retro-console-soc-b003-n1m/retro-console-soc__LG6ZQ2E/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 2670.7981429169886,
+  "W": 0.0,
+  "steps": 198,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 160543,
+    "H": 39918272,
+    "O": 221163,
+    "n": 198
+   }
+  },
+  "unknown_cache": 1,
+  "left_running": false,
+  "policy": "L",
+  "task": "coq-block-bound",
+  "thr": 1000,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-coq-block-bound-b003-n1m/coq-block-bound__nSFcNno/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-coq-block-bound-b003-n1m/coq-block-bound__nSFcNno/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 5409.201505250065,
+  "W": 0.0,
+  "steps": 238,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 164643,
+    "H": 53389440,
+    "O": 347040,
+    "n": 238
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "interleaved-vigenere",
+  "thr": 1000,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-interleaved-vigenere-b003-n1m/interleaved-vigenere__AVeywiS/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-interleaved-vigenere-b003-n1m/interleaved-vigenere__AVeywiS/result.json"
+ },
+ {
+  "model": "glm",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 3204.3654325418174,
+  "W": 0.0,
+  "steps": 126,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 75601,
+    "H": 14187840,
+    "O": 138333,
+    "n": 126
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 1000,
+  "rep": "b003",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-mp-checkpoint-consolidation-b003-n1m/mp-checkpoint-consolidation__DsVnkKR/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/glm-window-sweep-20260927/main/long-011/n1m-b003-summary12288/window-main-long-011-summary12288-mp-checkpoint-consolidation-b003-n1m/mp-checkpoint-consolidation__DsVnkKR/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 5139.695920708124,
+  "W": 44.65393000096083,
+  "steps": 128,
+  "comps": 3,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 174229,
+    "H": 7508736,
+    "O": 213678,
+    "n": 128
+   },
+   "compaction": {
+    "U": 4711,
+    "H": 335232,
+    "O": 10639,
+    "n": 3
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s128/mp-checkpoint-consolidation__gwi45k7/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s128/mp-checkpoint-consolidation__gwi45k7/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28989.897527916124,
+  "W": 3334.1662399475463,
+  "steps": 1187,
+  "comps": 140,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 4383089,
+    "H": 39936128,
+    "O": 4430795,
+    "n": 1187
+   },
+   "compaction": {
+    "U": 452170,
+    "H": 7009280,
+    "O": 918788,
+    "n": 141
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a64/mp-checkpoint-consolidation__G32JHLK/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a64/mp-checkpoint-consolidation__G32JHLK/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 28610.159169166116,
+  "W": 12212.132675001398,
+  "steps": 1136,
+  "comps": 240,
+  "retrig": 8,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 4539869,
+    "H": 20579327,
+    "O": 2622003,
+    "n": 1136
+   },
+   "compaction": {
+    "U": 3129678,
+    "H": 7725440,
+    "O": 3954820,
+    "n": 342
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "retro-console-soc",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-retro-console-soc-b001-s32/retro-console-soc__24PMJRB/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-retro-console-soc-b001-s32/retro-console-soc__24PMJRB/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 9272.279805833008,
+  "W": 868.0876421686262,
+  "steps": 475,
+  "comps": 41,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 1266664,
+    "H": 13246720,
+    "O": 1141212,
+    "n": 475
+   },
+   "compaction": {
+    "U": 98898,
+    "H": 2317312,
+    "O": 240539,
+    "n": 41
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": true,
+  "policy": "S",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s64/mp-checkpoint-consolidation__fP6XQyg/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-s64/mp-checkpoint-consolidation__fP6XQyg/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 1.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 6564.030672417022,
+  "W": 185.03631129069254,
+  "steps": 269,
+  "comps": 9,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 475422,
+    "H": 16252416,
+    "O": 762577,
+    "n": 269
+   },
+   "compaction": {
+    "U": 17264,
+    "H": 1031168,
+    "O": 44406,
+    "n": 9
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": true,
+  "policy": "A",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 128,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a128/mp-checkpoint-consolidation__ACMGqta/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-mp-checkpoint-consolidation-b001-a128/mp-checkpoint-consolidation__ACMGqta/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 16978.52416775003,
+  "W": 4351.211273590568,
+  "steps": 884,
+  "comps": 154,
+  "retrig": 12,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 4017340,
+    "H": 18175871,
+    "O": 1212886,
+    "n": 884
+   },
+   "compaction": {
+    "U": 2124376,
+    "H": 2025472,
+    "O": 1340210,
+    "n": 158
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "retro-console-soc",
+  "thr": 32,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-retro-console-soc-b001-a32/retro-console-soc__hvRfqju/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-retro-console-soc-b001-a32/retro-console-soc__hvRfqju/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 17464.792618749896,
+  "W": 801.3029753365554,
+  "steps": 425,
+  "comps": 45,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 1196365,
+    "H": 13462400,
+    "O": 1761421,
+    "n": 425
+   },
+   "compaction": {
+    "U": 145101,
+    "H": 2273280,
+    "O": 213217,
+    "n": 45
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-interleaved-vigenere-b001-a64/interleaved-vigenere__fv965ap/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-interleaved-vigenere-b001-a64/interleaved-vigenere__fv965ap/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 26579.728763167048,
+  "W": 2051.589955042349,
+  "steps": 1524,
+  "comps": 104,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 3159528,
+    "H": 45149312,
+    "O": 3141188,
+    "n": 1524
+   },
+   "compaction": {
+    "U": 210559,
+    "H": 5883648,
+    "O": 573126,
+    "n": 104
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-rs-archive-clone-b001-s64/rs-archive-clone__uM37Lcn/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-rs-archive-clone-b001-s64/rs-archive-clone__uM37Lcn/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 1.0,
+  "exception": "AgentTimeoutError",
+  "elapsed": 28979.64010041696,
+  "W": 2193.459632414393,
+  "steps": 1113,
+  "comps": 104,
+  "retrig": 1,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 2985827,
+    "H": 36052736,
+    "O": 3703236,
+    "n": 1113
+   },
+   "compaction": {
+    "U": 275249,
+    "H": 5351040,
+    "O": 588061,
+    "n": 105
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "A",
+  "task": "rs-archive-clone",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-rs-archive-clone-b001-a64/rs-archive-clone__UX5WtmZ/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-rs-archive-clone-b001-a64/rs-archive-clone__UX5WtmZ/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": "NonZeroAgentExitCodeError",
+  "elapsed": 16930.692210249836,
+  "W": 1310.079057201976,
+  "steps": 433,
+  "comps": 67,
+  "retrig": 3,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 1104784,
+    "H": 12549504,
+    "O": 3214749,
+    "n": 434
+   },
+   "compaction": {
+    "U": 316226,
+    "H": 3953664,
+    "O": 345944,
+    "n": 69
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "S",
+  "task": "interleaved-vigenere",
+  "thr": 64,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s64/interleaved-vigenere__Qh2iHRX/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/main/long-011-formal-summary12288/deepseek-window-main-long-011-formal-summary12288-interleaved-vigenere-b001-s64/interleaved-vigenere__Qh2iHRX/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4715.666579332901,
+  "W": 0.0,
+  "steps": 210,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 153170,
+    "H": 80661504,
+    "O": 596868,
+    "n": 210
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "interleaved-vigenere",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-interleaved-vigenere-b001-n1m/interleaved-vigenere__Mo5FSGs/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-interleaved-vigenere-b001-n1m/interleaved-vigenere__Mo5FSGs/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 2831.9580522920005,
+  "W": 0.0,
+  "steps": 195,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 103910,
+    "H": 58971392,
+    "O": 379876,
+    "n": 195
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "coq-block-bound",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-coq-block-bound-b001-n1m/coq-block-bound__8nMTpBi/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-coq-block-bound-b001-n1m/coq-block-bound__8nMTpBi/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1208.4577596660238,
+  "W": 0.0,
+  "steps": 57,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 60595,
+    "H": 5592576,
+    "O": 125135,
+    "n": 57
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-mp-checkpoint-consolidation-b001-n1m/mp-checkpoint-consolidation__3XjTH9Q/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-mp-checkpoint-consolidation-b001-n1m/mp-checkpoint-consolidation__3XjTH9Q/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4836.803340541897,
+  "W": 0.0,
+  "steps": 248,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 194071,
+    "H": 93796096,
+    "O": 531034,
+    "n": 248
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "rs-archive-clone",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-rs-archive-clone-b001-n1m/rs-archive-clone__c3ha3D6/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-rs-archive-clone-b001-n1m/rs-archive-clone__c3ha3D6/result.json"
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 3191.925569207873,
+  "W": 0.0,
+  "steps": 190,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 260081,
+    "H": 59064576,
+    "O": 406158,
+    "n": 190
+   }
+  },
+  "unknown_cache": 0,
+  "left_running": false,
+  "policy": "L",
+  "task": "retro-console-soc",
+  "thr": 1000,
+  "rep": "b001",
+  "native": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-retro-console-soc-b001-n1m/retro-console-soc__jxBwg8T/axiom-private/result.json",
+  "official": "results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs/deepseek-flash-window-sweep-20260928/limitonly-20261004/deepseek-window-limitonly-20261004-retro-console-soc-b001-n1m/retro-console-soc__jxBwg8T/result.json"
+ }
+]

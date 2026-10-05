@@ -1,0 +1,79 @@
+{
+ "QWEN3_VALIDATION_TOTALS.csv": {
+  "columns": [
+   "deployment_index",
+   "point_id",
+   "condition",
+   "repetition",
+   "measured_total_s",
+   "estimated_total_s",
+   "relative_error",
+   "engine_residual_s",
+   "client_wall_measured_total_s",
+   "client_wall_minus_measured_engine_s",
+   "client_wall_minus_engine_prediction_s",
+   "validation_request_count",
+   "prediction_request_count",
+   "historical_output_lengths_match",
+   "complete_20_request_pair",
+   "actual_break_even_request",
+   "complete_actual_20_request_pair",
+   "frozen_predicted_break_even_request",
+   "updated_predicted_break_even_request",
+   "actual_matches_frozen_prediction",
+   "updated_estimated_total_s",
+   "updated_relative_error",
+   "updated_engine_residual_s",
+   "validation_to_reconstruction_cross_session"
+  ],
+  "row_count": 6,
+  "null_encoding": "empty; not zero"
+ },
+ "QWEN3_VALIDATION_CUMULATIVE.csv": {
+  "columns": [
+   "deployment_index",
+   "point_id",
+   "condition",
+   "repetition",
+   "j",
+   "actual_engine_cumulative_s",
+   "actual_limit_engine_cumulative_s",
+   "reconstructed_engine_cumulative_s",
+   "frozen_reconstructed_engine_cumulative_s"
+  ],
+  "row_count": 120,
+  "null_encoding": "empty; not zero"
+ },
+ "QWEN3_VALIDATION_MARGINS.csv": {
+  "columns": [
+   "deployment_index",
+   "point_id",
+   "repetition",
+   "validation_session_index",
+   "condition",
+   "j",
+   "actual_engine_cumulative_s",
+   "actual_limit_engine_cumulative_s",
+   "actual_candidate_minus_l_s",
+   "frozen_candidate_engine_cumulative_s",
+   "frozen_limit_engine_cumulative_s",
+   "frozen_candidate_minus_l_s",
+   "updated_candidate_engine_cumulative_s",
+   "updated_limit_engine_cumulative_s",
+   "updated_candidate_minus_l_s",
+   "actual_break_even_request",
+   "frozen_predicted_break_even_request",
+   "updated_predicted_break_even_request"
+  ],
+  "row_count": 12,
+  "null_encoding": "empty; not zero"
+ },
+ "conventions": {
+  "scope": "Two independent no-gap full-original-output L/S/K validation rounds; wall n3 and K Exp1 n3 are unchanged",
+  "clock": "Exclusive engine inference including summary once; first token belongs to prefill; tool gaps excluded",
+  "margin": "candidate minus matching same-round L; negative is a lead. S j10/11, K j12/13 and both j20 are descriptive selections, not a new crossover algorithm",
+  "prediction": "Frozen historical 11/13 prediction and residual remain separate from updated pooled reconstruction and actual crossover",
+  "sessions": "Validation rep0 and rep1 are two physical sessions; cross-session residuals cannot isolate fit error from session variation",
+  "domain": "Historical/new-high calibration remains2048..81664 and requires prompt+original_output-1 coverage; R5 adds no calibration"
+ }
+}

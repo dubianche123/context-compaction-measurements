@@ -1,0 +1,127 @@
+[
+ {
+  "model": "deepseek",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 2831.9580522920005,
+  "W": 0.0,
+  "steps": 195,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 103910,
+    "H": 58971392,
+    "O": 379876,
+    "n": 195
+   }
+  },
+  "unknown_cache": 0,
+  "policy": "L",
+  "task": "coq-block-bound",
+  "thr": 1000,
+  "rep": "b001",
+  "peak": 449446
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4715.666579332901,
+  "W": 0.0,
+  "steps": 210,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 153170,
+    "H": 80661504,
+    "O": 596868,
+    "n": 210
+   }
+  },
+  "unknown_cache": 0,
+  "policy": "L",
+  "task": "interleaved-vigenere",
+  "thr": 1000,
+  "rep": "b001",
+  "peak": 686678
+ },
+ {
+  "model": "deepseek",
+  "reward": 1.0,
+  "exception": null,
+  "elapsed": 1208.4577596660238,
+  "W": 0.0,
+  "steps": 57,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 60595,
+    "H": 5592576,
+    "O": 125135,
+    "n": 57
+   }
+  },
+  "unknown_cache": 0,
+  "policy": "L",
+  "task": "mp-checkpoint-consolidation",
+  "thr": 1000,
+  "rep": "b001",
+  "peak": 170162
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 3191.925569207873,
+  "W": 0.0,
+  "steps": 190,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 260081,
+    "H": 59064576,
+    "O": 406158,
+    "n": 190
+   }
+  },
+  "unknown_cache": 0,
+  "policy": "L",
+  "task": "retro-console-soc",
+  "thr": 1000,
+  "rep": "b001",
+  "peak": 541352
+ },
+ {
+  "model": "deepseek",
+  "reward": 0.0,
+  "exception": null,
+  "elapsed": 4836.803340541897,
+  "W": 0.0,
+  "steps": 248,
+  "comps": 0,
+  "retrig": 0,
+  "kept": null,
+  "tok": {
+   "conversation": {
+    "U": 194071,
+    "H": 93796096,
+    "O": 531034,
+    "n": 248
+   }
+  },
+  "unknown_cache": 0,
+  "policy": "L",
+  "task": "rs-archive-clone",
+  "thr": 1000,
+  "rep": "b001",
+  "peak": 660543
+ }
+]

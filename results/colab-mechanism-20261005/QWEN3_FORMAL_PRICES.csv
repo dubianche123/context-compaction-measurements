@@ -1,0 +1,4 @@
+deployment_index,context_tokens,new_input_token_s,output_token_s,output_to_new_ratio,cached_input_marginal_token_s,equivalent_r,direct_decode_observations,direct_cold_prefill_observations
+0,2048,0.00017946053011108631,0.047307778061440334,263.6110460175101,,,6,3
+0,32768,0.00028224462071731643,0.052814684980397215,187.12379653567973,,,6,3
+0,65536,0.00039811787856547376,0.05856150915686015,147.0959037757186,,,6,3
