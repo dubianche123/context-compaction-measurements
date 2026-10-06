@@ -1,17 +1,17 @@
 {
- "schema": "cost-parts-figure/v1",
+ "schema": "cost-parts-figure/v2",
  "bars": [
   {
    "model": "glm",
    "policy": "S",
    "runs": 45,
    "steps": 18268,
-   "cny_per_100_steps": {
-    "cached": 0.7560330755419313,
-    "uncached": 0.10834738340267133,
-    "output": 0.3801848368732209
+   "usd_per_100_steps": {
+    "cached": 0.09861300985329538,
+    "uncached": 0.020315134388000877,
+    "output": 0.06789014944164659
    },
-   "total": 1.2445652958178235,
+   "total": 0.18681829368294284,
    "cached_share_of_input": 0.9604286744311237
   },
   {
@@ -19,12 +19,12 @@
    "policy": "A",
    "runs": 45,
    "steps": 20350,
-   "cny_per_100_steps": {
-    "cached": 0.8241678812776414,
-    "uncached": 0.1313650162162162,
-    "output": 0.3996610339066339
+   "usd_per_100_steps": {
+    "cached": 0.10750015842751844,
+    "uncached": 0.02463094054054054,
+    "output": 0.07136804176904177
    },
-   "total": 1.3551939314004915,
+   "total": 0.20349914073710074,
    "cached_share_of_input": 0.9561829743658258
   },
   {
@@ -32,12 +32,12 @@
    "policy": "K",
    "runs": 18,
    "steps": 5307,
-   "cny_per_100_steps": {
-    "cached": 0.6989553600904466,
-    "uncached": 0.16458695308083662,
-    "output": 0.4537990653853401
+   "usd_per_100_steps": {
+    "cached": 0.09116809044657999,
+    "uncached": 0.03086005370265687,
+    "output": 0.08103554739023931
    },
-   "total": 1.3173413785566233,
+   "total": 0.20306369153947618,
    "cached_share_of_input": 0.9365933395870705
   },
   {
@@ -45,12 +45,12 @@
    "policy": "L",
    "runs": 15,
    "steps": 3376,
-   "cny_per_100_steps": {
-    "cached": 6.215063924170616,
-    "uncached": 0.06052559241706161,
-    "output": 0.3535749763033175
+   "usd_per_100_steps": {
+    "cached": 0.8106605118483412,
+    "uncached": 0.011348548578199053,
+    "output": 0.06313838862559241
    },
-   "total": 6.629164492890995,
+   "total": 0.8851474490521327,
    "cached_share_of_input": 0.9972079894984428
   },
   {
@@ -58,12 +58,12 @@
    "policy": "S",
    "runs": 5,
    "steps": 3696,
-   "cny_per_100_steps": {
-    "cached": 0.12905724567099566,
-    "uncached": 0.7578542207792207,
-    "output": 3.345865367965368
+   "usd_per_100_steps": {
+    "cached": 0.01935858685064935,
+    "uncached": 0.11367813311688311,
+    "output": 0.5018798051948052
    },
-   "total": 4.232776834415584,
+   "total": 0.6349165251623377,
    "cached_share_of_input": 0.8948989021653759
   },
   {
@@ -71,12 +71,12 @@
    "policy": "A",
    "runs": 5,
    "steps": 3878,
-   "cny_per_100_steps": {
-    "cached": 0.14602350799381125,
-    "uncached": 0.8288913357400722,
-    "output": 3.08934440433213
+   "usd_per_100_steps": {
+    "cached": 0.021903526199071686,
+    "uncached": 0.12433370036101082,
+    "output": 0.46340166064981947
    },
-   "total": 4.064259248066014,
+   "total": 0.609638887209902,
    "cached_share_of_input": 0.8980461830494227
   },
   {
@@ -84,14 +84,34 @@
    "policy": "L",
    "runs": 4,
    "steps": 705,
-   "cny_per_100_steps": {
-    "cached": 1.3566794439716312,
-    "uncached": 0.18948,
-    "output": 1.8827744680851064
+   "usd_per_100_steps": {
+    "cached": 0.20350191659574465,
+    "uncached": 0.028422000000000003,
+    "output": 0.28241617021276594
    },
-   "total": 3.4289339120567375,
+   "total": 0.5143400868085106,
    "cached_share_of_input": 0.9972144900931101
   }
  ],
+ "prices": {
+  "currency": "USD",
+  "per_million_tokens": {
+   "glm": [
+    0.15,
+    0.03,
+    0.5
+   ],
+   "deepseek": [
+    0.3,
+    0.006,
+    1.2
+   ]
+  },
+  "as_of": "2026-10-06",
+  "sources": {
+   "glm": "https://docs.z.ai/guides/overview/pricing",
+   "deepseek": "https://api-docs.deepseek.com/quick_start/pricing"
+  }
+ },
  "notes": "fixed price vectors; agent and summarization requests; tokens pooled over each policy's runs"
 }

@@ -1,27 +1,27 @@
-## DeepSeek L, one run per task (fixed price 2.00/0.04/8.00 CNY per M)
-Coq   reward=1.0 exception=None steps=195 elapsed=47.2 min compactions=0 peak prompt=449446 cached=0.9982 cost=5.61 CNY (2.87/100 steps)
-Vig   reward=0.0 exception=None steps=210 elapsed=78.6 min compactions=0 peak prompt=686678 cached=0.9981 cost=8.31 CNY (3.96/100 steps)
-MP    reward=1.0 exception=None steps=57 elapsed=20.1 min compactions=0 peak prompt=170162 cached=0.9893 cost=1.35 CNY (2.36/100 steps)
-Retro reward=0.0 exception=None steps=190 elapsed=53.2 min compactions=0 peak prompt=541352 cached=0.9956 cost=6.13 CNY (3.23/100 steps)
-RS    reward=0.0 exception=None steps=248 elapsed=80.6 min compactions=0 peak prompt=660543 cached=0.9979 cost=8.39 CNY (3.38/100 steps)
-pooled: steps=900 cost=29.78 CNY, 3.31/100 steps; cached share of input 0.9974; cost shares output 0.55, cached input 0.40, uncached input 0.05
-pooled without Coq: 3.43/100 steps
-one step at a 1M-token prompt, with L's mean uncached input (858) and output (2266) per step: 5.98/100 steps
+## DeepSeek L, one run per task (official USD per M (0.3, 0.006, 1.2), checked 2026-10-06; peak price, no discounts)
+Coq   reward=1.0 exception=None steps=195 elapsed=47.2 min compactions=0 peak prompt=449446 cached=0.9982 cost=0.84 USD (0.43/100 steps)
+Vig   reward=0.0 exception=None steps=210 elapsed=78.6 min compactions=0 peak prompt=686678 cached=0.9981 cost=1.25 USD (0.59/100 steps)
+MP    reward=1.0 exception=None steps=57 elapsed=20.1 min compactions=0 peak prompt=170162 cached=0.9893 cost=0.20 USD (0.35/100 steps)
+Retro reward=0.0 exception=None steps=190 elapsed=53.2 min compactions=0 peak prompt=541352 cached=0.9956 cost=0.92 USD (0.48/100 steps)
+RS    reward=0.0 exception=None steps=248 elapsed=80.6 min compactions=0 peak prompt=660543 cached=0.9979 cost=1.26 USD (0.51/100 steps)
+pooled L, all 5 tasks (including Coq): steps=900 cost=4.47 USD, 0.50/100 steps; cached share of input 0.9974; cost shares output 0.55, cached input 0.40, uncached input 0.05
+pooled L without Coq (the four tasks with S/A pairs): 0.51/100 steps
+one step at a 1M-token prompt, with L's mean uncached input (858) and output (2266) per step: 0.90/100 steps
 
 ## DeepSeek S/A (snapshot)
-Vig   A64  reward=0.0 steps=425 elapsed=4.85 h cost=19.11 CNY (4.50/100 steps)
-Vig   S64  reward=0.0 steps=433 elapsed=4.70 h cost=31.99 CNY (7.39/100 steps)
-MP    A64  reward=0.0 steps=1187 elapsed=8.05 h cost=54.34 CNY (4.58/100 steps)
-MP    S64  reward=1.0 steps=475 elapsed=2.58 h cost=14.41 CNY (3.03/100 steps)
-MP    A128 reward=1.0 steps=269 elapsed=1.82 h cost=8.13 CNY (3.02/100 steps)
-MP    S128 reward=1.0 steps=128 elapsed=1.43 h cost=2.47 CNY (1.93/100 steps)
-Retro A32  reward=0.0 steps=884 elapsed=4.72 h cost=33.52 CNY (3.79/100 steps)
-Retro S32  reward=0.0 steps=1136 elapsed=7.95 h cost=69.09 CNY (6.08/100 steps)
-RS    A64  reward=1.0 steps=1113 elapsed=8.05 h cost=42.51 CNY (3.82/100 steps)
-RS    S64  reward=0.0 steps=1524 elapsed=7.38 h cost=38.50 CNY (2.53/100 steps)
-pooled S: 4.23/100 steps; L/S = 0.78
-pooled A: 4.06/100 steps; L/A = 0.81
-per run: L 1.35-8.39 CNY over 20-81 min; S/A 2.47-69.09 CNY over 1.43-8.05 h
+Vig   A64  reward=0.0 steps=425 elapsed=4.85 h cost=2.87 USD (0.67/100 steps)
+Vig   S64  reward=0.0 steps=433 elapsed=4.70 h cost=4.80 USD (1.11/100 steps)
+MP    A64  reward=0.0 steps=1187 elapsed=8.05 h cost=8.15 USD (0.69/100 steps)
+MP    S64  reward=1.0 steps=475 elapsed=2.58 h cost=2.16 USD (0.45/100 steps)
+MP    A128 reward=1.0 steps=269 elapsed=1.82 h cost=1.22 USD (0.45/100 steps)
+MP    S128 reward=1.0 steps=128 elapsed=1.43 h cost=0.37 USD (0.29/100 steps)
+Retro A32  reward=0.0 steps=884 elapsed=4.72 h cost=5.03 USD (0.57/100 steps)
+Retro S32  reward=0.0 steps=1136 elapsed=7.95 h cost=10.36 USD (0.91/100 steps)
+RS    A64  reward=1.0 steps=1113 elapsed=8.05 h cost=6.38 USD (0.57/100 steps)
+RS    S64  reward=0.0 steps=1524 elapsed=7.38 h cost=5.77 USD (0.38/100 steps)
+pooled S: 0.63/100 steps; L on the same 4 tasks: 0.51/100 steps; matched L/S = 0.81; L over all 5 tasks/S = 0.78
+pooled A: 0.61/100 steps; L on the same 4 tasks: 0.51/100 steps; matched L/A = 0.84; L over all 5 tasks/A = 0.81
+per run: L 0.20-1.26 USD over 20-81 min; S/A 0.37-10.36 USD over 1.43-8.05 h
 passes: L 2/5, S/A 4/10
 
 ## Per-step crossover r* against the same task's L (DeepSeek actual r=0.02)
@@ -36,41 +36,41 @@ Retro S32  r*=0.070
 RS    A64  r*=0.026
 RS    S64  r*=0.008
 
-## GLM per-step r* by setting against pooled same-task L (snapshot; GLM actual r=0.29)
-Coq   A32  r*=0.019
-Coq   A64  r*=0.003
-Coq   A128 r*=0.005
-Coq   K32  r*=0.044
-Coq   K64  r*=0.018
-Coq   S32  r*=0.064
-Coq   S64  r*=0.015
-Coq   S128 r*=0.026
-Vig   A32  r*=0.006
-Vig   A64  r*=0.006
-Vig   A128 r*=-0.015
-Vig   K64  r*=-0.004
-Vig   S32  r*=0.003
+## GLM per-step r* by setting against pooled same-task L (snapshot; GLM actual r=0.2)
+Coq   A32  r*=0.023
+Coq   A64  r*=0.010
+Coq   A128 r*=0.009
+Coq   K32  r*=0.043
+Coq   K64  r*=0.017
+Coq   S32  r*=0.045
+Coq   S64  r*=0.022
+Coq   S128 r*=0.019
+Vig   A32  r*=0.002
+Vig   A64  r*=0.005
+Vig   A128 r*=-0.014
+Vig   K64  r*=-0.003
+Vig   S32  r*=-0.003
 Vig   S64  r*=-0.007
-Vig   S128 r*=-0.006
-MP    A32  r*=-0.000
+Vig   S128 r*=-0.010
+MP    A32  r*=0.003
 MP    A64  r*=-0.001
-MP    A128 r*=-0.004
+MP    A128 r*=-0.007
 MP    K64  r*=-0.002
-MP    S32  r*=0.003
-MP    S64  r*=-0.004
-MP    S128 r*=-0.001
-Retro A32  r*=0.027
-Retro A64  r*=0.001
-Retro A128 r*=-0.005
+MP    S32  r*=0.005
+MP    S64  r*=-0.001
+MP    S128 r*=-0.005
+Retro A32  r*=0.022
+Retro A64  r*=-0.000
+Retro A128 r*=-0.003
 Retro K64  r*=0.006
-Retro S32  r*=0.002
-Retro S64  r*=-0.001
-Retro S128 r*=-0.002
-RS    A32  r*=0.001
+Retro S32  r*=0.003
+Retro S64  r*=-0.002
+Retro S128 r*=0.001
+RS    A32  r*=0.005
 RS    A64  r*=0.001
 RS    A128 r*=-0.004
 RS    K64  r*=0.002
 RS    S32  r*=-0.002
-RS    S64  r*=0.001
-RS    S128 r*=-0.005
-GLM max r* = 0.064
+RS    S64  r*=0.000
+RS    S128 r*=-0.003
+GLM max r* = 0.045

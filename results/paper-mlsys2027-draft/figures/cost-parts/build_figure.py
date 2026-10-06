@@ -3,7 +3,7 @@ uncached input, and output; no provider or model calls.
 
 Run from the repository root:
   python3 results/paper-mlsys2027-draft/figures/cost-parts/build_figure.py [--paste]
-Inputs: the same runs as the cost figure, prelim-numbers-20261003/runs.json (2026-10-03 23:08 snapshot) and
+Inputs: the same completed runs as the cost figure, prelim-numbers-20261003/runs.json and
 deepseek-limitonly-numbers-20261004/deepseek-l-runs.json. Token totals and prices come from the shared
 implementation in prelim-numbers-20261003/metrics.py and include agent and summarization requests. As in the cost
 figure's repricing panel, L pools only the tasks on which the model's compacting runs ran.
@@ -19,13 +19,13 @@ PAPER = HERE.parents[1]
 ROOT = HERE.parents[3]
 DIAG = ROOT / "results/harness-diagnosis-20260927"
 sys.path.insert(0, str(DIAG / "prelim-numbers-20261003"))
-from metrics import PRICE, pooled  # noqa: E402
+from metrics import PRICE, PRICE_AS_OF, PRICE_CURRENCY, PRICE_SOURCES, pooled  # noqa: E402
 
 NAME = dict(glm="GLM", deepseek="DeepSeek")
 BARS = [("glm", "S"), ("glm", "A"), ("glm", "K"), ("glm", "L"), ("deepseek", "S"), ("deepseek", "A"), ("deepseek", "L")]
 # left to right in each bar: the cached history first, so that the part compaction removes starts at zero
 PARTS = [("cached", "Cached input", "black!62"), ("uncached", "Uncached input", "black!25"), ("output", "Output", "white")]
-XMAX = 7.5
+XMAX = 1.05
 BEGIN, END = "% BEGIN generated cost-parts figure", "% END generated cost-parts figure"
 
 
@@ -40,13 +40,16 @@ def collect():
         U, H, O, n = pooled(sel)
         pu, pc, po = PRICE[model]
         parts = dict(cached=100 * pc * H / 1e6 / n, uncached=100 * pu * U / 1e6 / n, output=100 * po * O / 1e6 / n)
-        bars.append(dict(model=model, policy=policy, runs=len(sel), steps=n, cny_per_100_steps=parts,
+        bars.append(dict(model=model, policy=policy, runs=len(sel), steps=n, usd_per_100_steps=parts,
                          total=sum(parts.values()), cached_share_of_input=H / (U + H)))
-    return dict(schema="cost-parts-figure/v1", bars=bars,
+    return dict(schema="cost-parts-figure/v2", bars=bars,
+                prices=dict(currency=PRICE_CURRENCY, per_million_tokens=PRICE, as_of=PRICE_AS_OF, sources=PRICE_SOURCES),
                 notes="fixed price vectors; agent and summarization requests; tokens pooled over each policy's runs")
 
 
 def write_tex(data):
+    if any(not 0 <= b["total"] <= XMAX for b in data["bars"]):
+        raise ValueError("Cost composition bounds would truncate a bar")
     n = len(data["bars"])
     # top to bottom in the order of BARS, with a gap between the models
     ypos = [n + 1 - i - (1 if b["model"] == "deepseek" else 0) for i, b in enumerate(data["bars"])]
@@ -55,20 +58,20 @@ def write_tex(data):
          r"\begin{figure}[t]", r"\centering", r"\begin{tikzpicture}",
          r"\begin{axis}[xbar stacked,scale only axis,width=0.68\columnwidth,height=2.5cm,bar width=4.6pt,",
          r"xmin=0,xmax=" + str(XMAX) + r",ymin=" + f"{min(ypos) - 0.6:g}" + r",ymax=" + f"{max(ypos) + 0.6:g}" +
-         r",xtick={0,1,2,3,4,5,6,7},",
+         r",xtick={0,0.2,0.4,0.6,0.8,1.0},",
          r"ytick={" + ",".join(str(ypos[i]) for i in order) + r"},yticklabels={" +
          ",".join(f"{NAME[data['bars'][i]['model']]} {data['bars'][i]['policy']}" for i in order) + r"},",
-         r"xlabel={CNY per 100 agent steps},tick label style={font=\scriptsize},label style={font=\small},",
+         r"xlabel={USD per 100 agent steps},tick label style={font=\scriptsize},label style={font=\small},",
          r"axis line style={black!45},tick style={black!45},ytick style={draw=none},xmajorgrids,grid style={black!8},",
          r"legend style={at={(0.5,1.03)},anchor=south,legend columns=3,font=\scriptsize,draw=none,",
          r"/tikz/every even column/.append style={column sep=6pt}},legend cell align=left,clip=false]"]
     for key, name, color in PARTS:
-        pts = " ".join(f"({b['cny_per_100_steps'][key]:.4g},{y})" for b, y in zip(data["bars"], ypos))
+        pts = " ".join(f"({b['usd_per_100_steps'][key]:.4g},{y})" for b, y in zip(data["bars"], ypos))
         L.append(r"\addplot[fill=" + color + r",draw=black!70,line width=0.3pt,area legend] coordinates {" + pts + "};")
         L.append(r"\addlegendentry{" + name + "}")
     for b, y in zip(data["bars"], ypos):
         L.append(r"\node[font=\scriptsize,anchor=west,inner sep=2pt] at (axis cs:" + f"{b['total']:.4g},{y}" + r") {" +
-                 f"{b['total']:.1f}" + "};")
+                 f"{b['total']:.2f}" + "};")
     L += [r"\end{axis}", r"\end{tikzpicture}",
           r"\caption{What the steps paid for: cost per 100 agent steps at the list prices of",
           r"Table~\ref{tab:prices}, split by token type and pooling each policy's agent and summarization requests",
@@ -98,8 +101,8 @@ def main():
     if args.paste:
         paste(tex)
     for b in data["bars"]:
-        p = b["cny_per_100_steps"]
-        print(f"{NAME[b['model']]:8s} {b['policy']}: runs {b['runs']:2d} steps {b['steps']:5d} total {b['total']:.2f} CNY/100 steps; "
+        p = b["usd_per_100_steps"]
+        print(f"{NAME[b['model']]:8s} {b['policy']}: runs {b['runs']:2d} steps {b['steps']:5d} total {b['total']:.2f} USD/100 steps; "
               f"cached {p['cached']:.2f} uncached {p['uncached']:.2f} output {p['output']:.2f} "
               f"(output {100 * p['output'] / b['total']:.0f}%, input cached {100 * b['cached_share_of_input']:.1f}%)")
 

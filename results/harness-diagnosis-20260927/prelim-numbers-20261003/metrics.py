@@ -1,6 +1,18 @@
-"""Per-run metrics shared by the paper-number scripts (read-only; no model calls)."""
+"""Per-run metrics shared by the paper-number scripts (read-only; no model calls).
+
+Official USD API list prices checked 2026-10-06; rates are per million tokens
+in the order uncached input, cached input, output. These are direct USD quotes,
+not currency conversions. DeepSeek uses peak prices; promotional and off-peak
+discounts are excluded. Historical experiment price files remain frozen.
+"""
 import json,statistics as st,collections
-PRICE={'glm':(0.8,0.23,2.8),'deepseek':(2.0,0.04,8.0)}
+PRICE={'glm':(0.15,0.03,0.50),'deepseek':(0.30,0.006,1.20)}
+PRICE_CURRENCY='USD'
+PRICE_AS_OF='2026-10-06'
+PRICE_SOURCES={
+    'glm':'https://docs.z.ai/guides/overview/pricing',
+    'deepseek':'https://api-docs.deepseek.com/quick_start/pricing',
+}
 def run_metrics(model,native,official):
     r=json.load(open(native)); o=json.load(open(official))
     vr=o.get('verifier_result')
@@ -42,7 +54,7 @@ def pooled(ms):
     t=[tokens(m) for m in ms]
     return tuple(sum(x[i] for x in t) for i in range(3))+(sum(m['steps'] for m in ms),)
 def step_cost(model,p,r=None):
-    """CNY per step for pooled totals p=(U,H,O,steps), with the cached price at r times the uncached price."""
+    """USD per step for pooled totals p=(U,H,O,steps), with the cached price at r times the uncached price."""
     pu,pc,po=PRICE[model]; rr=pc/pu if r is None else r; U,H,O,n=p
     return (pu*U+rr*pu*H+po*O)/1e6/n
 def rstar(model,c,l):

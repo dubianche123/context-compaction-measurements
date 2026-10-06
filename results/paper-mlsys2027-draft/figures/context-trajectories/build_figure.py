@@ -23,13 +23,15 @@ import sys
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
+sys.path.insert(0, str(ROOT / "results/harness-diagnosis-20260927/prelim-numbers-20261003"))
+from metrics import PRICE, PRICE_AS_OF, PRICE_CURRENCY, PRICE_SOURCES  # noqa: E402
+
 GLM = "results/glm-repetition-tiered-20260930/work/runtime"
 KEEP = "results/skeep-20261001/work/runtime"
 JOBS = GLM + "/output/harbor-jobs/glm-window-sweep-20260927"
 S = JOBS + "/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-coq-block-bound-{rep}-{arm}"
 K = KEEP + "/output/harbor-jobs/glm-window-sweep-20260927/skeep-001/window-skeep-001-coq-block-bound-{rep}-{arm}"
 L = JOBS + "/main/long-011/n1m-deadline5400-b001/window-main-long-011-d5400-coq-block-bound-b001-n1m"
-PRICE = (0.80, 0.23, 2.80)  # GLM CNY per million uncached input, cached input, output
 SOURCES = [
     dict(column=0, label="S64", policy="S", threshold=64000, runtime=GLM, job=S.format(rep="b001", arm="s64")),
     dict(column=0, label="A64", policy="A", threshold=64000, runtime=GLM, job=S.format(rep="b001", arm="a64")),
@@ -41,6 +43,36 @@ SOURCES = [
     dict(column=1, label="K32, 3rd run", policy="K", threshold=32000, runtime=KEEP, job=K.format(rep="b003", arm="k32")),
 ]
 COLORS = dict(S="polS", A="polA", K="polK", L="polL")
+
+
+def request_usage(trial):
+    """Read only recorded billing usage, without rebuilding trajectory events."""
+    totals = dict(uncached_input=0, cached_input=0, output=0)
+    missing = 0
+    for request in json.loads((ROOT / trial / "axiom-private/result.json").read_text()).get("requests", []):
+        usage = request.get("usage") or {}
+        missing += not usage.get("input_tokens")
+        inp, cached = usage.get("input_tokens") or 0, usage.get("cached_tokens") or 0
+        totals["uncached_input"] += inp - cached
+        totals["cached_input"] += cached
+        totals["output"] += usage.get("output_tokens") or 0
+    return totals, missing
+
+
+def reprice(data):
+    """Reprice stored token totals; migrate older caches from their recorded requests."""
+    pu, pc, po = PRICE["glm"]
+    for run in data["runs"]:
+        if "usage_tokens" not in run:
+            run["usage_tokens"], run["requests_without_usage"] = request_usage(run["trial"])
+        usage = run["usage_tokens"]
+        cost = (pu * usage["uncached_input"] + pc * usage["cached_input"] + po * usage["output"]) / 1e6
+        run["usd_per_100_steps"] = 100 * cost / run["accepted_steps"]
+        run.pop("cny_per_100_steps", None)
+    data["schema"] = "context-trajectories/v2"
+    data["cost"] = dict(currency=PRICE_CURRENCY, per_million_tokens=PRICE["glm"],
+                        as_of=PRICE_AS_OF, source=PRICE_SOURCES["glm"],
+                        includes="all agent and summary requests")
 
 
 def extract(index):
@@ -100,7 +132,7 @@ def extract(index):
         raise ValueError("Accepted-step coverage or unique accepted-attempt mapping failed")
     first_use = {j["first_consumption"]["step_id"]: j for j in consumption["jobs"]
                  if j.get("first_consumption") is not None}
-    points, usage = [], [0, 0, 0]
+    points = []
     for ordinal, (attempt, started, sent) in enumerate(
             sorted((v[0] for v in candidates.values()), key=lambda x: x[2]["seq"]), 1):
         d = started["data"]
@@ -116,21 +148,12 @@ def extract(index):
                            first_action=dict(role="assistant", tool_calls=calls[:1]) if job and message else None,
                            retained_tokens_at_proposal=(job.get("proposal", {}).get("retained_projection_tokens")
                                                         if job else None)))
-    # Standardized cost at the fixed GLM price vector, all agent and summary requests.
-    missing_usage = 0
-    for request in json.loads((private / "result.json").read_text()).get("requests", []):
-        u = request.get("usage") or {}
-        missing_usage += not u.get("input_tokens")
-        inp, cached = u.get("input_tokens") or 0, u.get("cached_tokens") or 0
-        usage[0] += inp - cached
-        usage[1] += cached
-        usage[2] += u.get("output_tokens") or 0
-    cost = (usage[0] * PRICE[0] + usage[1] * PRICE[1] + usage[2] * PRICE[2]) / 1e6
+    usage, missing_usage = request_usage(Path(trial[0]).relative_to(ROOT))
     reward = ((official.get("verifier_result") or {}).get("rewards") or {}).get("reward")
     return dict(**source, trial=str(Path(trial[0]).relative_to(ROOT)), reward=reward,
                 accepted_steps=len(points), first_consumption_count=len(first_use),
                 unplotted_first_consumption=len(set(first_use) - set(candidates)),
-                cny_per_100_steps=round(100 * cost / len(points), 2),
+                usage_tokens=usage,
                 requests_without_usage=missing_usage, points=points)
 
 
@@ -177,7 +200,7 @@ def write_tex(data):
             title = f"{run['label']}: {run['accepted_steps']} steps, {outcome}"
             if c == 0:
                 bound = "$\\ge$" if run["requests_without_usage"] else ""
-                title += f", {bound}{run['cny_per_100_steps']:.2f} CNY/100 steps"
+                title += f", {bound}{run['usd_per_100_steps']:.2f} USD/100 steps"
             color = COLORS[run["policy"]]
             ticks = "xtick={0,100,200,300,400}" if c == 0 else "xtick={0,100,200,300,400}"
             lines.append(r"\nextgroupplot[" + f"xmin=0,xmax={xmax[c]},{ticks}," + r"title={" + title + "}]")
@@ -229,13 +252,13 @@ def main():
                               "S32 b001 ended after 12 steps and is omitted.",
                     context_source="model/attempt started.compaction_policy.calibrated_input_tokens",
                     first_action_rule="skeep-first-action/blind-secondary-v2.1, first tool call",
-                    cost="fixed GLM price vector (0.80/0.23/2.80 CNY per M), all agent and summary requests",
                     runs=runs)
         classify_first_actions(data)
-        (HERE / "context-trajectories-data.json").write_text(json.dumps(data, indent=1) + "\n")
+    reprice(data)
+    (HERE / "context-trajectories-data.json").write_text(json.dumps(data, indent=1) + "\n")
     write_tex(data)
     print(json.dumps([{k: r[k] for k in ("label", "accepted_steps", "reward", "first_consumption_count",
-                                         "unplotted_first_consumption", "cny_per_100_steps")} for r in data["runs"]],
+                                         "unplotted_first_consumption", "usd_per_100_steps")} for r in data["runs"]],
                      indent=1))
 
 

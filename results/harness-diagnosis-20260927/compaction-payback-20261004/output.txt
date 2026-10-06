@@ -1,8 +1,8 @@
 API S runs: 48 summaries: 1215 without removed context: 0 (summaries cut by the run end are left out below)
-glm        32 runs=15 summaries= 429 repay med    4.41 | used med  13.0 | repaid before next 376/429 | runs where most repaid 14/15, per-run share 0.00-1.00 | prefix share of one-time 9% | input-drop check: repaid 352/429
-glm        64 runs=15 summaries= 230 repay med    2.44 | used med  29.0 | repaid before next 222/230 | runs where most repaid 15/15, per-run share 0.80-1.00 | prefix share of one-time 7% | input-drop check: repaid 207/230
-glm       128 runs=11 summaries=  58 repay med    1.72 | used med  64.5 | repaid before next 56/58 | runs where most repaid 11/11, per-run share 0.83-1.00 | prefix share of one-time 5% | input-drop check: repaid 54/58
-glm       all runs=41 summaries= 717 repay med    3.71 | used med  17.0 | repaid before next 654/717 | runs where most repaid 40/41, per-run share 0.00-1.00 | prefix share of one-time 9% | input-drop check: repaid 613/717
+glm        32 runs=15 summaries= 429 repay med    5.73 | used med  13.0 | repaid before next 353/429 | runs where most repaid 14/15, per-run share 0.00-1.00 | prefix share of one-time 12% | input-drop check: repaid 329/429
+glm        64 runs=15 summaries= 230 repay med    2.97 | used med  29.0 | repaid before next 218/230 | runs where most repaid 15/15, per-run share 0.60-1.00 | prefix share of one-time 10% | input-drop check: repaid 206/230
+glm       128 runs=11 summaries=  58 repay med    1.99 | used med  64.5 | repaid before next 55/58 | runs where most repaid 11/11, per-run share 0.75-1.00 | prefix share of one-time 7% | input-drop check: repaid 54/58
+glm       all runs=41 summaries= 717 repay med    4.75 | used med  17.0 | repaid before next 626/717 | runs where most repaid 40/41, per-run share 0.00-1.00 | prefix share of one-time 11% | input-drop check: repaid 589/717
 deepseek   32 runs= 1 summaries= 239 repay med  242.32 | used med   4.0 | repaid before next 0/239 | runs where most repaid 0/1, per-run share 0.00-0.00 | prefix share of one-time 14% | input-drop check: repaid 0/239
 deepseek   64 runs= 3 summaries= 209 repay med   28.91 | used med  10.0 | repaid before next 5/209 | runs where most repaid 0/3, per-run share 0.00-0.04 | prefix share of one-time 14% | input-drop check: repaid 3/209
 deepseek  128 runs= 1 summaries=   2 repay med    9.35 | used med  39.5 | repaid before next 2/2 | runs where most repaid 1/1, per-run share 1.00-1.00 | prefix share of one-time 13% | input-drop check: repaid 2/2

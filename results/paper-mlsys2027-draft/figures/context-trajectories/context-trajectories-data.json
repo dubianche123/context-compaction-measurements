@@ -1,9 +1,19 @@
 {
- "schema": "context-trajectories/v1",
+ "schema": "context-trajectories/v2",
  "selection": "Coq b001 S64/A64/K64 and the b001 L run; Coq S32 b002 and K32 b001-b003. S32 b001 ended after 12 steps and is omitted.",
  "context_source": "model/attempt started.compaction_policy.calibrated_input_tokens",
  "first_action_rule": "skeep-first-action/blind-secondary-v2.1, first tool call",
- "cost": "fixed GLM price vector (0.80/0.23/2.80 CNY per M), all agent and summary requests",
+ "cost": {
+  "currency": "USD",
+  "per_million_tokens": [
+   0.15,
+   0.03,
+   0.5
+  ],
+  "as_of": "2026-10-06",
+  "source": "https://docs.z.ai/guides/overview/pricing",
+  "includes": "all agent and summary requests"
+ },
  "runs": [
   {
    "column": 0,
@@ -17,7 +27,6 @@
    "accepted_steps": 370,
    "first_consumption_count": 11,
    "unplotted_first_consumption": 0,
-   "cny_per_100_steps": 1.26,
    "requests_without_usage": 0,
    "points": [
     {
@@ -2980,7 +2989,13 @@
      "retained_tokens_at_proposal": null,
      "first_action_category": null
     }
-   ]
+   ],
+   "usage_tokens": {
+    "uncached_input": 574604,
+    "cached_input": 10758528,
+    "output": 622149
+   },
+   "usd_per_100_steps": 0.19460025405405404
   },
   {
    "column": 0,
@@ -2994,7 +3009,6 @@
    "accepted_steps": 297,
    "first_consumption_count": 7,
    "unplotted_first_consumption": 0,
-   "cny_per_100_steps": 1.15,
    "requests_without_usage": 0,
    "points": [
     {
@@ -5373,7 +5387,13 @@
      "retained_tokens_at_proposal": null,
      "first_action_category": null
     }
-   ]
+   ],
+   "usage_tokens": {
+    "uncached_input": 231500,
+    "cached_input": 9849920,
+    "output": 349124
+   },
+   "usd_per_100_steps": 0.1699611447811448
   },
   {
    "column": 0,
@@ -5387,7 +5407,6 @@
    "accepted_steps": 213,
    "first_consumption_count": 7,
    "unplotted_first_consumption": 0,
-   "cny_per_100_steps": 1.39,
    "requests_without_usage": 0,
    "points": [
     {
@@ -7094,7 +7113,13 @@
      "retained_tokens_at_proposal": null,
      "first_action_category": null
     }
-   ]
+   ],
+   "usage_tokens": {
+    "uncached_input": 229068,
+    "cached_input": 6975168,
+    "output": 417309
+   },
+   "usd_per_100_steps": 0.21233321126760563
   },
   {
    "column": 0,
@@ -7108,7 +7133,6 @@
    "accepted_steps": 215,
    "first_consumption_count": 0,
    "unplotted_first_consumption": 0,
-   "cny_per_100_steps": 5.04,
    "requests_without_usage": 1,
    "points": [
     {
@@ -8831,7 +8855,13 @@
      "retained_tokens_at_proposal": null,
      "first_action_category": null
     }
-   ]
+   ],
+   "usage_tokens": {
+    "uncached_input": 140517,
+    "cached_input": 42352512,
+    "output": 348151
+   },
+   "usd_per_100_steps": 0.6817341441860464
   },
   {
    "column": 1,
@@ -8845,7 +8875,6 @@
    "accepted_steps": 272,
    "first_consumption_count": 13,
    "unplotted_first_consumption": 0,
-   "cny_per_100_steps": 1.07,
    "requests_without_usage": 0,
    "points": [
     {
@@ -11024,7 +11053,13 @@
      "retained_tokens_at_proposal": null,
      "first_action_category": null
     }
-   ]
+   ],
+   "usage_tokens": {
+    "uncached_input": 373617,
+    "cached_input": 4550144,
+    "output": 557099
+   },
+   "usd_per_100_steps": 0.17319719485294116
   },
   {
    "column": 1,
@@ -11038,7 +11073,6 @@
    "accepted_steps": 421,
    "first_consumption_count": 72,
    "unplotted_first_consumption": 0,
-   "cny_per_100_steps": 1.65,
    "requests_without_usage": 0,
    "points": [
     {
@@ -14409,7 +14443,13 @@
      "retained_tokens_at_proposal": null,
      "first_action_category": null
     }
-   ]
+   ],
+   "usage_tokens": {
+    "uncached_input": 2101072,
+    "cached_input": 7803456,
+    "output": 1246655
+   },
+   "usd_per_100_steps": 0.2785254109263658
   },
   {
    "column": 1,
@@ -14423,7 +14463,6 @@
    "accepted_steps": 246,
    "first_consumption_count": 19,
    "unplotted_first_consumption": 0,
-   "cny_per_100_steps": 1.18,
    "requests_without_usage": 0,
    "points": [
     {
@@ -16394,7 +16433,13 @@
      "retained_tokens_at_proposal": null,
      "first_action_category": null
     }
-   ]
+   ],
+   "usage_tokens": {
+    "uncached_input": 664347,
+    "cached_input": 4657984,
+    "output": 466141
+   },
+   "usd_per_100_steps": 0.19205775203252032
   },
   {
    "column": 1,
@@ -16408,7 +16453,6 @@
    "accepted_steps": 432,
    "first_consumption_count": 60,
    "unplotted_first_consumption": 0,
-   "cny_per_100_steps": 1.67,
    "requests_without_usage": 0,
    "points": [
     {
@@ -19867,7 +19911,13 @@
      "retained_tokens_at_proposal": null,
      "first_action_category": null
     }
-   ]
+   ],
+   "usage_tokens": {
+    "uncached_input": 2096492,
+    "cached_input": 8359616,
+    "output": 1298371
+   },
+   "usd_per_100_steps": 0.2811221712962963
   }
  ]
 }

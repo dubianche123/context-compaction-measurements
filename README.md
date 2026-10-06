@@ -20,6 +20,11 @@ Every file keeps its path from the research repository, so the scripts run uncha
 Each builder writes a pgfplots or LaTeX fragment and its plotted data next to itself; the fragments shipped here are
 the ones in the paper.
 
+Monetary results use the official USD API list prices checked on 2026-10-06, not currency conversions:
+GLM-5.3-Flash is $0.15/$0.03/$0.50 and DeepSeek-Flash is $0.30/$0.006/$1.20 per million
+uncached-input/cached-input/output tokens. DeepSeek uses peak rates. Discounts are excluded; these are
+standardized costs, not invoices. Prices and source URLs are recorded in `metrics.py`.
+
 ## Contents
 
 - `results/harness-diagnosis-20260927/prelim-numbers-20261003/runs.json`: one record per API run (model, policy, task, threshold, repetition,

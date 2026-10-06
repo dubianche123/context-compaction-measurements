@@ -1,9 +1,12 @@
 """Steps a summary must be used to repay its cost, against the steps it was used (read-only; no model calls).
 
 Run from the repository root:
-  python3 results/harness-diagnosis-20260927/compaction-payback-20261004/analyze.py
+  python3 results/harness-diagnosis-20260927/compaction-payback-20261004/analyze.py [--from-data]
 
-API runs: the S runs of the 2026-10-03 23:08 snapshot (prelim-numbers-20261003/runs.json). For each adopted summary,
+--from-data reprices the API runs in the frozen runs.json from their recorded native
+requests, preserving payback.json's self-hosted replay, async and decode data.
+
+API runs: the S runs of the frozen snapshot (prelim-numbers-20261003/runs.json). For each adopted summary,
   one-time cost  = its summarization requests (every attempt with usage) + the uncached input of the first agent
                    request after the switch beyond the run's median, charged at the uncached-minus-cached price;
   saving / step  = removed context priced as cached input; removed context = reported input of the last agent
@@ -22,6 +25,7 @@ makes Coq64 and Retro64 computable (their rows replace the earlier null rows; th
 calibration), and one measured 20-step A/S/L wall comparison at Vig64 with the original tool gaps.
 Writes payback.json and output.txt next to this file.
 """
+import argparse
 import csv
 import glob
 import json
@@ -32,7 +36,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DIAG = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(DIAG, 'prelim-numbers-20261003'))
-from metrics import PRICE  # noqa: E402
+from metrics import PRICE, PRICE_AS_OF, PRICE_SOURCES  # noqa: E402
 
 G = 'results/glm-repetition-tiered-20260930/work/runtime/output/harbor-jobs'
 RUN_DIRS = {'glm': f'{G}/glm-window-sweep-20260927/main/long-011-formal-summary12288/window-main-long-011-formal-summary12288-{{task}}-{{rep}}-s{{thr}}',
@@ -98,10 +102,10 @@ def api_summaries(model, R):
         drop = usage(before)[0] + usage(before)[3] - usage(after)[0]
         plain = usage(before)[0] - usage(after)[0]
         used, last = cyc[c['compaction_id']]
-        rec = dict(summary_cny=summ, prefix_cny=prefix, removed_tokens=drop, input_drop_tokens=plain,
+        rec = dict(summary_usd=summ, prefix_usd=prefix, removed_tokens=drop, input_drop_tokens=plain,
                    steps_used=used, cut_by_run_end=last)
         if drop > 0:
-            rec.update(saving_cny_per_step=drop * pc / 1e6, repay_steps=(summ + prefix) / (drop * pc / 1e6))
+            rec.update(saving_usd_per_step=drop * pc / 1e6, repay_steps=(summ + prefix) / (drop * pc / 1e6))
         if plain > 0:
             rec['repay_steps_input_drop'] = (summ + prefix) / (plain * pc / 1e6)
         out.append(rec)
@@ -183,18 +187,32 @@ def colab():
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--from-data", action="store_true",
+                        help="Reprice frozen API runs; preserve processed self-hosted data")
+    args = parser.parse_args()
     snap = [r for r in json.load(open(os.path.join(DIAG, 'prelim-numbers-20261003/runs.json'))) if r['policy'] == 'S']
     api = []
     for r in snap:
-        d = glob.glob(RUN_DIRS[r['model']].format(task=r['task'], rep=r['rep'], thr=r['thr']))
-        if len(d) != 1:
-            raise SystemExit(f"run directory not found: {r['model']} {r['task']} {r['thr']} {r['rep']}")
-        for rec in api_summaries(r['model'], native(d[0])):
+        if args.from_data:
+            recorded = json.load(open(r['native']))
+        else:
+            d = glob.glob(RUN_DIRS[r['model']].format(task=r['task'], rep=r['rep'], thr=r['thr']))
+            if len(d) != 1:
+                raise SystemExit(f"run directory not found: {r['model']} {r['task']} {r['thr']} {r['rep']}")
+            recorded = native(d[0])
+        for rec in api_summaries(r['model'], recorded):
             rec.update(model=r['model'], task=r['task'], thr=r['thr'], rep=r['rep'])
             api.append(rec)
-    points, async_points, decode = colab()
-    data = dict(schema='compaction-payback/v1', api=api, replay=points, replay_async=async_points, decode=decode,
-                notes=dict(api='S runs of the 2026-10-03 23:08 snapshot; fixed list prices',
+    if args.from_data:
+        previous = json.load(open(os.path.join(HERE, 'payback.json')))
+        points, async_points, decode = (previous[k] for k in ('replay', 'replay_async', 'decode'))
+    else:
+        points, async_points, decode = colab()
+    data = dict(schema='compaction-payback/v2', api=api, replay=points, replay_async=async_points, decode=decode,
+                notes=dict(api='S runs of the frozen runs.json snapshot; official USD list prices; DeepSeek peak, no discounts',
+                           pricing=dict(currency='USD', unit='USD per million tokens', as_of=PRICE_AS_OF,
+                                        vectors=PRICE, sources=PRICE_SOURCES),
                            replay='amortized linear projection; steps used from the GLM source run',
                            cut_by_run_end='the last summary of a run; its use was cut short by the run end'))
     json.dump(data, open(os.path.join(HERE, 'payback.json'), 'w'), indent=1)
@@ -215,7 +233,7 @@ def main():
             say(f"{model:8s} {str(thr or 'all'):>4s} runs={len(byrun):2d} summaries={len(a):4d} repay med {st.median(x['repay_steps'] for x in a):7.2f}"
                 f" | used med {st.median(x['steps_used'] for x in a):5.1f} | repaid before next {sum(x['repay_steps'] < x['steps_used'] for x in a)}/{len(a)}"
                 f" | runs where most repaid {sum(v > 0.5 for v in shares)}/{len(shares)}, per-run share {min(shares):.2f}-{max(shares):.2f}"
-                f" | prefix share of one-time {100 * st.median(x['prefix_cny'] / (x['prefix_cny'] + x['summary_cny']) for x in a):.0f}%"
+                f" | prefix share of one-time {100 * st.median(x['prefix_usd'] / (x['prefix_usd'] + x['summary_usd']) for x in a):.0f}%"
                 f" | input-drop check: repaid {sum(x['repay_steps_input_drop'] < x['steps_used'] for x in plain)}/{len(a)}")
     for dep in DEPLOYMENTS:
         s = [x for x in points if x['deployment'] == dep and x['condition'] == 'S']
