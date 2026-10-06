@@ -108,7 +108,7 @@ def write_tex(data):
     L += [r"\end{groupplot}", r"\end{tikzpicture}",
           r"\caption{Time after one switch at Vig64 on Qwen3-32B relative to keeping the full context (L). (a)~Wall",
           r"clock with the original tool gaps, mean time differences from matched L across three runs per policy;",
-          r"these differences varied by under " + f"{math.ceil(10 * spread) / 10:.1f}" + r"\,s at every step. L runs without a summary.",
+          r"these differences varied by under " + f"{math.ceil(10 * spread) / 10:.1f}" + r"\,s at every step. L is a matched run without a summary.",
           r"S used its summary from step 1, after waiting for it, and A from step 2. (b)~Engine time without tool gaps,",
           r"two runs per policy in separate sessions; time differences from matched L varied by under " + f"{math.ceil(10 * espread) / 10:.1f}" + r"\,s",
           r"at every step. Measured (solid) and reconstructed before the runs (dashed).",
