@@ -107,10 +107,11 @@ def write_tex(data):
     espread = max(data["engine"][c]["max_spread_s"] for c in ("S", "K"))
     L += [r"\end{groupplot}", r"\end{tikzpicture}",
           r"\caption{Time after one switch at Vig64 on Qwen3-32B relative to keeping the full context (L). (a)~Wall",
-          r"clock with the original tool gaps, mean of three runs per policy, which differed by under " + f"{math.ceil(10 * spread) / 10:.1f}" + r"\,s",
-          r"at every step; L is a matched run without a summary. S used its summary from step 1, after waiting for it,",
-          r"and A from step 2. (b)~Engine time without tool gaps, two runs per policy in separate sessions, which",
-          r"differed by under " + f"{math.ceil(10 * espread) / 10:.1f}" + r"\,s at every step; measured (solid) and reconstructed before the runs (dashed).",
+          r"clock with the original tool gaps, mean time differences from matched L across three runs per policy;",
+          r"these differences varied by under " + f"{math.ceil(10 * spread) / 10:.1f}" + r"\,s at every step. L runs without a summary.",
+          r"S used its summary from step 1, after waiting for it, and A from step 2. (b)~Engine time without tool gaps,",
+          r"two runs per policy in separate sessions; time differences from matched L varied by under " + f"{math.ceil(10 * espread) / 10:.1f}" + r"\,s",
+          r"at every step. Measured (solid) and reconstructed before the runs (dashed).",
           r"Filled marks: first step below L in each run.}",
           r"\label{fig:selfhosted}", r"\end{figure}", END]
     tex = "\n".join(L) + "\n"
@@ -140,12 +141,12 @@ def main():
         w = data["wall"][c]
         print(f"wall {c}: first below L at step {w['first_below_l']} (per run {w['first_below_l_per_run']}), mean total "
               f"{w['total_s']:.1f} s vs L {w['l_total_s']:.1f} s ({100 * (w['total_s'] - w['l_total_s']) / w['l_total_s']:+.1f}%), "
-              f"runs differ by at most {w['max_spread_s']:.3f} s")
+              f"time differences from matched L vary by at most {w['max_spread_s']:.3f} s")
     for c in ("S", "K"):
         e = data["engine"][c]
         print(f"engine {c}: measured first below L at steps {e['first_below_l']} per run (margins "
               f"{', '.join(f'{m:.3f}' for m in e['margin_at_first_below_s'])} s), reconstructed {e['reconstructed_first_below_l']}, "
-              f"runs differ by at most {e['max_spread_s']:.3f} s")
+              f"time differences from matched L vary by at most {e['max_spread_s']:.3f} s")
 
 
 if __name__ == "__main__":
